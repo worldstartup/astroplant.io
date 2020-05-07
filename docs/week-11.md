@@ -1,4 +1,4 @@
-![image](https://raw.githubusercontent.com/mwdossantos/miles/master/docs/images/week-11.png)
+![image](https://raw.githubusercontent.com/meet-miles/astroplant/master/docs/images/week-11.png)
 
 Thank you for taking the time to read this week's update. As you can see in the following table, I have a couple of activities planned that I will do in order to get my desired result: Research & Planning.
 
