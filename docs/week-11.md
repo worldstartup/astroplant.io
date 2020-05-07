@@ -63,7 +63,7 @@ Now that I have a clear understanding of the current situation and problem it's 
 
 In the lecture I attended by Tim, we learned that there are a few key players in the game. One of them being Netlify. Netlify originated the term JAMstack and explains it as follows:
 
-![image](https://raw.githubusercontent.com/mwdossantos/miles/master/docs/images/jamstack.png)
+![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/jamstack.png)
 
 As you can see there are no databases or web servers neccesary such as is the case with WordPress. You can easily switch your front end and back end based on your needs while still having a very easy to setup project. Aside from Netlify there are also other build and hosting platforms, such as Vercel.
 
@@ -75,7 +75,7 @@ From this research I came to the conclusion that there are a couple of main thin
 
 So as you might think, my quest to find the right tools started. I came accross a website that lists all the [static site generators](https://www.staticgen.com) based on popularity.
 
-![image](https://raw.githubusercontent.com/mwdossantos/miles/master/docs/images/nextjs-markdown.png)
+![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/nextjs-markdown.png)
 
 When looking at that website it became clear to me that there was a lot of choice. That's why I consulted Tim and asked for help. He pointed me in the right direction and for the static site generator I am going to try out [Next.js](https://nextjs.org/). It's a framework based on React (which I already have some experience with) and has a lot of cool stuff built in such as SEO tools. For the data I am going to keep it simple, and will use `.md` (markdown) files to supply the website with content.
 
@@ -89,11 +89,11 @@ As always, I am going to think out the next few weeks, a planning. You can find 
 
 |When|What|Finalized|
 |:---|:---|:---:|
-|Week 11|[Research & Planning](https://github.com/mwdossantos/miles/blob/master/docs/week-11.md)|
-|Week 12|[Next.js](https://github.com/mwdossantos/miles/blob/master/docs/week-12.md)|
-|Week 13|[Markdown data](https://github.com/mwdossantos/miles/blob/master/docs/week-13.md)|
-|Week 14|[Refactoring](https://github.com/mwdossantos/miles/blob/master/docs/week-14.md)|
-|Week 15|[Time for deployment with Vercel](https://github.com/mwdossantos/miles/blob/master/docs/week-15.md)|
+|Week 11|[Research & Planning](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-11.md)|
+|Week 12|[Next.js](https://github.com/mwdossantos/Meet-Miles/astroplant/docs/week-12.md)|
+|Week 13|[Markdown data](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md)|
+|Week 14|[Refactoring](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-14.md)|
+|Week 15|[Time for deployment with Vercel](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-15.md)|
 
 ---
 > end here...
