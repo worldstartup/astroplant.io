@@ -2,11 +2,11 @@
 
 Thank you for taking the time to read this week's update. As you can see in the following table, I have a couple of activities planned that I will do in order to get my desired result: Research & Planning.
 
-|Activities|Finalized|
-|:---|:---:|
-|Setting up|✅|
-|Research the JAMstack|✅|
-|Planning for the upcoming weeks|✅|
+| Activities                      | Finalized |
+| :------------------------------ | :-------: |
+| Setting up                      |     ✅     |
+| Research the JAMstack           |     ✅     |
+| Planning for the upcoming weeks |     ✅     |
 
 # Setting up
 
@@ -91,13 +91,13 @@ Now that I have an idea of the tools I am going to use it's time to plan out the
 
 As always, I am going to think out the next few weeks, a planning. You can find this planning on the [README.md](https://github.com/Meet-Miles/astroplant) page as well for the overall project.
 
-|When|What|Finalized|
-|:---|:---|:---:|
-|Week 11|[Research & Planning](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-11.md)|✅|
-|Week 12|[Next.js](https://github.com/mwdossantos/Meet-Miles/astroplant/docs/week-12.md)|✅|
-|Week 13|[Markdown data](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md)||
-|Week 14|[Refactoring](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-14.md)||
-|Week 15|[Time for deployment with Vercel](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-15.md)||
+| When    | What                                                                                                    | Finalized |
+| :------ | :------------------------------------------------------------------------------------------------------ | :-------: |
+| Week 11 | [Research & Planning](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-11.md)             |     ✅     |
+| Week 12 | [Next.js](https://github.com/mwdossantos/Meet-Miles/astroplant/docs/week-12.md)                         |     ✅     |
+| Week 13 | [Markdown data](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md)                   |           |
+| Week 14 | [Refactoring](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-14.md)                     |           |
+| Week 15 | [Time for deployment with Vercel](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-15.md) |           |
 
 ---
 
@@ -105,15 +105,15 @@ This week has been a very informative and exciting week. I really do think JAMst
 
 # Resources
 
-|Resource|Note|
-|:---|:---|
-|[What the f* is JAMstack?](https://jamstack.wtf/)|A cool website that gave me layman information|
-|[Next.js](https://nextjs.org/)|The react framework I will be using to build the website|
-|[`.md` data in Next.js](https://nextjs.org/learn/basics/data-fetching/blog-data)|Very handy way of loading in the Markdown data|
-|[Netlify explanation](https://www.netlify.com/jamstack/)|To learn more about the way Netlify handles the JAMstack|
-|[Static site generators](https://www.staticgen.com)|A collection of all static site generators. Quite overwhelming|
-|[Headless CMS'es](https://headlesscms.org)|A collection of open source and closed source headless CMS'es|
-|[JAMstack conference](https://jamstackconf.com/)|I will attend this virtual conference and dive even deeper into the topic|
-|[Medium article](https://medium.com/kongsberg-digital/jamstack-in-action-e9e13cd5a27)|A medium article I found about an example project built with the JAMstack|
-|[O'Reilly - Modern Development on the JAMstack](https://github.com/mwdossantos/miles/blob/master/docs/oreilly-modern-web-development-on-the-jamstack.pdf)|I read this book to learn more about the JAMstack|
+| Resource                                                                                                                                                  | Note                                                                      |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |
+| [What the f* is JAMstack?](https://jamstack.wtf/)                                                                                                         | A cool website that gave me layman information                            |
+| [Next.js](https://nextjs.org/)                                                                                                                            | The react framework I will be using to build the website                  |
+| [`.md` data in Next.js](https://nextjs.org/learn/basics/data-fetching/blog-data)                                                                          | Very handy way of loading in the Markdown data                            |
+| [Netlify explanation](https://www.netlify.com/jamstack/)                                                                                                  | To learn more about the way Netlify handles the JAMstack                  |
+| [Static site generators](https://www.staticgen.com)                                                                                                       | A collection of all static site generators. Quite overwhelming            |
+| [Headless CMS'es](https://headlesscms.org)                                                                                                                | A collection of open source and closed source headless CMS'es             |
+| [JAMstack conference](https://jamstackconf.com/)                                                                                                          | I will attend this virtual conference and dive even deeper into the topic |
+| [Medium article](https://medium.com/kongsberg-digital/jamstack-in-action-e9e13cd5a27)                                                                     | A medium article I found about an example project built with the JAMstack |
+| [O'Reilly - Modern Development on the JAMstack](https://github.com/mwdossantos/miles/blob/master/docs/oreilly-modern-web-development-on-the-jamstack.pdf) | I read this book to learn more about the JAMstack                         |
 
