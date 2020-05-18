@@ -96,25 +96,25 @@ As always, I am going to think out the next few weeks, a planning. You can find 
 | When    | What                                                                                                    | Finalized |
 | :------ | :------------------------------------------------------------------------------------------------------ | :-------: |
 | Week 11 | [Research & Planning](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-11.md)             |     ✅     |
-| Week 12 | [Next.js](https://github.com/Meet-Miles/astroplant/docs/week-12.md)                                     |     ✅     |
+| Week 12 | [Next.js](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-12.md)                         |     ✅     |
 | Week 13 | [Markdown data](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md)                   |     ✅     |
 | Week 14 | [Refactoring](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-14.md)                     |     ✅     |
 | Week 15 | [Time for deployment with Vercel](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-15.md) |     ✅     |
 
 ---
 
-This week has been a very informative and exciting week. I really do think JAMstack is in some way the future of web development, and I'm already seeing it's changing my thinking about web development as a whole. I can't wait to jump into next [week](https://github.com/Meet-Miles/astroplant/docs/week-12.md) and start building the website using Next.js. It's going to be exciting!
+This week has been a very informative and exciting week. I really do think JAMstack is in some way the future of web development, and I'm already seeing it's changing my thinking about web development as a whole. I can't wait to jump into next [week](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-12.md) and start building the website using Next.js. It's going to be exciting!
 
 # Resources
 
-| Resource                                                                                                                                                  | Note                                                                      |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |
-| [What the f\* is JAMstack?](https://jamstack.wtf/)                                                                                                        | A cool website that gave me layman information                            |
-| [Next.js](https://nextjs.org/)                                                                                                                            | The react framework I will be using to build the website                  |
-| [`.md` data in Next.js](https://nextjs.org/learn/basics/data-fetching/blog-data)                                                                          | Very handy way of loading in the Markdown data                            |
-| [Netlify explanation](https://www.netlify.com/jamstack/)                                                                                                  | To learn more about the way Netlify handles the JAMstack                  |
-| [Static site generators](https://www.staticgen.com)                                                                                                       | A collection of all static site generators. Quite overwhelming            |
-| [Headless CMS'es](https://headlesscms.org)                                                                                                                | A collection of open source and closed source headless CMS'es             |
-| [JAMstack conference](https://jamstackconf.com/)                                                                                                          | I will attend this virtual conference and dive even deeper into the topic |
-| [Medium article](https://medium.com/kongsberg-digital/jamstack-in-action-e9e13cd5a27)                                                                     | A medium article I found about an example project built with the JAMstack |
-| [O'Reilly - Modern Development on the JAMstack](https://github.com/mwdossantos/miles/blob/master/docs/oreilly-modern-web-development-on-the-jamstack.pdf) | I read this book to learn more about the JAMstack                         |
+| Resource                                                                                                                                                      | Note                                                                      |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------ |
+| [What the f\* is JAMstack?](https://jamstack.wtf/)                                                                                                            | A cool website that gave me layman information                            |
+| [Next.js](https://nextjs.org/)                                                                                                                                | The react framework I will be using to build the website                  |
+| [`.md` data in Next.js](https://nextjs.org/learn/basics/data-fetching/blog-data)                                                                              | Very handy way of loading in the Markdown data                            |
+| [Netlify explanation](https://www.netlify.com/jamstack/)                                                                                                      | To learn more about the way Netlify handles the JAMstack                  |
+| [Static site generators](https://www.staticgen.com)                                                                                                           | A collection of all static site generators. Quite overwhelming            |
+| [Headless CMS'es](https://headlesscms.org)                                                                                                                    | A collection of open source and closed source headless CMS'es             |
+| [JAMstack conference](https://jamstackconf.com/)                                                                                                              | I will attend this virtual conference and dive even deeper into the topic |
+| [Medium article](https://medium.com/kongsberg-digital/jamstack-in-action-e9e13cd5a27)                                                                         | A medium article I found about an example project built with the JAMstack |
+| [O'Reilly - Modern Development on the JAMstack](https://github.com/Meet-Miles/astroplant/blob/master/docs/oreilly-modern-web-development-on-the-jamstack.pdf) | I read this book to learn more about the JAMstack                         |
