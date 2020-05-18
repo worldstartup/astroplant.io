@@ -96,14 +96,14 @@ As always, I am going to think out the next few weeks, a planning. You can find 
 | When    | What                                                                                                    | Finalized |
 | :------ | :------------------------------------------------------------------------------------------------------ | :-------: |
 | Week 11 | [Research & Planning](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-11.md)             |     ✅     |
-| Week 12 | [Next.js](https://github.com/mwdossantos/Meet-Miles/astroplant/docs/week-12.md)                         |     ✅     |
+| Week 12 | [Next.js](https://github.com/Meet-Miles/astroplant/docs/week-12.md)                                     |     ✅     |
 | Week 13 | [Markdown data](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md)                   |     ✅     |
 | Week 14 | [Refactoring](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-14.md)                     |     ✅     |
 | Week 15 | [Time for deployment with Vercel](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-15.md) |     ✅     |
 
 ---
 
-This week has been a very informative and exciting week. I really do think JAMstack is in some way the future of web development, and I'm already seeing it's changing my thinking about web development as a whole. I can't wait to jump into next [week](https://github.com/mwdossantos/Meet-Miles/astroplant/docs/week-12.md) and start building the website using Next.js. It's going to be exciting!
+This week has been a very informative and exciting week. I really do think JAMstack is in some way the future of web development, and I'm already seeing it's changing my thinking about web development as a whole. I can't wait to jump into next [week](https://github.com/Meet-Miles/astroplant/docs/week-12.md) and start building the website using Next.js. It's going to be exciting!
 
 # Resources
 
