@@ -36,16 +36,13 @@ My theme will revolve around the AstroPlant Kit, that is in need of a new landin
 
 AstroPlant is a kit that people can purchase and use to grow plants and food. The startup is quite small and has sold a couple dozen of kits. However, now that [ESA](https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/AstroPlant_citizen_science_for_growing_plants_in_space) is showing interest, it is becoming clear that the current website is in need of a replacement. Miles, my company, has done the rebranding of Astroplant and came up with a design for the landingpage.
 
-![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/rebrand.png)
-![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/landingpage-mockup.png)
-
 And thus, from this situation arises the following problem: the current website doesn't tell the story of AstroPlant and customers often don't go through with the order. With the new design for the website that Miles made both points have been touched upon. Given this part of the minor is focused on front-end development, I will be building the website, for both this minor as well as Miles. Two birds with one stone, you may say.
 
 In short, to solve this problem, I will plan activities (which you can see further on in this week's documentation) to do for the upcoming weeks that will help me code and evaluate the website with my team members at Miles that work on Astroplant. To facilitate this, I will be having a weekly check-in with the members of my team to see if everything aligns and work on any feedback that's provided. I will do my best to record these meetings where possible.
 
 ### The design I will be working with
 
-You saw it earlier in this week's documentation, but the design I will be working with has been made by Miles. You can view the design again, here:
+Earlier I mentioned that Miles did the redesign of the AstroPlant website. I will now present you with the design I will be working with:
 
 ![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/landingpage-mockup.png)
 
@@ -56,7 +53,7 @@ Based on this design I had a co-creation session with Daniel, Ezra and Romain my
 -   Ability to easily change the textual content on the website
 -   Ability to add more partner logo's
 -   Ability to change images of the community
--   Edit the card information
+-   Edit the bottom card information
 
 ### The goal for the website
 
@@ -100,9 +97,9 @@ As always, I am going to think out the next few weeks, a planning. You can find 
 | :------ | :------------------------------------------------------------------------------------------------------ | :-------: |
 | Week 11 | [Research & Planning](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-11.md)             |     ✅     |
 | Week 12 | [Next.js](https://github.com/mwdossantos/Meet-Miles/astroplant/docs/week-12.md)                         |     ✅     |
-| Week 13 | [Markdown data](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md)                   |           |
-| Week 14 | [Refactoring](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-14.md)                     |           |
-| Week 15 | [Time for deployment with Vercel](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-15.md) |           |
+| Week 13 | [Markdown data](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md)                   |     ✅     |
+| Week 14 | [Refactoring](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-14.md)                     |     ✅     |
+| Week 15 | [Time for deployment with Vercel](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-15.md) |     ✅     |
 
 ---
 
