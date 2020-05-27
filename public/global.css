@@ -13,6 +13,8 @@
     --medium: 500;
     --bold: 700;
     --default-2s: all .2s ease;
+    --title: 60px;
+    --subTitle: 24px;
 }
 
 body {

@@ -85,7 +85,7 @@ So as you might think, my quest to find the right tools started. I came accross 
 
 When looking at that website it became clear to me that there was a lot of choice. That's why I consulted Tim and asked for help. He pointed me in the right direction and for the static site generator I am going to try out [Next.js](https://nextjs.org/). It's a framework based on React (which I already have some experience with) and has a lot of cool stuff built in such as SEO tools. For the data I am going to keep it simple, and will use `.md` (markdown) files to supply the website with content.
 
-Lastly, in order to build the website and deploy it somewhere I am going to go with [Vercel](https://vercel.com/). Reason being is that it is free and is made by the developers that are behind Next.js. It also has a GitHub integration that will work very well with my project and is free to use, even with a SSL certificate for the custom domain name.
+Lastly, in order to build the website and deploy it somewhere I am going to go with [Netlify](https://netlify.com/). Reason being is that it is free and is made by the developers that are behind the whole idea of the JAMstack. It also has a GitHub integration for organizations that will work very well with my project and is free to use, even with a SSL certificate for the custom domain name.
 
 Now that I have an idea of the tools I am going to use it's time to plan out the upcoming weeks.
 
@@ -93,13 +93,13 @@ Now that I have an idea of the tools I am going to use it's time to plan out the
 
 As always, I am going to think out the next few weeks, a planning. You can find this planning on the [README.md](https://github.com/Meet-Miles/astroplant) page as well for the overall project.
 
-| When    | What                                                                                                    | Finalized |
-| :------ | :------------------------------------------------------------------------------------------------------ | :-------: |
-| Week 11 | [Research & Planning](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-11.md)             |     ✅     |
-| Week 12 | [Next.js](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-12.md)                         |     ✅     |
-| Week 13 | [Markdown data](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md)                   |     ✅     |
-| Week 14 | [Refactoring](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-14.md)                     |     ✅     |
-| Week 15 | [Time for deployment with Vercel](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-15.md) |     ✅     |
+| When    | What                                                                                                     | Finalized |
+| :------ | :------------------------------------------------------------------------------------------------------- | :-------: |
+| Week 11 | [Research & Planning](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-11.md)              |     ✅     |
+| Week 12 | [Next.js](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-12.md)                          |     ✅     |
+| Week 13 | [Markdown data](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md)                    |     ✅     |
+| Week 14 | [Refactoring](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-14.md)                      |     ✅     |
+| Week 15 | [Time for deployment with Netlify](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-15.md) |     ✅     |
 
 ---
 
