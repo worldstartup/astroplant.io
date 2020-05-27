@@ -85,7 +85,7 @@ So as you might think, my quest to find the right tools started. I came accross 
 
 When looking at that website it became clear to me that there was a lot of choice. That's why I consulted Tim and asked for help. He pointed me in the right direction and for the static site generator I am going to try out [Next.js](https://nextjs.org/). It's a framework based on React (which I already have some experience with) and has a lot of cool stuff built in such as SEO tools. For the data I am going to keep it simple, and will use `.md` (markdown) files to supply the website with content.
 
-Lastly, in order to build the website and deploy it somewhere I am going to go with [Netlify](https://netlify.com/). Reason being is that it is free and is made by the developers that are behind the whole idea of the JAMstack. It also has a GitHub integration for organizations that will work very well with my project and is free to use, even with a SSL certificate for the custom domain name.
+Lastly, in order to build the website and deploy it somewhere I am going to go with [Vercel](https://netlify.com/). Reason being is that it is free and is made by the developers that are behind the whole idea of the JAMstack. It also has a GitHub integration for organizations that will work very well with my project and is free to use, even with a SSL certificate for the custom domain name. 
 
 Now that I have an idea of the tools I am going to use it's time to plan out the upcoming weeks.
 
