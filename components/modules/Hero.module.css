@@ -1,7 +1,25 @@
 .heroSection {
-    font-size: 48px;
     color: white;
     text-align: center;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 20px auto;
+}
+
+.planetHolder {
+    position: relative;
+}
+
+.mars {
+    width: 100%;
+}
+
+.title {
+    position: absolute;
+    bottom: 4rem;
+    font-size: var(--title);
+}
+
+.subTitle {
+    font-size: var(--subTitle);
+    font-weight: var(--medium);
 }

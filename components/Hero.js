@@ -1,5 +1,7 @@
 import s from "./modules/Hero.module.css";
 
+import { Video } from "./Video";
+
 export function Hero() {
     React.useEffect(() => {
         // define and assign a function to the hero top margin
@@ -16,7 +18,14 @@ export function Hero() {
 
     return (
         <section id='hero' className={s.heroSection}>
-            <h1>Grow Plants in Space</h1>
+            <div className={s.planetHolder}>
+                <img src='/images/mars.png' className={s.mars} />
+                <h1 className={s.title}>Grow Plants in Space</h1>
+            </div>
+            <div>
+                <h3 className={s.subTitle}>Time to start your journey.</h3>
+                <Video></Video>
+            </div>
         </section>
     );
 }
