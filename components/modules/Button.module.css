@@ -3,8 +3,8 @@
     border-radius: .25rem;
     background-color: var(--main-color);
     font-size: 16px;
-    font-weight: var(--medium);
-    color: white;
+    font-weight: var(--bold);
+    color: rgb(240, 244, 255);
     border: none;
     outline: none;
     cursor: pointer;
