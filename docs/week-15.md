@@ -4,7 +4,7 @@ Thank you for taking the time to read this week's update. As you can see in the 
 
 | Activities        | Finalized |
 | :---------------- | :-------: |
-| Vercel deployment |     ✅     |
+| Vercel deployment |    ✅     |
 
 # The deployment process
 
@@ -20,7 +20,7 @@ I can even see the build logs for each push!
 
 ![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/vercelbuild.jpg)
 
-To finish off this week I invite you to take a look at the finalized website. Created with Next.js, deployed with Vercel :)
+To finish off this week I invite you to take a look at the [finalized website](https://astroplant.now.sh/). Created with Next.js, deployed with Vercel :)
 
 ---
 
