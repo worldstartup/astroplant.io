@@ -15,6 +15,9 @@
     justify-content: space-between;
     align-items: flex-start;
 }
+.logo {
+    width: 250px;
+}
 
 .nav {
     display: flex;
@@ -26,7 +29,8 @@
     margin: 0.5rem 0;
 }
 
-.socials {}
+.socials {
+}
 
 .icon {
     margin-right: 0.5rem;
