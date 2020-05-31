@@ -1,12 +1,11 @@
-![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/week-12.png)
+![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/week-13.png)
 
 Thank you for taking the time to read this week's update. As you can see in the following table, I have a couple of activities planned that I will do in order to get my desired result: Research & Planning.
 
-| Activities               | Finalized |
-| :----------------------- | :-------: |
-| Getting started          |     ✅     |
-| Initialising the project |     ✅     |
-| Building the website     |     ✅     |
+| Activities     | Finalized |
+| :------------- | :-------: |
+| Implementing   |     ✅     |
+| The `.md` file |     ✅     |
 
 # Getting started
 
@@ -458,7 +457,9 @@ Now that we have arrived at the bottom of the page I have created the Footer. No
 ---
 
 This week has been a very informative and exciting week.  I can't wait to jump into next [week](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md) and start filling up the website with some markdown data that other users could enter. It's going to be exciting!
+## Extras
 
+such as preloader, anims, optimization mobile
 # Resources
 
 | Resource                                                                                                                                     | Note                                               |

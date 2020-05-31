@@ -5,19 +5,19 @@ import { TintedText } from "./TintedText";
 
 export function Hero() {
     React.useEffect(() => {
-        // define and assign a function to the hero top margin
-        const setHeroMargin = () => {
+        // define and assign a function to the hero top padding
+        const setHeroPadding = () => {
             // get the height of the header
             const headerHeight = document.querySelector("#header").clientHeight;
 
-            // find the hero section DOM element and set its margin top to the height of the header
+            // find the hero section DOM element and set its padding top to the height of the header
             document.querySelector("#hero").style.paddingTop = `${headerHeight}px`;
 
             // equal padding to the bottom
             document.querySelector("#hero").style.paddingBottom = `${headerHeight}px`;
         };
 
-        setHeroMargin();
+        setHeroPadding();
     });
 
     return (

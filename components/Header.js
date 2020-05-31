@@ -4,8 +4,6 @@ import { Button } from "./Button";
 import Link from "next/link";
 
 export function Header() {
-    // similiar to componentDidMount, but for functional components, and triggers after rendering. We can only reference the DOM once this hook is triggered
-
     return (
         <header className={s.header} id='header'>
             <div className={s.container}>
