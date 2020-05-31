@@ -6,6 +6,11 @@ import { Community } from "../components/Community";
 import { Supporters } from "../components/Supporters";
 import { Earthlings } from "../components/Earthlings";
 import { Footer } from "../components/Footer";
+import dynamic from "next/dynamic";
+
+const Loader = dynamic(() => import("react-preloaders").then((loaders) => loaders.Planets), {
+    ssr: false,
+});
 
 export default function Home() {
     return (
@@ -14,6 +19,7 @@ export default function Home() {
                 <title>Astroplant</title>
                 <link rel='icon' href='/favicon.ico' />
             </Head>
+            <Loader />
             <Header></Header>
             <Hero></Hero>
             <Spacer height={"var(--spacer-height)"}></Spacer>
