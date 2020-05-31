@@ -8,7 +8,7 @@ export function Footer() {
         <footer className={s.footer}>
             <div className={s.container}>
                 <div className={s.left}>
-                    <img alt='Astroplant logo' className={s.logo} src='/images/logo.svg' />
+                    <img alt='Astroplant logo' className={s.logo} src='/images/logo.png' />
                     <div className={s.nav}>
                         <Link href='/'>
                             <a>Home</a>

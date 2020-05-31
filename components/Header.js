@@ -10,7 +10,7 @@ export function Header() {
         <header className={s.header} id='header'>
             <div className={s.container}>
                 <Link href='/'>
-                    <img src='/images/logo.svg' className={s.logo} />
+                    <img src='/images/logo.png' className={s.logo} />
                 </Link>
 
                 <div className={s.nav}>
