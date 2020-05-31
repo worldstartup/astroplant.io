@@ -9,12 +9,13 @@
     outline: none;
     cursor: pointer;
     transition: var(--default-2s);
+    width: 100%;
 }
 
 .button:hover {
-    background-color: var(--main-color-darker);
+    filter: brightness(0.8);
 }
 
 .button:active {
-    background-color: var(--main-color-darkest);
+    filter: brightness(0.6);
 }

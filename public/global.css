@@ -5,16 +5,6 @@
     font-family: 'Inter var';
 }
 
-/* -------------------------------------------------------
-Variable font.
-Usage:
-
-  html { font-family: 'Inter', sans-serif; }
-  @supports (font-variation-settings: normal) {
-    html { font-family: 'Inter var', sans-serif; }
-  }
-*/
-
 @font-face {
     font-family: 'Inter var';
     font-weight: 100 900;
@@ -28,6 +18,7 @@ Usage:
     --main-color: #839CDB;
     --main-color-darker: #6F85BD;
     --main-color-darkest: #6073A4;
+    --green: #8BFFAC;
     --bg-gradient: linear-gradient(180deg, #000000 0%, #110823 26.04%, #152A53 49.48%, #052113 89.06%, #000000 100%);
     --medium: 500;
     --bold: 700;
@@ -35,7 +26,23 @@ Usage:
     --default-2s: all .2s ease;
     --title: 60px;
     --subTitle: 24px;
+    --footnote: 18px;
     --tinted-text: 0.75;
+    --border-radius: 10px;
+    --spacer-height: 22rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    :root {
+        --spacer-height: 6rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --title: 36px;
+        --subTitle: 18px;
+    }
 }
 
 body {
@@ -55,18 +62,4 @@ a {
 
 a:hover {
     opacity: 1;
-}
-
-.title {
-    bottom: 4rem;
-    font-size: var(--title);
-    font-weight: var(--bold);
-    text-align: center;
-}
-
-.subTitle {
-    margin-top: 2rem;
-    font-size: var(--subTitle);
-    font-weight: var(--medium);
-    text-align: center;
 }

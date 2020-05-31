@@ -1,0 +1,20 @@
+.intro {
+    margin: 0px auto;
+    max-width: 600px;
+}
+
+.title {
+    color: white;
+    bottom: 4rem;
+    font-size: var(--title);
+    font-weight: var(--bold);
+    text-align: center;
+}
+
+.subTitle {
+    color: white;
+    margin-top: 2rem;
+    font-size: var(--subTitle);
+    font-weight: var(--medium);
+    text-align: center;
+}

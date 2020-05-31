@@ -28,7 +28,7 @@ export function Hero() {
                 <h1 className={s.heroTitle}>Grow Plants in Space</h1>
             </div>
             <div className={s.videoHolder}>
-                <h3 className='subTitle'>Time to start your journey.</h3>
+                <h3 className={s.subTitle}>Time to start your journey.</h3>
                 <Video source='/astro-intro.mp4'></Video>
             </div>
             <TintedText

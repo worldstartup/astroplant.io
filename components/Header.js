@@ -17,16 +17,7 @@ export function Header() {
                     <Link href='/'>
                         <a>Home</a>
                     </Link>
-                    <Link href='#'>
-                        <a>Community</a>
-                    </Link>
-                    <Link href='#'>
-                        <a>The Kit</a>
-                    </Link>
-                    <Link href='#'>
-                        <a>Developers</a>
-                    </Link>
-                    <Button label='Join the Community'></Button>
+                    <Button href='earthlings' label='Join the Community'></Button>
                 </div>
             </div>
         </header>
