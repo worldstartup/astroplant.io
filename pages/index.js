@@ -8,7 +8,7 @@ import { Earthlings } from "../components/Earthlings";
 import { Footer } from "../components/Footer";
 import dynamic from "next/dynamic";
 
-const Loader = dynamic(() => import("react-preloaders").then((loaders) => loaders.Planets), {
+const Loader = dynamic(() => import("react-preloaders").then((loaders) => loaders.Cube), {
     ssr: false,
 });
 
@@ -19,7 +19,12 @@ export default function Home() {
                 <title>Astroplant</title>
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <Loader />
+            <Loader
+                color={"var(--main-color)"}
+                time={1000}
+                animation='slide'
+                background='linear-gradient(321deg, rgba(28,19,31,1) 0%, rgba(20,15,43,1) 100%)'
+            />
             <Header></Header>
             <Hero></Hero>
             <Spacer height={"var(--spacer-height)"}></Spacer>
