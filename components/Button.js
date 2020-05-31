@@ -4,7 +4,6 @@ import Link from "next/link";
 export function Button(
     props = {
         label,
-        className,
         bgColor,
         color,
         href,

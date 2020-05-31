@@ -1,16 +1,16 @@
 ![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/week-12.png)
 
-Thank you for taking the time to read this week's update. As you can see in the following table, I have a couple of activities planned that I will do in order to get my desired result: Research & Planning.
+Thank you for taking the time to read this week's update. As you can see in the following table, I have a couple of activities planned that I will do in order to get my desired result: Next.js.
 
 | Activities               | Finalized |
 | :----------------------- | :-------: |
-| Getting started          |     ✅     |
-| Initialising the project |     ✅     |
-| Building the website     |     ✅     |
+| Getting started          |    ✅     |
+| Initialising the project |    ✅     |
+| Building the website     |    ✅     |
 
 # Getting started
 
-in order for me to get started and learn all about Next.js, the lightweight production ready React framework, I followed their tutorial on their [website](https://nextjs.org/learn/basics/create-nextjs-app). During this tutorial I learnt a lot about what a Next.js app is, how the navigation works, how to fetch data and do routing. Eventually it showed me how to deploy on Vercel!
+In order for me to get started and learn all about Next.js, the lightweight production ready React framework, I followed their tutorial on their [website](https://nextjs.org/learn/basics/create-nextjs-app). During this tutorial I learnt a lot about what a Next.js app is, how the navigation works, how to fetch data and do routing. Eventually it showed me how to deploy on Vercel!
 
 # Initialising the project
 
@@ -32,15 +32,15 @@ When I first started this project I found out that the folder structure was stil
 
 The `Pages` folder holds all of the pages for the website. Each page is also a route. This means that each page is a place you can go in the addressbar of the browser. In my case, it holds a couple of files:
 
-**_app.js** - This is my custom version of the application file. The reason I declared it is because I wanted to have global styling in my application. I'll dive deeper into the styling setup later on.
+**\_app.js** - This is my custom version of the application file. The reason I declared it is because I wanted to have global styling in my application. I'll dive deeper into the styling setup later on.
 
-**_document.js** - This page is especially handy becomes it allows me to alter the default state of the HTML `lang` attribute and other `<meta>` tags I want, for every page.
+**\_document.js** - This page is especially handy becomes it allows me to alter the default state of the HTML `lang` attribute and other `<meta>` tags I want, for every page.
 
 **index.js** - As you may have guessed already, this is the default page. It's my home page and will house all of the sections. I will go deeper into the sections later on.
 
 ### Components
 
-What is the components folder? Normally, within React, I create *reusable* components. This comes in handy when I create elements such as a header, footer or buttons. I can reuse them and make them dynamically callable. This means they can have their own instance.
+What is the components folder? Normally, within React, I create _reusable_ components. This comes in handy when I create elements such as a header, footer or buttons. I can reuse them and make them dynamically callable. This means they can have their own instance.
 
 ### Styling
 
@@ -53,28 +53,35 @@ Next to that I have a `global.css` file that is housed in the `public` folder of
     user-select: none;
     margin: 0;
     padding: 0;
-    font-family: 'Inter var';
+    font-family: "Inter var";
 }
 
 @font-face {
-    font-family: 'Inter var';
+    font-family: "Inter var";
     font-weight: 100 900;
     font-display: swap;
     font-style: normal;
-    font-named-instance: 'Regular';
+    font-named-instance: "Regular";
     src: url("Inter.var.woff2?v=3.13") format("woff2");
 }
 
 :root {
-    --main-color: #839CDB;
-    --main-color-darker: #6F85BD;
-    --main-color-darkest: #6073A4;
-    --green: #8BFFAC;
-    --bg-gradient: linear-gradient(180deg, #000000 0%, #110823 26.04%, #152A53 49.48%, #052113 89.06%, #000000 100%);
+    --main-color: #839cdb;
+    --main-color-darker: #6f85bd;
+    --main-color-darkest: #6073a4;
+    --green: #8bffac;
+    --bg-gradient: linear-gradient(
+        180deg,
+        #000000 0%,
+        #110823 26.04%,
+        #152a53 49.48%,
+        #052113 89.06%,
+        #000000 100%
+    );
     --medium: 500;
     --bold: 700;
     --extra-bold: 900;
-    --default-2s: all .2s ease;
+    --default-2s: all 0.2s ease;
     --title: 60px;
     --subTitle: 24px;
     --footnote: 18px;
@@ -132,7 +139,7 @@ Based on the image in the previous part of this week's documentation you can see
 
 Let's start with the header!
 
-As a heads up: each component description here will have my code shown first, and then an explanation. I won't paste the subcomponents as well, as it's better to take a look at the components folder itself [here](https://github.com/Meet-Miles/astroplant/tree/master/components) where you will have a clickthrough ability provided by GitHub. 
+As a heads up: each component description here will have my code shown first, and then an explanation. I won't paste the subcomponents as well, as it's better to take a look at the components folder itself [here](https://github.com/Meet-Miles/astroplant/tree/master/components) where you will have a clickthrough ability provided by GitHub.
 
 ### Header
 
@@ -163,7 +170,8 @@ export function Header() {
     );
 }
 ```
-As you can see I went about the normal way of creating a component in Next.js by exporting it as a function. I am also importing the `<Button />` component within `Header.js`. `Button.js` looks like this: 
+
+As you can see I went about the normal way of creating a component in Next.js by exporting it as a function. I am also importing the `<Button />` component within `Header.js`. `Button.js` looks like this:
 
 ```javascript
 import s from "./modules/Button.module.css";
@@ -189,7 +197,6 @@ export function Button(
         </Link>
     );
 }
-
 ```
 
 An important difference you can see here is that I am using `props` within the [`<Button />`](https://github.com/Meet-Miles/astroplant/blob/master/components/Button.js) component so that I can alter things when calling it such as the textual value, the href attribute, the background color and color of the text. By default the button is purple and has white text.
@@ -244,7 +251,7 @@ export function Hero() {
 }
 ```
 
-Within the Hero section you can see two main important things. Firstly, the padding of the hero section is based on the height of the header. In order to achieve this I needed to use `React.useEffect` to see when the DOM has loaded and then extract those values and set them accordingly.  
+Within the Hero section you can see two main important things. Firstly, the padding of the hero section is based on the height of the header. In order to achieve this I needed to use `React.useEffect` to see when the DOM has loaded and then extract those values and set them accordingly.
 
 The [`<Video />`](https://github.com/Meet-Miles/astroplant/blob/master/components/Video.js) component is also easy to use, which I created.
 
@@ -299,7 +306,7 @@ export function Community() {
 
 Here you can see the Community section component. It also has the [`<IntroText />`](https://github.com/Meet-Miles/astroplant/blob/master/components/Footnote.js) component that holds a tilte and subtitle for easy access. For the images I created the [`<ImageGrid />`](https://github.com/Meet-Miles/astroplant/blob/master/components/Footnote.js) component.
 
-From now on you get the idea of the subcomponents, so I will advise you to go to the [components folder](https://github.com/Meet-Miles/astroplant/tree/master/components) for an overview of all. 
+From now on you get the idea of the subcomponents, so I will advise you to go to the [components folder](https://github.com/Meet-Miles/astroplant/tree/master/components) for an overview of all.
 
 ### Supporters section
 
@@ -389,6 +396,7 @@ export function Earthlings() {
     );
 }
 ```
+
 > please note, I named the component "Earthlings"
 
 This is by far the largest component I have built for the project, especially as it's importing the [`<Card />`](https://github.com/Meet-Miles/astroplant/blob/master/components/Card.js) and [`<KitCard />`](https://github.com/Meet-Miles/astroplant/blob/master/components/KitCard.js) components. It also has a [`<Footnote />`](https://github.com/Meet-Miles/astroplant/blob/master/components/Footnote.js) component that I use for the text on the bottom.
@@ -457,7 +465,7 @@ Now that we have arrived at the bottom of the page I have created the Footer. No
 
 ---
 
-This week has been a very informative and exciting week.  I can't wait to jump into next [week](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md) and start filling up the website with some markdown data that other users could enter. It's going to be exciting!
+This week has been a very informative and exciting week. I can't wait to jump into next [week](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md) and start filling up the website with some markdown data that other users could enter. It's going to be exciting!
 
 # Resources
 
@@ -465,5 +473,3 @@ This week has been a very informative and exciting week.  I can't wait to jump i
 | :------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------- |
 | [Next.js tutorial](https://nextjs.org/learn/basics/create-nextjs-app?utm_source=next-site&utm_medium=homepage-cta&utm_campaign=next-website) | Used to learn about the Next.js framework          |
 | [Next.js docs](https://nextjs.org/docs/getting-started)                                                                                      | Used for whenever I needed help with the framework |
-
-
