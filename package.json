@@ -10,7 +10,11 @@
     },
     "dependencies": {
         "@sanity/block-content-to-react": "^2.0.7",
+        "hls.js": "^0.11.0",
+        "lodash": "^4.17.11",
+        "mux-embed": "^3.2.0",
         "next": "9.4.2",
+        "prop-types": "^15.6.0",
         "react": "16.13.1",
         "react-dom": "16.13.1",
         "react-loading-skeleton": "^2.0.1",

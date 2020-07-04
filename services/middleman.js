@@ -50,6 +50,7 @@ export async function getHome() {
             planetImage,
             heroTitle,
             heroSubTitle,
+            "video": video.asset->url,
             heroDescription,
             
             // community section

@@ -37,7 +37,8 @@ export function Hero(props = { data }) {
             <div className={s.videoHolder}>
                 {/* get the heroSubTitle */}
                 <h3 className={s.subTitle}>{props.data.heroSubTitle}</h3>
-                <Video source='/astro-intro.mp4'></Video>
+                {/* get the video URL */}
+                <Video source={props.data.video}></Video>
             </div>
             {/* get heroDescription and use the helper function to transform it */}
             <TintedText

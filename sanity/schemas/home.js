@@ -30,6 +30,12 @@ export default {
             fieldset: "hero",
         },
         {
+            title: "Video file",
+            name: "video",
+            type: "file",
+            fieldset: "hero",
+        },
+        {
             name: "heroDescription",
             title: "Description",
             type: "array",
