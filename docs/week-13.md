@@ -15,7 +15,7 @@ As you saw last week I finished the front end of the website. Made purely in Nex
 
 What Sanity does, is give you a customizable front end _studio_, that can be used by anybody with an account. Using this studio they can edit information on the website. The data itself is hosted on Sanity's end. Then using their API, I can load in the data in the Next.js front end next week.
 
-// image of this structure
+![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/sanity-next-structure.png)
 
 To get started, I opened up my project and ran `sanity init`. This created a folder inside of my repository, called "Sanity". Everything related to the Sanity studio lives there. Here's a look of the folder structure:
 
