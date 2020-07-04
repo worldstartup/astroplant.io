@@ -1,14 +1,16 @@
 ![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/week-14.png)
 
-Thank you for taking the time to read this week's update. As you can see in the following table, I have a couple of activities planned that I will do in order to get my desired result: Refactoring.
+Thank you for taking the time to read this week's update. As you can see in the following table, I have a couple of activities planned that I will do in order to get my desired result: Loading the Data.
 
-| Activities          | Finalized |
-| :------------------ | :-------: |
-| Cleaning some props |    ✅     |
+| Activities                     | Finalized |
+| :----------------------------- | :-------: |
+| Cleaning some props            |    ✅     |
+| Loading data using a middleman |    ✅     |
+| getStaticProps()               |    ✅     |
 
 # Cleaning some props
 
-Now that I have finalizd the website, I jumped back in and tried to make a few components a bit more reusable and clean.
+Now that I have finalizd the front end of the website, I jumped back in and tried to make a few components a bit more reusable and clean.
 
 ## Spacer
 
@@ -73,6 +75,8 @@ export function Button(
 ```
 
 Now I could specify a link, a background color and a text color, giving me the change to create any type of button when calling it!
+
+# Integrating with Next.js
 
 ---
 

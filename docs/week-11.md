@@ -4,9 +4,9 @@ Thank you for taking the time to read this week's update. As you can see in the 
 
 | Activities                      | Finalized |
 | :------------------------------ | :-------: |
-| Setting up                      |     ✅     |
-| Research the JAMstack           |     ✅     |
-| Planning for the upcoming weeks |     ✅     |
+| Setting up                      |    ✅     |
+| Research the JAMstack           |    ✅     |
+| Planning for the upcoming weeks |    ✅     |
 
 # Setting up
 
@@ -81,11 +81,11 @@ From this research I came to the conclusion that there are a couple of main thin
 
 So as you might think, my quest to find the right tools started. I came accross a website that lists all the [static site generators](https://www.staticgen.com) based on popularity.
 
-![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/nextjs-markdown.png)
+![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/nextjs-sanity.png)
 
-When looking at that website it became clear to me that there was a lot of choice. That's why I consulted Tim and asked for help. He pointed me in the right direction and for the static site generator I am going to try out [Next.js](https://nextjs.org/). It's a framework based on React (which I already have some experience with) and has a lot of cool stuff built in such as SEO tools. For the data I am going to keep it simple, and will use `.md` (markdown) files to supply the website with content.
+When looking at that website it became clear to me that there was a lot of choice. That's why I consulted Tim and asked for help. He pointed me in the right direction and for the static site generator I am going to try out [Next.js](https://nextjs.org/). It's a framework based on React (which I already have some experience with) and has a lot of cool stuff built in such as SEO tools. For the data I am going to keep it simple, and will use Sanity to supply the website with content.
 
-Lastly, in order to build the website and deploy it somewhere I am going to go with [Vercel](https://vercel.com/). Reason being is that it is free and is made by the developers that are behind Next.js. It also has a GitHub integration that will work very well with my project and is free to use, even with a SSL certificate for the custom domain name. 
+Lastly, in order to build the website and deploy it somewhere I am going to go with [Vercel](https://vercel.com/). Reason being is that it is free and is made by the developers that are behind Next.js. It also has a GitHub integration that will work very well with my project and is free to use, even with a SSL certificate for the custom domain name.
 
 Now that I have an idea of the tools I am going to use it's time to plan out the upcoming weeks.
 
@@ -95,11 +95,11 @@ As always, I am going to think out the next few weeks, a planning. You can find 
 
 | When    | What                                                                                                     | Finalized |
 | :------ | :------------------------------------------------------------------------------------------------------- | :-------: |
-| Week 11 | [Research & Planning](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-11.md)              |     ✅     |
-| Week 12 | [Next.js](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-12.md)                          |     ✅     |
-| Week 13 | [Markdown data](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md)                    |     ✅     |
-| Week 14 | [Refactoring](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-14.md)                      |     ✅     |
-| Week 15 | [Time for deployment with Netlify](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-15.md) |     ✅     |
+| Week 11 | [Research & Planning](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-11.md)              |    ✅     |
+| Week 12 | [Next.js](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-12.md)                          |    ✅     |
+| Week 13 | [Sanity](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md)                           |    ✅     |
+| Week 14 | [Refactoring](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-14.md)                      |    ✅     |
+| Week 15 | [Time for deployment with Netlify](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-15.md) |    ✅     |
 
 ---
 
@@ -111,7 +111,7 @@ This week has been a very informative and exciting week. I really do think JAMst
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------ |
 | [What the f\* is JAMstack?](https://jamstack.wtf/)                                                                                                            | A cool website that gave me layman information                            |
 | [Next.js](https://nextjs.org/)                                                                                                                                | The react framework I will be using to build the website                  |
-| [`.md` data in Next.js](https://nextjs.org/learn/basics/data-fetching/blog-data)                                                                              | Very handy way of loading in the Markdown data                            |
+| [Sanity](https://sanity.io)                                                                                                                                   | Very customizable CMS ready for production                                |
 | [Netlify explanation](https://www.netlify.com/jamstack/)                                                                                                      | To learn more about the way Netlify handles the JAMstack                  |
 | [Static site generators](https://www.staticgen.com)                                                                                                           | A collection of all static site generators. Quite overwhelming            |
 | [Headless CMS'es](https://headlesscms.org)                                                                                                                    | A collection of open source and closed source headless CMS'es             |

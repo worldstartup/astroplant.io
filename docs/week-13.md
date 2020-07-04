@@ -1,12 +1,13 @@
 ![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/week-13.png)
 
-Thank you for taking the time to read this week's update. As you can see in the following table, I have a couple of activities planned that I will do in order to get my desired result: Markdown data.
+Thank you for taking the time to read this week's update. As you can see in the following table, I have a couple of activities planned that I will do in order to get my desired result: Sanity.
 
 | Activities     | Finalized |
 | :------------- | :-------: |
-| The `.md` file |    ✅     |
-| Implementing   |    ✅     |
-| The preloader  |    ✅     |
+| Sanity         |    ✅     |
+| Setup          |    ✅     |
+| Desk structure |    ✅     |
+| Schemas        |    ✅     |
 
 # The `.md` file
 
@@ -72,7 +73,7 @@ On the `index.js` page I just imported the preloader, but using client side rend
 
 ---
 
-This week has been a very informative and exciting week. I can't wait to jump into next [week](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-14.md) and start refactoring the website where possible and needed. It's going to be exciting!
+This week has been a very informative and exciting week. I can't wait to jump into next [week](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-14.md) and start loading in the Sanity data. It's going to be exciting!
 
 # Resources
 

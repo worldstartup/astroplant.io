@@ -2,9 +2,13 @@
 
 Thank you for taking the time to read this week's update. As you can see in the following table, I have a couple of activities planned that I will do in order to get my desired result: Time for deployment with Vercel.
 
-| Activities        | Finalized |
-| :---------------- | :-------: |
-| Vercel deployment |    ✅     |
+| Activities                  | Finalized |
+| :-------------------------- | :-------: |
+| Mux video API               |    ✅     |
+| Vercel deployment           |    ✅     |
+| Re-deploy on Sanity publish |    ✅     |
+
+# Mux video API
 
 # The deployment process
 
@@ -21,6 +25,8 @@ I can even see the build logs for each push!
 ![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/vercelbuild.jpg)
 
 To finish off this week I invite you to take a look at the [finalized website](https://astroplant.now.sh/). Created with Next.js, deployed with Vercel :)
+
+# Re-deploy on Sanity publish
 
 ---
 

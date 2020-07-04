@@ -465,7 +465,7 @@ Now that we have arrived at the bottom of the page I have created the Footer. No
 
 ---
 
-This week has been a very informative and exciting week. I can't wait to jump into next [week](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md) and start filling up the website with some markdown data that other users could enter. It's going to be exciting!
+This week has been a very informative and exciting week. I can't wait to jump into next [week](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md) and start working on the Sanity CMS that other users could enter. It's going to be exciting!
 
 # Resources
 
