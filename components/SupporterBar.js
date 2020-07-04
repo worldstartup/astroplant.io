@@ -1,13 +1,12 @@
 import s from "./modules/SupporterBar.module.css";
+import { imageUrlFor } from "../services/middleman";
 
-export function SupporterBar() {
+export function SupporterBar(props = { data }) {
     return (
         <div className={s.bar}>
-            <img className={s.supporter} src='/images/esa.png' />
-            <img className={s.supporter} src='/images/melissa.png' />
-            <img className={s.supporter} src='/images/surf.png' />
-            <img className={s.supporter} src='/images/bordersessions.png' />
-            <img className={s.supporter} src='/images/mobgen.png' />
+            {props.data.partnerImages.map((image) => (
+                <img className={s.supporter} src={imageUrlFor(image)} />
+            ))}
         </div>
     );
 }

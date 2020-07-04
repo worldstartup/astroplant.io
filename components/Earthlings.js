@@ -3,14 +3,15 @@ import { IntroText } from "./IntroText";
 import { Footnote } from "./Footnote";
 import { Card } from "./Card";
 import { KitCard } from "./KitCard";
+import { renderRichText } from "../services/middleman";
 
-export function Earthlings() {
+export function Earthlings(props = { data }) {
     return (
         <section id='earthlings' className={s.earthlings}>
             <div className={s.introHolder}>
                 <IntroText
-                    title='AstroPlant is for all Earthlings'
-                    subTitle='All the ways you can become a Space Farmer. There’s no better time than now.'
+                    title={props.data.ctaTitle}
+                    subTitle={props.data.ctaSubTitle}
                     subTitleColor='E5FFFE'
                 ></IntroText>
             </div>
@@ -47,7 +48,7 @@ export function Earthlings() {
                         buttonLabel={"Contribute"}
                     ></Card>
                 </div>
-                <Footnote text='Become a Space Farmer and act now!'></Footnote>
+                <Footnote text={renderRichText(props.data.ctaDescription)}></Footnote>
             </div>
         </section>
     );

@@ -3,7 +3,7 @@ import s from "./modules/Footer.module.css";
 import Link from "next/link";
 import { Button } from "./Button";
 
-export function Footer() {
+export function Footer(props = { data }) {
     return (
         <footer className={s.footer}>
             <div className={s.container}>
@@ -36,8 +36,8 @@ export function Footer() {
                     </div>
                 </div>
                 <div className={s.right}>
-                    <h1 className={s.title}>Growing a New Generation of Space Farmers</h1>
-                    <h2 className={s.subTitle}>Grow with the community on Slack.</h2>
+                    <h1 className={s.title}>{props.data.footerSlogan}</h1>
+                    <h2 className={s.subTitle}>{props.data.footerSubSlogan}</h2>
                     <div className={s.buttons}>
                         <Button label='Join'></Button>
                         <Button label='View GitHub' bgColor='white' color='black'></Button>

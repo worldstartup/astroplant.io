@@ -30,13 +30,13 @@ export default function Home({ home }) {
             <Header></Header>
             <Hero data={home}></Hero>
             <Spacer height={"var(--spacer-height)"}></Spacer>
-            <Community></Community>
+            <Community data={home}></Community>
             <Spacer height={"var(--spacer-height)"}></Spacer>
-            <Supporters></Supporters>
+            <Supporters data={home}></Supporters>
             <Spacer height={"var(--spacer-height)"}></Spacer>
-            <Earthlings></Earthlings>
+            <Earthlings data={home}></Earthlings>
             <Spacer bgColor={"black"} height={"var(--spacer-height)"}></Spacer>
-            <Footer></Footer>
+            <Footer data={home}></Footer>
         </>
     );
 }
