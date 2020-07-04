@@ -31,7 +31,7 @@ In order to view my studio, I can run `sanity start` in the Sanity folder. This 
 
 ![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/sanity-empty-desk.jpg)
 
-Another important command is `sanity deploy`. This will deploy the studio to a Sanity hosted link, so that the studio can be accessed out of localhost.
+Another important command is `sanity deploy`. This will deploy the studio to a Sanity hosted link, so that the studio can be accessed outside of localhost.
 
 ![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/sanity-deployed.jpg)
 

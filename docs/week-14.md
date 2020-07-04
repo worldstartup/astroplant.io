@@ -313,7 +313,7 @@ We have arrived at the final stage of this week's development, namely, loading t
 
 In short, these two differ in the fact that one fetches data a _build_ time and the other at every _request_. For this website's data it's not important to fetch at every request as changes to the content will only happen occasionally.
 
-So, what I learned was that I you can only call `getStaticProps()` on _page_ files, and not in individual components. Let's take a look at how we can use it on the homepage.
+So, what I learned was that I can only call `getStaticProps()` on _page_ files, and not in individual components. Let's take a look at how we can use it on the homepage.
 
 ```javascript
 // index.js
@@ -434,13 +434,13 @@ When looking at the website, it correctly fetches and displays the data!
 
 ![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/fetch-success.jpg)
 
-Something important to note is that the video is still being loaded in locally, as I am going to implement a Mux video API connection next week, so that I can upload videos in the studio and display them on the website.
+Something important to note is that the video is still being loaded in locally, as I am going to implement a video file connection next week, so that I can upload videos in the studio and display them on the website.
 
 If you are interested in seeing how I implemented the data fetching into the other components, be sure to visit my [GitHub repository](https://github.com/Meet-Miles/astroplant).
 
 ---
 
-This week has been a very informative and exciting week. I can't wait to jump into next [week](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-15.md) and finally deploy the website!. It's going to be exciting!
+This week has been a very informative and exciting week. I can't wait to jump into next [week](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-15.md) and finally deploy the website! It's going to be exciting!
 
 # Resources
 
