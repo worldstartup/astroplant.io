@@ -32,7 +32,7 @@ export function Spacer(props = { height, bgColor }) {
 
 Now I was able to add a background color easily!
 
-## Spacer
+## Button
 
 ```javascript
 import s from "./modules/Button.module.css";
