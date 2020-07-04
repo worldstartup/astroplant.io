@@ -93,13 +93,13 @@ Now that I have an idea of the tools I am going to use it's time to plan out the
 
 As always, I am going to think out the next few weeks, a planning. You can find this planning on the [README.md](https://github.com/Meet-Miles/astroplant) page as well for the overall project.
 
-| When    | What                                                                                                     | Finalized |
-| :------ | :------------------------------------------------------------------------------------------------------- | :-------: |
-| Week 11 | [Research & Planning](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-11.md)              |    ✅     |
-| Week 12 | [Next.js](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-12.md)                          |    ✅     |
-| Week 13 | [Sanity](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md)                           |    ✅     |
-| Week 14 | [Loading the Data](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-14.md)                 |    ✅     |
-| Week 15 | [Time for deployment with Netlify](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-15.md) |    ✅     |
+| When    | What                                                                                                    | Finalized |
+| :------ | :------------------------------------------------------------------------------------------------------ | :-------: |
+| Week 11 | [Research & Planning](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-11.md)             |    ✅     |
+| Week 12 | [Next.js](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-12.md)                         |    ✅     |
+| Week 13 | [Sanity](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-13.md)                          |    ✅     |
+| Week 14 | [Loading the Data](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-14.md)                |    ✅     |
+| Week 15 | [Time for deployment with Vercel](https://github.com/Meet-Miles/astroplant/blob/master/docs/week-15.md) |    ✅     |
 
 ---
 
