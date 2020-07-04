@@ -8,11 +8,13 @@ import { Earthlings } from "../components/Earthlings";
 import { Footer } from "../components/Footer";
 import dynamic from "next/dynamic";
 
+import { getHome } from "../services/middleman";
+
 const Loader = dynamic(() => import("react-preloaders").then((loaders) => loaders.Cube), {
     ssr: false,
 });
 
-export default function Home() {
+export default function Home({ home }) {
     return (
         <>
             <Head>
@@ -26,7 +28,7 @@ export default function Home() {
                 background='linear-gradient(321deg, rgba(28,19,31,1) 0%, rgba(20,15,43,1) 100%)'
             />
             <Header></Header>
-            <Hero></Hero>
+            <Hero data={home}></Hero>
             <Spacer height={"var(--spacer-height)"}></Spacer>
             <Community></Community>
             <Spacer height={"var(--spacer-height)"}></Spacer>
@@ -37,4 +39,12 @@ export default function Home() {
             <Footer></Footer>
         </>
     );
+}
+
+export async function getStaticProps() {
+    return {
+        props: {
+            home: await getHome(),
+        },
+    };
 }

@@ -3,7 +3,12 @@ import s from "./modules/Hero.module.css";
 import { Video } from "./Video";
 import { TintedText } from "./TintedText";
 
-export function Hero() {
+// import the helper functions
+
+import { imageUrlFor, renderRichText } from "../services/middleman";
+
+// create a prop called data
+export function Hero(props = { data }) {
     React.useEffect(() => {
         // define and assign a function to the hero top padding
         const setHeroPadding = () => {
@@ -24,17 +29,19 @@ export function Hero() {
         <section id='hero' className={s.heroSection}>
             <div className={s.stars}></div>
             <div className={s.planetHolder}>
-                <img src='/images/mars.png' className={s.mars} />
-                <h1 className={s.heroTitle}>Grow Plants in Space</h1>
+                {/* get the image and transform it into a url */}
+                <img src={imageUrlFor(props.data.planetImage)} className={s.mars} />
+                {/* get the heroTitle */}
+                <h1 className={s.heroTitle}>{props.data.heroTitle}</h1>
             </div>
             <div className={s.videoHolder}>
-                <h3 className={s.subTitle}>Time to start your journey.</h3>
+                {/* get the heroSubTitle */}
+                <h3 className={s.subTitle}>{props.data.heroSubTitle}</h3>
                 <Video source='/astro-intro.mp4'></Video>
             </div>
+            {/* get heroDescription and use the helper function to transform it */}
             <TintedText
-                text={
-                    "AstroPlant is an educational citizen science project in collaboration with the European Space Agency to engage a new generation of Space Farmers, collect data and ideas for agriculture on Mars, develop open source research equipment and create awareness of regenerative and closed-loop life support systems."
-                }
+                text={renderRichText(props.data.heroDescription)}
                 color={"#E9DEFF"}
                 margin={"3rem auto 0 auto"}
             ></TintedText>
