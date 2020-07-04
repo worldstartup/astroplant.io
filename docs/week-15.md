@@ -87,8 +87,6 @@ I can even see the build logs for each push!
 
 ![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/vercelbuild.jpg)
 
-To finish off this week I invite you to take a look at the [finalized website](https://astroplant.now.sh/). Created with Next.js, deployed with Vercel :)
-
 # Re-deploy on Sanity publish
 
 Because I am using `getStaticProps()`, the data from the studio will only be fetched when the website is built. This can happen manually, by pushing to the repository, or by integrating a hook. This hook will listen for changes in the studio, and automatically re-deploy the website on Vercel. Let's get started:
@@ -111,13 +109,13 @@ And voila! It starts re-deploying with the latest changes from the studio:
 
 ---
 
-I've had so much fun learning this new platform! It went extremely well. The only thing I do want to dive deeper in with the portfolio website for block 4 of this minor, is the Markdown as a data source. Should be a lot of fun :)
+To finish off this week I invite you to take a look at the [finalized website](https://astroplant.now.sh/). Created with Next.js, Sanity & deployed with Vercel :)
+
+I've had so much fun learning this new combination of platforms! It went extremely well. Miles is happy with the end result!
 
 # Resources
 
-| Resource                                                           | Note                                    |
-| :----------------------------------------------------------------- | :-------------------------------------- |
-| [Vercel](https://vercel.com)                                       | Used to deploy the website              |
-| [Mux](https://mux.com)                                             | Used as the video API                   |
-| [Mux input](https://www.sanity.io/plugins/sanity-plugin-mux-input) | Used to integrate Mux into the studio   |
-| [Mux player](https://github.com/sanity-io/sanity-mux-player)       | Used to play the video in the front end |
+| Resource                                                 | Note                       |
+| :------------------------------------------------------- | :------------------------- |
+| [Vercel](https://vercel.com)                             | Used to deploy the website |
+| [File schema type](https://www.sanity.io/docs/file-type) | Used as the video API      |
