@@ -5,21 +5,26 @@ import pagesIcon from "react-icons/lib/md/book";
 
 export default () =>
     S.list()
-        .title("Have a wonderful day!")
+        .title("Welcome, Space Farmer!")
         .items([
             // First pane
             S.listItem()
-                .title("Portfolios")
+                .title("Pages")
                 .icon(pagesIcon)
                 .child(
                     // Second pane
                     S.list()
-                        .title("All portfolios")
+                        .title("All pages")
                         .items([
-                            // Home page
+                            // Landing page
                             S.listItem()
-                                .title("Bo")
-                                .child(S.list().title("All portfolios").items([])),
+                                .title("Home")
+                                .child(
+                                    S.editor()
+                                        .schemaType("home")
+                                        .documentId("home")
+                                        .title("Edit Homepage")
+                                ),
                         ])
                 ),
         ]);
