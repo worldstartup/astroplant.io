@@ -45,7 +45,7 @@ fields: [
 
 When I launched the studio I was greeted with the following, where I can upload the video file:
 
-![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/mux-api-greeting.jpg)
+![image](https://raw.githubusercontent.com/Meet-Miles/astroplant/master/docs/images/mux-api-granted.jpg)
 
 ## Displaying in the front end
 
