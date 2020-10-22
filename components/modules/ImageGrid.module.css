@@ -1,25 +1,25 @@
 .imageGrid {
-    max-width: 1200px;
-    margin: 3rem auto;
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
-    grid-gap: 3rem;
-    height: 800px;
+  max-width: 1200px;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 3rem;
+  height: 800px;
 }
 
 .gridImage {
-    object-fit: cover;
-    height: 100%;
-    border-radius: 10px;
-    width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 10px;
+  width: 100%;
 }
 
 @media only screen and (max-width: 660px) {
-    .imageGrid {
-        grid-gap: 2rem;
-        height: fit-content;
-    }
-    .gridImage {
-        height: 300px;
-    }
+  .imageGrid {
+    grid-gap: 2rem;
+    height: fit-content;
+  }
+  .gridImage {
+    height: 300px;
+  }
 }

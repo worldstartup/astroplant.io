@@ -1,93 +1,93 @@
 .footer {
-    background-color: black;
+  background-color: black;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3rem;
 }
 
 .left {
-    justify-self: start;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .logo {
-    width: 250px;
+  width: 250px;
 }
 
 .nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .nav a {
-    margin: 0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .socials {
 }
 
 .icon {
-    margin-right: 0.5rem;
-    width: 30px;
+  margin-right: 0.5rem;
+  width: 30px;
 }
 
 .right {
-    justify-self: end;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
+  justify-self: end;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .title {
-    font-size: var(--title);
-    font-weight: var(--bold);
-    text-align: right;
+  font-size: var(--title);
+  font-weight: var(--bold);
+  text-align: right;
 }
 
 .subTitle {
-    margin-top: 1rem;
-    opacity: 0.5;
-    font-size: var(--subTitle);
-    font-weight: var(--medium);
+  margin-top: 1rem;
+  opacity: 0.5;
+  font-size: var(--subTitle);
+  font-weight: var(--medium);
 }
 
 .buttons {
-    margin: 2rem 0 4rem 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1.5rem;
+  margin: 2rem 0 4rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1.5rem;
 }
 
 .miles {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .milesLogo {
-    height: 15px;
-    margin-right: 0.5rem;
-    padding-bottom: 3px;
+  height: 15px;
+  margin-right: 0.5rem;
+  padding-bottom: 3px;
 }
 
 @media only screen and (max-width: 1048px) {
-    .container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-row-gap: 3rem;
-        padding: 1.5rem;
-    }
-    .right {
-        align-items: flex-start;
-    }
-    .title {
-        text-align: left;
-    }
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 3rem;
+    padding: 1.5rem;
+  }
+  .right {
+    align-items: flex-start;
+  }
+  .title {
+    text-align: left;
+  }
 }

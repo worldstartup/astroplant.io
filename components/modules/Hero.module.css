@@ -1,52 +1,52 @@
 .heroSection {
-    color: white;
-    text-align: center;
-    margin: 0px auto;
-    position: relative;
+  color: white;
+  text-align: center;
+  margin: 0px auto;
+  position: relative;
 }
 
 .stars {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-image: url(/images/stars-alpha.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    mix-blend-mode: luminosity;
-    opacity: 0.75;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url(/images/stars-alpha.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  mix-blend-mode: luminosity;
+  opacity: 0.75;
 }
 
 .heroTitle {
-    position: absolute;
-    bottom: 4rem;
-    font-size: var(--title);
+  position: absolute;
+  bottom: 4rem;
+  font-size: var(--title);
 }
 
 .subTitle {
-    font-size: var(--subTitle);
+  font-size: var(--subTitle);
 }
 
 .planetHolder {
-    margin: 0px auto;
-    max-width: 600px;
-    position: relative;
+  margin: 0px auto;
+  max-width: 600px;
+  position: relative;
 }
 
 .mars {
-    width: 100%;
+  width: 100%;
 }
 
 .videoHolder {
-    position: relative;
-    margin: 0px auto;
-    max-width: 800px;
+  position: relative;
+  margin: 0px auto;
+  max-width: 800px;
 }
 
 @media only screen and (max-width: 910px) {
-    .heroSection {
-        padding-right: 1.5rem;
-        padding-left: 1.5rem;
-    }
+  .heroSection {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
 }

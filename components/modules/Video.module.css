@@ -1,36 +1,36 @@
 .holder {
-    margin-top: 4rem;
-    position: relative;
+  margin-top: 4rem;
+  position: relative;
 }
 
 .video {
-    width: 100%;
-    border-radius: 10px;
-    transition: all 0.2s ease;
+  width: 100%;
+  border-radius: 10px;
+  transition: all 0.2s ease;
 }
 
 .video:focus {
-    outline: none;
+  outline: none;
 }
 
 .gradient {
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(0deg, #0d071a 0%, rgba(0, 0, 0, 0) 100%);
-    transition: all 0.2s ease;
-    opacity: 1;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, #0d071a 0%, rgba(0, 0, 0, 0) 100%);
+  transition: all 0.2s ease;
+  opacity: 1;
 }
 
 .holder:hover .gradient {
-    opacity: 0;
+  opacity: 0;
 }
 
 @media only screen and (max-width: 600px) {
-    .gradient {
-        display: none;
-    }
+  .gradient {
+    display: none;
+  }
 }

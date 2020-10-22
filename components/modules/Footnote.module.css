@@ -1,8 +1,8 @@
 .footnote {
-    color: white;
-    opacity: 0.5;
-    text-align: center;
-    font-weight: var(--medium);
-    font-size: var(--footnote);
-    margin-top: 6rem;
+  color: white;
+  opacity: 0.5;
+  text-align: center;
+  font-weight: var(--medium);
+  font-size: var(--footnote);
+  margin-top: 6rem;
 }
