@@ -1,24 +1,28 @@
 {
-    "name": "astroplant",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "export": "next export"
-    },
-    "dependencies": {
-        "@sanity/block-content-to-react": "^2.0.7",
-        "hls.js": "^0.11.0",
-        "lodash": "^4.17.19",
-        "mux-embed": "^3.2.0",
-        "next": "9.4.2",
-        "prop-types": "^15.6.0",
-        "react": "16.13.1",
-        "react-dom": "16.13.1",
-        "react-loading-skeleton": "^2.0.1",
-        "react-markdown": "^4.3.1",
-        "react-preloaders": "^3.0.3"
-    }
+  "name": "astroplant.io",
+  "version": "0.2.0",
+  "author": "Miles",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "dependencies": {
+    "@sanity/block-content-to-react": "^2.0.7",
+    "hls.js": "^0.11.0",
+    "lodash": "^4.17.19",
+    "mux-embed": "^3.2.0",
+    "next": "9.5.5",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-loading-skeleton": "^2.0.1",
+    "react-markdown": "^4.3.1",
+    "react-preloaders": "^3.0.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "prop-types": "^15.7.2"
+  }
 }
