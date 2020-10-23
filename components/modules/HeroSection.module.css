@@ -1,12 +1,13 @@
 .heroSection {
-  color: white;
-  text-align: center;
-  margin: 0px auto;
   position: relative;
+
+  min-height: 100vh;
 }
 
 .stars {
   position: absolute;
+  z-index: -1;
+
   top: 0;
   right: 0;
   left: 0;
@@ -18,30 +19,23 @@
   opacity: 0.75;
 }
 
-.heroTitle {
-  position: absolute;
-  bottom: 4rem;
-  font-size: var(--title);
-}
-
-.subTitle {
-  font-size: var(--subTitle);
-}
-
-.planetHolder {
-  margin: 0px auto;
-  max-width: 600px;
-  position: relative;
-}
-
 .mars {
   width: 100%;
+  transform: rotate(-90deg);
+}
+
+.content {
+  padding: 4rem 0;
+  max-width: 800px;
+}
+
+.heroTitle {
+  margin: 0 0 3rem 0;
 }
 
 .videoHolder {
   position: relative;
-  margin: 0px auto;
-  max-width: 800px;
+  max-width: 640px;
 }
 
 @media only screen and (max-width: 910px) {

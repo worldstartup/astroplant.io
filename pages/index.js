@@ -1,45 +1,39 @@
-import dynamic from "next/dynamic";
-import Head from "next/head";
-import { Community } from "../components/Community";
-import { Earthlings } from "../components/Earthlings";
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
-import { Hero } from "../components/Hero";
-import { Spacer } from "../components/Spacer";
-import { Supporters } from "../components/Supporters";
-import { getHome } from "../services/middleman";
+import MainLayout from "../components/layouts/MainLayout";
+import CommunitySection from "../components/sections/CommunitySection";
+import CTASection from "../components/sections/CTASection";
+import HeroSection from "../components/sections/HeroSection";
+import MainPartnersSection from "../components/sections/MainPartnersSection";
+import { getHome } from "../services/sanity";
 
-const Loader = dynamic(
+/*const Loader = dynamic(
   () => import("react-preloaders").then((loaders) => loaders.Cube),
   {
     ssr: false,
   }
-);
+);*/
 
 export default function Home({ home }) {
   return (
-    <>
-      <Head>
-        <title>Astroplant</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Loader
+    <div className={"bg-gradient"}>
+      <MainLayout
+        pageName={"Home"}
+        pageDescription={
+          "AstroPlant, growing a new generation of urban and space farmers."
+        }
+        pages={["Home", "Community", "Contribute", "Shop"]}
+      >
+        {/*<Loader
         color={"var(--main-color)"}
         time={1000}
         animation="slide"
         background="linear-gradient(321deg, rgba(28,19,31,1) 0%, rgba(20,15,43,1) 100%)"
-      />
-      <Header></Header>
-      <Hero data={home}></Hero>
-      <Spacer height={"var(--spacer-height)"}></Spacer>
-      <Community data={home}></Community>
-      <Spacer height={"var(--spacer-height)"}></Spacer>
-      <Supporters data={home}></Supporters>
-      <Spacer height={"var(--spacer-height)"}></Spacer>
-      <Earthlings data={home}></Earthlings>
-      <Spacer bgColor={"black"} height={"var(--spacer-height)"}></Spacer>
-      <Footer data={home}></Footer>
-    </>
+      />*/}
+        <HeroSection data={home} />
+        <MainPartnersSection data={home} />
+        <CommunitySection data={home} />
+        <CTASection data={home} />
+      </MainLayout>
+    </div>
   );
 }
 

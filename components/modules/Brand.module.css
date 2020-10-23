@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.separator {
+  display: block;
+  height: 2rem;
+  width: 1px;
+  background-color: var(--light);
+  margin: 0 1rem;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.text svg {
+  height: 32px;
+  width: 128px;
+}
+
+.logoHolder {
+  display: block;
+  height: 32px;
+  width: 32px;
+}

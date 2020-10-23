@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 28px;
+  margin-right: 1rem;
+}
+
+.secondary svg path,
+.secondary svg g {
+  fill: var(--secondary-color);
+}
+
+.light svg path,
+.light svg g {
+  fill: var(--light);
+}

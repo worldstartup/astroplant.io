@@ -1,0 +1,25 @@
+.title {
+  margin: 4rem 0;
+}
+
+.earth {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.cardRow {
+  margin-top: 12rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+
+  max-width: 1200px;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .cardRow {
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+  }
+}

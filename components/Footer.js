@@ -1,62 +1,50 @@
 import Link from "next/link";
+import PropTypes from "prop-types";
+import Brand from "./Brand";
 import { Button } from "./Button";
-import s from "./modules/Footer.module.css";
+import styles from "./modules/Footer.module.css";
+import SocialIcons from "./SocialIcons";
 
-export function Footer(props = { data }) {
+export function Footer({ pages }) {
   return (
-    <footer className={s.footer}>
-      <div className={s.container}>
-        <div className={s.left}>
-          <img
-            alt="Astroplant logo"
-            className={s.logo}
-            src="/images/logo.png"
-          />
-          <div className={s.nav}>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-            <Link href="#">
-              <a>Community</a>
-            </Link>
-            <Link href="#">
-              <a>The Kit</a>
-            </Link>
-            <Link href="#">
-              <a>Developers</a>
-            </Link>
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.left}>
+          <Brand />
+
+          <div className={styles.nav}>
+            {pages.map((link) => (
+              <Link key={link} href="/">
+                <a>{link}</a>
+              </Link>
+            ))}
           </div>
-          <div className={s.socials}>
-            <a href="" target="_blank">
-              <img
-                className={s.icon}
-                alt="social icon"
-                src="/images/insta.png"
-              />
-            </a>
-            <a href="" target="_blank">
-              <img
-                className={s.icon}
-                alt="social icon"
-                src="/images/twitter.png"
-              />
-            </a>
-            <a href="" target="_blank">
-              <img className={s.icon} alt="social icon" src="/images/fb.png" />
-            </a>
-          </div>
+
+          <SocialIcons />
         </div>
-        <div className={s.right}>
-          <h1 className={s.title}>{props.data.footerSlogan}</h1>
-          <h2 className={s.subTitle}>{props.data.footerSubSlogan}</h2>
-          <div className={s.buttons}>
-            <Button label="Join"></Button>
-            <Button label="View GitHub" bgColor="white" color="black"></Button>
+        <div className={styles.right}>
+          <h1 className={styles.title}>
+            Growing a new generation of space farmers
+          </h1>
+          <p>
+            Grow with the community on <a>Slack</a>
+          </p>
+          <div className={styles.ctaButtons}>
+            <Button
+              className={styles.marginButtons}
+              label="Join the community"
+            />
+            <Button
+              className={styles.marginButtons}
+              label="View GitHub"
+              bgColor="white"
+              color="black"
+            />
           </div>
-          <div className={s.miles}>
+          <div className={styles.miles}>
             <img
               src="/images/miles.svg"
-              className={s.milesLogo}
+              className={styles.milesLogo}
               alt="miles logo"
             />
             <p>was here.</p>
@@ -66,3 +54,7 @@ export function Footer(props = { data }) {
     </footer>
   );
 }
+
+Footer.propTypes = {
+  pages: PropTypes.arrayOf(PropTypes.string).isRequired,
+};

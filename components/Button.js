@@ -1,21 +1,17 @@
 import Link from "next/link";
-import s from "./modules/Button.module.css";
+import styles from "./modules/Button.module.css";
 
-export function Button(
-  props = {
-    label,
-    bgColor,
-    color,
-    href,
-  }
-) {
+export function Button({ label, bgColor, color, className, href, ...props }) {
   return (
-    <Link href={`#` + props.href}>
+    <Link href={`#` + href}>
       <button
-        className={s.button}
-        style={{ backgroundColor: props.bgColor, color: props.color }}
+        className={`${styles.button} ${className}`}
+        style={{ backgroundColor: bgColor, color: color }}
+        aria-label={label}
+        type={props.type || "button"}
+        {...props}
       >
-        {props.label}
+        {label}
       </button>
     </Link>
   );

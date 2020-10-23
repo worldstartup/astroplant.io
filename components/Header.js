@@ -1,22 +1,28 @@
 import Link from "next/link";
+import PropTypes from "prop-types";
+import Brand from "./Brand";
 import { Button } from "./Button";
-import s from "./modules/Header.module.css";
+import styles from "./modules/Header.module.css";
 
-export function Header() {
+export function Header({ pages }) {
   return (
-    <header className={s.header} id="header">
-      <div className={s.container}>
-        <Link href="/">
-          <img src="/images/logo.png" className={s.logo} />
-        </Link>
+    <header className={styles.header} id="header">
+      <div className={styles.container}>
+        <Brand />
 
-        <div className={s.nav}>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-          <Button href="earthlings" label="Join the Community"></Button>
-        </div>
+        <nav className={styles.nav}>
+          {pages.map((link) => (
+            <Link key={link} href="/">
+              <a className={styles.navLink}>{link}</a>
+            </Link>
+          ))}
+          <Button href="earthlings" label="Join the Community" />
+        </nav>
       </div>
     </header>
   );
 }
+
+Header.propTypes = {
+  pages: PropTypes.arrayOf(PropTypes.string).isRequired,
+};

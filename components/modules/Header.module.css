@@ -33,10 +33,18 @@
 }
 
 .nav {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: row;
   justify-items: center;
   align-items: center;
+}
+
+.navLink {
+  margin: 0 2rem;
+}
+
+.navLink:hover {
+  color: var(--main-color);
 }
 
 @media only screen and (max-width: 768px) {
