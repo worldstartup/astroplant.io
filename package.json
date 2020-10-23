@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
+    "@svgr/webpack": "^5.4.0",
     "hls.js": "^0.11.0",
     "lodash": "^4.17.19",
     "mux-embed": "^3.2.0",
