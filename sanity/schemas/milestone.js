@@ -1,6 +1,6 @@
 export default {
-  name: "roadmapStep",
-  title: "Roadmap Step",
+  name: "milestone",
+  title: "Milestone",
   type: "document",
   fields: [
     {
