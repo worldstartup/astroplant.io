@@ -1,0 +1,39 @@
+.titleRow {
+  display: flex;
+  align-items: center;
+
+  margin: 3rem 0;
+}
+
+.title {
+  margin: 0 2rem 0 0;
+  max-width: 640px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+
+  margin: 4rem 0;
+}
+
+.marginButton {
+  margin: 0 2rem;
+}
+
+.mockUp {
+  height: 100%;
+  width: 100%;
+}
+
+.chip {
+  padding: 0.5rem 1rem;
+
+  border-radius: var(--border-radius-min);
+
+  font-weight: bold;
+  letter-spacing: 0.1em;
+
+  color: var(--dark);
+  background-color: var(--main-color);
+}

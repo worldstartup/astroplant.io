@@ -66,7 +66,7 @@ export async function getHome() {
       // platform section
       platformTitle,
       platformDescription,
-      platformImage,
+      "platformImage": platformImage.asset->url,
       
       // cta section
       ctaTitle,

@@ -3,6 +3,7 @@ import CommunitySection from "../components/sections/CommunitySection";
 import CTASection from "../components/sections/CTASection";
 import HeroSection from "../components/sections/HeroSection";
 import MainPartnersSection from "../components/sections/MainPartnersSection";
+import PlatformSection from "../components/sections/PlatformSection";
 import { getHome } from "../services/sanity";
 
 /*const Loader = dynamic(
@@ -42,6 +43,11 @@ export default function Home({ data }) {
           title={data.communityTitle}
           description={data.communityDescription}
           images={data.communityImages}
+        />
+        <PlatformSection
+          title={data.platformTitle}
+          description={data.platformDescription}
+          image={data.platformImage}
         />
         <CTASection
           title={data.ctaTitle}
