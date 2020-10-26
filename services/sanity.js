@@ -85,6 +85,57 @@ export async function getHome() {
   }
 }
 
+export async function getAboutUsContent() {
+  try {
+    const query = `*[_type == "aboutUs"] {
+      name,
+      description,
+    }
+    `;
+
+    let res = await client.fetch(query);
+
+    return res[0];
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
+
+export async function getContributeContent() {
+  try {
+    const query = `*[_type == "contribute"] {
+      name,
+      description,
+    }
+    `;
+
+    let res = await client.fetch(query);
+
+    return res[0];
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
+
+export async function getGoalsContent() {
+  try {
+    const query = `*[_type == "goals"] {
+      name,
+      description,
+    }
+    `;
+
+    let res = await client.fetch(query);
+
+    return res[0];
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
+
 export async function getAchievements() {
   try {
     const query = `*[_type == "achievement"] {

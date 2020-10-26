@@ -16,7 +16,6 @@ import { getAchievements, getHome } from "../services/sanity";
 );*/
 
 export default function Home({ data, achievements }) {
-  console.log(achievements);
   return (
     <div className={"bg-gradient"}>
       <MainLayout
@@ -24,7 +23,6 @@ export default function Home({ data, achievements }) {
         pageDescription={
           "AstroPlant, growing a new generation of urban and space farmers."
         }
-        pages={["Home", "Community", "Contribute", "Shop"]}
       >
         {/*<Loader
         color={"var(--main-color)"}

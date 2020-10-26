@@ -5,12 +5,9 @@ import React from "react";
 import { Footer } from "../Footer";
 import { Header } from "../Header";
 
-export default function MainLayout({
-  children,
-  pages,
-  pageName,
-  pageDescription,
-}) {
+const pages = ["Home", "Community", "Contribute", "Shop"];
+
+export default function MainLayout({ children, pageName, pageDescription }) {
   const router = useRouter();
 
   const publicUrl = `https://astroplant.io`;
@@ -46,7 +43,6 @@ export default function MainLayout({
 
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  pages: PropTypes.arrayOf(PropTypes.string).isRequired,
   pageName: PropTypes.string.isRequired,
   pageDescription: PropTypes.string.isRequired,
 };
