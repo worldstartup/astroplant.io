@@ -19,28 +19,40 @@ export default function CTASection({ title, description, ctas }) {
         <h1 className={styles.title}>{title}</h1>
         <SectionDescription richText={description} color={"#F6FFF5"} />
         <div className={styles.cardRow}>
-          <CommunityCard
-            cover={"/images/card1.jpg"}
-            title={"Community"}
-            description={
-              "Grow with the community on Slack. Exchange ideas and talk about AstroPlant.\n\n" +
-              "The Sky’s the limit!"
+          {ctas.map((cta) => {
+            if (cta.slug === "contribute") {
+              return (
+                <ContributeCard
+                  key={cta._id}
+                  cover={cta.cover}
+                  title={cta.title}
+                  description={cta.description}
+                />
+              );
             }
-          />
-          <ContributeCard
-            cover={"/images/card3.png"}
-            title={"Start hacking"}
-            description={
-              "You can help develop AstroPlant open-source hardware and software."
+
+            if (cta.slug === "kit") {
+              return (
+                <KitCard
+                  key={cta._id}
+                  cover={cta.cover}
+                  title={cta.title}
+                  description={cta.description}
+                />
+              );
             }
-          />
-          <KitCard
-            cover={"/images/card2.png"}
-            title={"Grow plants for space"}
-            description={
-              "Buy an Astroplant Kit, and start growing plants and collecting data to help space exploration move forward."
+
+            if (cta.slug === "community") {
+              return (
+                <CommunityCard
+                  key={cta._id}
+                  cover={cta.cover}
+                  title={cta.title}
+                  description={cta.description}
+                />
+              );
             }
-          />
+          })}
         </div>
       </ContentLayout>
     </Section>
