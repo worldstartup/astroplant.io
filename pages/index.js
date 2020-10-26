@@ -1,10 +1,12 @@
+import Carousel from "../components/Carousel";
 import MainLayout from "../components/layouts/MainLayout";
+import Section from "../components/Section";
 import CommunitySection from "../components/sections/CommunitySection";
 import CTASection from "../components/sections/CTASection";
 import HeroSection from "../components/sections/HeroSection";
 import MainPartnersSection from "../components/sections/MainPartnersSection";
 import PlatformSection from "../components/sections/PlatformSection";
-import { getHome } from "../services/sanity";
+import { getAchievements, getHome } from "../services/sanity";
 
 /*const Loader = dynamic(
   () => import("react-preloaders").then((loaders) => loaders.Cube),
@@ -13,7 +15,8 @@ import { getHome } from "../services/sanity";
   }
 );*/
 
-export default function Home({ data }) {
+export default function Home({ data, achievements }) {
+  console.log(achievements);
   return (
     <div className={"bg-gradient"}>
       <MainLayout
@@ -44,6 +47,9 @@ export default function Home({ data }) {
           description={data.communityDescription}
           images={data.communityImages}
         />
+        <Section id="achievements">
+          <Carousel content={achievements} />
+        </Section>
         <PlatformSection
           title={data.platformTitle}
           description={data.platformDescription}
@@ -63,6 +69,7 @@ export async function getStaticProps() {
   return {
     props: {
       data: await getHome(),
+      achievements: await getAchievements(),
     },
   };
 }

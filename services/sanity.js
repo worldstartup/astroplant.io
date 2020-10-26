@@ -1,5 +1,7 @@
-// import the Sanity client and create the connection
+import imageUrlBuilder from "@sanity/image-url";
+
 const sanityClient = require("@sanity/client");
+const BlockContent = require("@sanity/block-content-to-react");
 
 const client = sanityClient({
   projectId: "4iykv1c5",
@@ -7,19 +9,11 @@ const client = sanityClient({
   useCdn: true,
 });
 
-// import the imageUrlBuilder from Sanity
-import imageUrlBuilder from "@sanity/image-url";
-
-// create an instance of the imageUrlBuilder
 const imageBuilder = imageUrlBuilder(client);
 
-// helper function that I can access in the front end
 export function imageUrlFor(source) {
   return imageBuilder.image(source);
 }
-
-// require the block content module from Sanity
-const BlockContent = require("@sanity/block-content-to-react");
 
 // helper function that I can access in the front end
 export function renderRichText(richText) {
@@ -85,6 +79,24 @@ export async function getHome() {
     home = home ? (home.length ? home[0] : null) : null;
 
     return home;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
+
+export async function getAchievements() {
+  try {
+    const query = `*[_type == "achievement"] {
+      _id,
+      title,
+      description,
+      "cover": cover.asset -> url
+    }`;
+
+    let res = await client.fetch(query);
+
+    return res;
   } catch (error) {
     console.log(error);
     return null;
