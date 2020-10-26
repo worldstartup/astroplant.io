@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import CommunityCard from "../cards/CommunityCard";
 import ContributeCard from "../cards/ContributeCard";
 import KitCard from "../cards/KitCard";
@@ -7,7 +8,7 @@ import styles from "../modules/CTASection.module.css";
 import Section from "../Section";
 import SectionDescription from "../SectionDescription";
 
-export default function CTASection(props = { data }) {
+export default function CTASection({ title, description, ctas }) {
   return (
     <Section id="earthlings">
       <FloatingElement id={"earth"}>
@@ -15,8 +16,8 @@ export default function CTASection(props = { data }) {
       </FloatingElement>
 
       <ContentLayout>
-        <h1 className={styles.title}>{props.data.ctaTitle}</h1>
-        <SectionDescription text={props.data.ctaSubTitle} color={"#F6FFF5"} />
+        <h1 className={styles.title}>{title}</h1>
+        <SectionDescription richText={description} color={"#F6FFF5"} />
         <div className={styles.cardRow}>
           <CommunityCard
             cover={"/images/card1.jpg"}
@@ -45,3 +46,9 @@ export default function CTASection(props = { data }) {
     </Section>
   );
 }
+
+CTASection.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.array.isRequired,
+  ctas: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

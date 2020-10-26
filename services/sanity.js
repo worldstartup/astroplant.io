@@ -44,34 +44,42 @@ export function renderRichText(richText) {
 export async function getHome() {
   try {
     const query = `*[_type == "home"] {
-            // hero section
-            planetImage,
-            heroTitle,
-            heroSubTitle,
-            "video": video.asset->url,
-            heroDescription,
-            
-            // community section
-            communityTitle,
-            communitySubTitle,
-            communityImages,
-            communityDescription,
+      // hero section
+      planetImage,
+      heroTitle,
+      "video": video.asset->url,
+      heroDescription,
+                
+      // supporters section
+      partnersTitle,
+      partners[]->{
+        _id,
+        name,
+        "logo": logo.asset->url
+      },
 
-            // supporters section
-            supportersTitle,
-            supportersSubTitle,
-            partnerImages,
-
-            // cta section
-            ctaTitle,
-            ctaSubTitle,
-            ctaDescription,
-
-            // footer section
-            footerSlogan,
-            footerSubSlogan
-        }
-          `;
+      // community section
+      communityTitle,
+      communityImages,
+      communityDescription,
+      
+      // platform section
+      platformTitle,
+      platformDescription,
+      platformImage,
+      
+      // cta section
+      ctaTitle,
+      ctaDescription,
+      ctas[]->{
+        _id,
+        "slug": slug.current,
+        title,
+        description,
+        "cover": cover.asset->url,
+      }
+  }
+  `;
 
     let home = await client.fetch(query);
     home = home ? (home.length ? home[0] : null) : null;

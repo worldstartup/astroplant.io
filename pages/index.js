@@ -12,7 +12,7 @@ import { getHome } from "../services/sanity";
   }
 );*/
 
-export default function Home({ home }) {
+export default function Home({ data }) {
   return (
     <div className={"bg-gradient"}>
       <MainLayout
@@ -28,10 +28,26 @@ export default function Home({ home }) {
         animation="slide"
         background="linear-gradient(321deg, rgba(28,19,31,1) 0%, rgba(20,15,43,1) 100%)"
       />*/}
-        <HeroSection data={home} />
-        <MainPartnersSection data={home} />
-        <CommunitySection data={home} />
-        <CTASection data={home} />
+        <HeroSection
+          title={data.heroTitle}
+          description={data.heroDescription}
+          imageUrl={data.planetImage}
+          videoUrl={data.video}
+        />
+        <MainPartnersSection
+          title={data.partnersTitle}
+          partners={data.partners}
+        />
+        <CommunitySection
+          title={data.communityTitle}
+          description={data.communityDescription}
+          images={data.communityImages}
+        />
+        <CTASection
+          title={data.ctaTitle}
+          description={data.ctaDescription}
+          ctas={data.ctas}
+        />
       </MainLayout>
     </div>
   );
@@ -40,7 +56,7 @@ export default function Home({ home }) {
 export async function getStaticProps() {
   return {
     props: {
-      home: await getHome(),
+      data: await getHome(),
     },
   };
 }

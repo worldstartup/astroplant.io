@@ -1,15 +1,14 @@
 import PropTypes from "prop-types";
-import { imageUrlFor } from "../services/sanity";
 import styles from "./modules/PartnersGrid.module.css";
 
-export function PartnersGrid({ partnersLogo }) {
+export function PartnersGrid({ partners }) {
   return (
     <div className={styles.bar}>
-      {partnersLogo.map((image) => (
+      {partners.map((partner) => (
         <img
           className={styles.supporter}
-          key={image._key}
-          src={imageUrlFor(image)}
+          key={partner._id}
+          src={partner.logo}
         />
       ))}
     </div>
@@ -17,5 +16,5 @@ export function PartnersGrid({ partnersLogo }) {
 }
 
 PartnersGrid.propTypes = {
-  partnersLogo: PropTypes.arrayOf(PropTypes.object).isRequired,
+  partners: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
