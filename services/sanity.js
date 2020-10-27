@@ -33,7 +33,9 @@ export function renderRichText(richText) {
   return <BlockContent blocks={richText} serializers={serializers} />;
 }
 
-// page queries
+/*****************************************
+ *                  PAGES                *
+ *****************************************/
 
 export async function getHome() {
   try {
@@ -136,6 +138,10 @@ export async function getGoalsContent() {
   }
 }
 
+/*****************************************
+ *               ACHIEVEMENTS            *
+ *****************************************/
+
 export async function getAchievements() {
   try {
     const query = `*[_type == "achievement"] {
@@ -143,6 +149,72 @@ export async function getAchievements() {
       title,
       description,
       "cover": cover.asset -> url
+    }`;
+
+    let res = await client.fetch(query);
+
+    return res;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
+
+/*****************************************
+ *             TEAM MEMBERS              *
+ *****************************************/
+
+export async function getCoreTeamMembers() {
+  try {
+    const query = `*[_type == "teamMember" && memberOf == "Core Team"]{
+      _id,
+      fullName,
+      role,
+      description,
+      "picture": picture.asset -> url,
+      linkedinProfile,
+      memberOf,
+    }`;
+
+    let res = await client.fetch(query);
+
+    return res;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
+
+export async function getOtherTeamMembers() {
+  try {
+    const query = `*[_type == "teamMember" && memberOf != "Core Team"]{
+      _id,
+      fullName,
+      role,
+      "picture": picture.asset -> url,
+      linkedinProfile,
+      memberOf,
+    }`;
+
+    let res = await client.fetch(query);
+
+    return res;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
+
+/*****************************************
+ *              PARTNERS                 *
+ *****************************************/
+
+export async function getPartners() {
+  try {
+    const query = `*[_type == "partner"]{
+      _id,
+      name,
+      "logo": logo.asset->url
     }`;
 
     let res = await client.fetch(query);

@@ -44,4 +44,7 @@ export default {
       validation: (Rule) => Rule.required(),
     },
   ],
+  initialValue: {
+    linkedinProfile: "https://linkedin.com/",
+  },
 };

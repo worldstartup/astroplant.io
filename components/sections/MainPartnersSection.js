@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Button } from "../Button";
-import { PartnersGrid } from "../PartnersGrid.js";
+import PartnersGrid from "../PartnersGrid.js";
 import Section from "../Section";
 
 export default function MainPartnersSection({ title, partners }) {

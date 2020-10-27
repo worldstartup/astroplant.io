@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+}
+
+.picture {
+  height: 160px;
+  width: 160px;
+
+  border-radius: var(--border-radius-min);
+
+  object-fit: cover;
+}
+
+.memberDetails {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 512px;
+
+  margin: 0 0 0 2rem;
+}
+
+.name {
+  font-size: 1.25rem;
+  color: var(--main-color);
+  margin: 0 0 1rem 0;
+}
+
+.role {
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+@media screen and (max-width: 448px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .name {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .memberDetails {
+    margin: 0;
+
+    width: 100%;
+    max-width: 512px;
+  }
+}

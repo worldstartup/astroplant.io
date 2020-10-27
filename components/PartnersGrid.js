@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styles from "./modules/PartnersGrid.module.css";
 
-export function PartnersGrid({ partners }) {
+export default function PartnersGrid({ partners }) {
   return (
     <div className={styles.bar}>
       {partners.map((partner) => (
