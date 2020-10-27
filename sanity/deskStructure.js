@@ -75,7 +75,33 @@ export default () =>
       S.listItem()
         .title("Teams")
         .icon(teamIcon)
-        .child(S.documentTypeList("teamMember")),
+        .child(
+          S.list()
+            .title("All teams")
+            .items([
+              S.listItem()
+                .title("Core Team")
+                .child(
+                  S.documentTypeList("teamMember")
+                    .title("Core Team Members")
+                    .filter('memberOf == "Core Team"')
+                ),
+              S.listItem()
+                .title("Advisor Team")
+                .child(
+                  S.documentTypeList("teamMember")
+                    .title("Advisor Team Members")
+                    .filter('memberOf == "Advisors"')
+                ),
+              S.listItem()
+                .title("Former Team")
+                .child(
+                  S.documentTypeList("teamMember")
+                    .title("Former Team Members")
+                    .filter('memberOf == "Former Team"')
+                ),
+            ])
+        ),
 
       S.listItem()
         .title("Achievements")
