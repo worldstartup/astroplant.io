@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
-import { renderRichText } from "../services/sanity";
 import styles from "./modules/SectionDescription.module.css";
+import RichTextRenderer from "./RichTextRenderer";
 
 export default function SectionDescription({ text, richText, color }) {
   return (
     <div className={styles.container} style={{ color: `${color}` }}>
       {text && <p style={{ color: color }}>{text}</p>}
-      {richText && renderRichText(richText)}
+      {richText && <RichTextRenderer richText={richText} />}
     </div>
   );
 }

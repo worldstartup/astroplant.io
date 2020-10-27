@@ -1,0 +1,7 @@
+.container p {
+  max-width: 512px;
+}
+
+.container a {
+  color: var(--main-color);
+}
