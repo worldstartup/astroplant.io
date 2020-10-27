@@ -14,5 +14,5 @@ export default function IntroductionSection({ title, introduction }) {
 
 IntroductionSection.propTypes = {
   title: PropTypes.string.isRequired,
-  introduction: PropTypes.array.isRequired,
+  introduction: PropTypes.string.isRequired,
 };

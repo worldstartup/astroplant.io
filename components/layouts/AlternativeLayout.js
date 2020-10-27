@@ -21,5 +21,5 @@ export default function AlternativeLayout({
 
 AlternativeLayout.propTypes = {
   pageTitle: PropTypes.string.isRequired,
-  introduction: PropTypes.array.isRequired,
+  introduction: PropTypes.string.isRequired,
 };
