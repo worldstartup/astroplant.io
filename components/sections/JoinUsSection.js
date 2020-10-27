@@ -7,7 +7,7 @@ import Section from "../Section";
 export default function JoinUsSection() {
   return (
     <Section id={"join_us"} bgColor={"dark-light"}>
-      <h1>Join Us!</h1>
+      <h1 className={styles.title}>Join Us!</h1>
       <div className={styles.buttonRow}>
         <GithubButton />
         <JoinCommunityButton />

@@ -84,7 +84,8 @@ h3 {
   font-size: 2rem;
 }
 
-p {
+p,
+b {
   font-size: 16px;
   line-height: 1.5;
 }

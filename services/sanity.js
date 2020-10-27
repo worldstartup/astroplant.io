@@ -109,6 +109,15 @@ export async function getContributeContent() {
     const query = `*[_type == "contribute"] {
       name,
       description,
+      waysToContributeSectionTitle,
+        waysToContribute[]{
+        _key,
+        content,
+        title,
+        "cover": cover.asset -> url
+      },
+      requirementSectionTitle,
+      requirementDescription
     }
     `;
 

@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+
+  margin: 4rem 0;
+}
+
+.cover {
+  max-width: 480px;
+
+  object-fit: cover;
+
+  border-radius: var(--border-radius-min);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  padding: 0 2rem;
+}
+
+.title {
+  margin: 0 0 1rem 0;
+}
+
+.buttonRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+
+  margin: auto 0 0 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: stretch;
+  }
+
+  .cover {
+    width: 100%;
+    max-width: 512;
+  }
+
+  .content {
+    padding: 2rem 0;
+  }
+
+  .buttonRow {
+    margin: 2rem 0 0 0;
+  }
+}

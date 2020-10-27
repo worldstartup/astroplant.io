@@ -10,11 +10,16 @@ import home from "./pages/home";
 import partner from "./partner";
 import milestone from "./milestone";
 import teamMember from "./teamMember";
+import contentBlock from "./contentBlock";
 
 export default createSchema({
   name: "default",
 
   types: schemaTypes.concat([
+    //Objects
+    contentBlock,
+
+    //Documents
     home,
     aboutUs,
     contribute,

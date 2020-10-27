@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
-import { Button } from "../Button";
+import Button from "../Button";
 import FloatingElement from "../FloatingElement";
 import { ImageGrid } from "../ImageGrid";
+import JoinCommunityButton from "../JoinCommunityButton";
 import ContentLayout from "../layouts/Contentlayout";
 import styles from "../modules/CommunitySection.module.css";
 import Section from "../Section";
@@ -11,7 +12,7 @@ export default function CommunitySection({ title, description, images }) {
   return (
     <Section id="community" className={styles.communitySection}>
       <FloatingElement id="community-highlights" percentageHidden={10}>
-        <ImageGrid id={"community-highlights"} images={images} />
+        <ImageGrid images={images} />
       </FloatingElement>
 
       <ContentLayout>
@@ -19,10 +20,7 @@ export default function CommunitySection({ title, description, images }) {
         <SectionDescription color={"#DEE8FF"} richText={description} />
         <div className={styles.buttons}>
           <Button label={"Learn More"} bgColor={"white"} color={"black"} />
-          <Button
-            className={styles.marginButton}
-            label={"Join the community"}
-          />
+          <JoinCommunityButton className={styles.marginButton} />
         </div>
       </ContentLayout>
     </Section>
