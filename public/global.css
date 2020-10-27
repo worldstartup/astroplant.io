@@ -91,16 +91,12 @@ p {
 
 a {
   color: white;
+
   font-size: 16px;
   font-weight: var(--medium);
-  cursor: pointer;
-  opacity: 0.75;
-  transition: var(--default-2s);
-  text-decoration: none;
-}
 
-a:hover {
-  opacity: 1;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .centered-text {

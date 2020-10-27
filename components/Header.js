@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PropTypes from "prop-types";
 import Brand from "./Brand";
-import { Button } from "./Button";
+import JoinCommunityButton from "./JoinCommunityButton";
 import styles from "./modules/Header.module.css";
 
 export function Header({ pages }) {
@@ -16,7 +16,7 @@ export function Header({ pages }) {
               <a className={styles.navLink}>{link}</a>
             </Link>
           ))}
-          <Button href="earthlings" label="Join the Community" />
+          <JoinCommunityButton />
         </nav>
       </div>
     </header>

@@ -1,13 +1,18 @@
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 0.65rem 1rem;
   border-radius: 0.25rem;
-  background-color: var(--secondary-color);
+
   font-size: 16px;
   font-weight: var(--bold);
-  color: rgb(240, 244, 255);
+
   border: none;
   outline: none;
   cursor: pointer;
+
   transition: var(--default-2s);
 }
 
@@ -17,4 +22,34 @@
 
 .button:active {
   filter: brightness(0.6);
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.light {
+  color: var(--light);
+}
+
+.dark {
+  color: var(--dark);
+}
+
+.iconHolder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 0 0 0.5rem;
+  font-size: 16px;
+}
+
+.github,
+.join {
+  width: 100%;
 }

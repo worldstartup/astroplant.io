@@ -1,7 +1,8 @@
 import Link from "next/link";
 import PropTypes from "prop-types";
 import Brand from "./Brand";
-import { Button } from "./Button";
+import GithubButton from "./GithubButton";
+import JoinCommunityButton from "./JoinCommunityButton";
 import styles from "./modules/Footer.module.css";
 import SocialIcons from "./SocialIcons";
 
@@ -30,16 +31,8 @@ export function Footer({ pages }) {
             Grow with the community on <a>Slack</a>
           </p>
           <div className={styles.ctaButtons}>
-            <Button
-              className={styles.marginButtons}
-              label="Join the community"
-            />
-            <Button
-              className={styles.marginButtons}
-              label="View GitHub"
-              bgColor="white"
-              color="black"
-            />
+            <JoinCommunityButton className={styles.marginButtons} />
+            <GithubButton className={styles.marginButtons} />
           </div>
           <div className={styles.miles}>
             <img

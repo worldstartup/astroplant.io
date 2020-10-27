@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Button } from "../Button";
+import Button from "../Button";
 import FloatingElement from "../FloatingElement";
 import ContentLayout from "../layouts/Contentlayout";
 import styles from "../modules/PlatformSection.module.css";
