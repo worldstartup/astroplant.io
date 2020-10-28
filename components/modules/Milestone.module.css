@@ -1,0 +1,112 @@
+.holder {
+  position: relative;
+
+  display: flex;
+
+  margin: -4px 0 0 0;
+}
+
+.date {
+  margin: 0 0 1.5rem 0;
+
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--main-color);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  position: absolute;
+  top: -2px;
+  left: -12px;
+
+  display: block;
+
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: solid 6px var(--dark);
+
+  background-color: var(--main-color);
+}
+
+.line {
+  display: block;
+
+  width: 4px;
+  height: 440px;
+
+  margin: 4px 2rem 0 0;
+
+  background-color: var(--main-color);
+}
+
+.content {
+  padding: 0 2rem;
+  max-width: 512px;
+}
+
+.description {
+  width: 100%;
+  min-width: 512px;
+  margin: 1rem 0;
+}
+
+.cover {
+  flex: 1;
+
+  max-width: 512px;
+
+  object-fit: cover;
+
+  border-radius: var(--border-radius-min);
+}
+
+.blue {
+  color: var(--secondary-color);
+}
+
+.bg-blue {
+  background-color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: stretch;
+  }
+
+  .cover {
+    width: 100%;
+    max-width: 512;
+  }
+
+  .description {
+    min-width: unset;
+  }
+
+  .content {
+    padding: 2rem 0;
+  }
+
+  .line {
+    height: 644px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .circle {
+    display: none;
+  }
+
+  .line {
+    display: none;
+  }
+}

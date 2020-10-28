@@ -4,9 +4,9 @@ export default {
   type: "document",
   fields: [
     {
-      name: "cover",
-      title: "Cover",
-      type: "image",
+      name: "title",
+      title: "Title",
+      type: "string",
       validation: (Rule) => Rule.required(),
     },
     {
@@ -19,9 +19,9 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "title",
-      title: "Title",
-      type: "string",
+      name: "cover",
+      title: "Cover",
+      type: "image",
       validation: (Rule) => Rule.required(),
     },
     {
@@ -29,6 +29,13 @@ export default {
       title: "Description",
       type: "text",
       validation: (Rule) => Rule.required(),
+    },
+  ],
+  orderings: [
+    {
+      title: "Date, Recent",
+      name: "DateDesc",
+      by: [{ field: "date", direction: "desc" }],
     },
   ],
 };

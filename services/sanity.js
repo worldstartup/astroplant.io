@@ -135,6 +135,12 @@ export async function getGoalsContent() {
     const query = `*[_type == "goals"] {
       name,
       description,
+      goals{
+        _id,
+        content,
+        title,
+        "cover": cover.asset -> url
+      },
     }
     `;
 
@@ -224,6 +230,29 @@ export async function getPartners() {
       _id,
       name,
       "logo": logo.asset->url
+    }`;
+
+    let res = await client.fetch(query);
+
+    return res;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
+
+/*****************************************
+ *              MILESTONES               *
+ *****************************************/
+
+export async function getMilestones() {
+  try {
+    const query = `*[_type == "milestone"] | order(date asc){
+      _id,
+      title,
+      date,
+      "cover": cover.asset -> url,
+      description,
     }`;
 
     let res = await client.fetch(query);
