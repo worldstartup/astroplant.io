@@ -5,7 +5,19 @@ import React from "react";
 import { Footer } from "../Footer";
 import { Header } from "../Header";
 
-const pages = ["Home", "Community", "Contribute", "Shop"];
+const pages = [
+  { name: "Home", path: "/" },
+  {
+    name: "Community",
+    path: "/community",
+    subpages: [
+      { name: "About Us", path: "/community/about-us" },
+      { name: "Goals", path: "/community/goals" },
+    ],
+  },
+  { name: "Contribute", path: "/contribute" },
+  { name: "Shop", path: "/shop" },
+];
 
 export default function MainLayout({ children, pageName, pageDescription }) {
   const router = useRouter();

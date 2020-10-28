@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLink {
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--main-color) !important;
+}
+
+.dropdown {
+  fill: var(--light);
+  font-size: 24px;
+
+  margin: 0 0 0 0.5rem;
+}

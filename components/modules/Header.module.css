@@ -1,9 +1,10 @@
+/** Header **/
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 999;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.5) 0%,
@@ -40,11 +41,43 @@
 }
 
 .navLink {
-  margin: 0 2rem;
+  margin: 0 3rem 0 0;
 }
 
-.navLink:hover {
+/** Dropdown content **/
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.dropdownTitle {
+  text-transform: uppercase;
+
+  font-size: 14px;
   color: var(--main-color);
+  letter-spacing: 0.1em;
+
+  margin: 0 0 1rem 0;
+}
+
+.dropdownLinks {
+  margin: 0 0 1rem 0;
+}
+
+.communityLink {
+  margin-top: auto;
+
+  text-transform: capitalize;
+
+  color: var(--main-color);
+}
+
+.newsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem;
 }
 
 @media only screen and (max-width: 768px) {

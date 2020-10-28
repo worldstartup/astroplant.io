@@ -129,7 +129,7 @@ a {
 
 .bg-gradient {
   position: relative;
-  z-index: -999;
+  z-index: 0;
   background: var(--bg-gradient);
 }
 
