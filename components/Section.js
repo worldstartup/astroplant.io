@@ -23,4 +23,5 @@ Section.propTypes = {
 
 Section.defaultProps = {
   bgColor: "transparent",
+  className: "",
 };

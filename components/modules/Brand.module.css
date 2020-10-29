@@ -10,20 +10,12 @@
   width: 1px;
   background-color: var(--light);
   margin: 0 1rem;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 }
 
 .text {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 }
 
 .text svg {
@@ -35,4 +27,11 @@
   display: block;
   height: 32px;
   width: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .text,
+  .separator {
+    display: none;
+  }
 }

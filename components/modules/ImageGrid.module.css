@@ -7,10 +7,14 @@
 }
 
 .gridImage {
-  object-fit: cover;
   height: 256px;
-  border-radius: var(--border-radius-min);
   width: 100%;
+
+  object-fit: cover;
+
+  border-radius: var(--border-radius-min);
+
+  box-shadow: var(--card-shadow);
 }
 
 @media only screen and (max-width: 660px) {
