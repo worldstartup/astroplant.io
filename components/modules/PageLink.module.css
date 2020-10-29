@@ -5,10 +5,15 @@
 }
 
 .navLink {
-  transition: color 0.3s ease;
+  color: var(--light);
+  font-weight: 500;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .navLink:hover {
+  opacity: 1;
   color: var(--main-color) !important;
 }
 

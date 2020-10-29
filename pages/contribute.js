@@ -3,11 +3,16 @@ import AlternativeLayout from "../components/layouts/AlternativeLayout";
 import Section from "../components/Section";
 import RequirementSection from "../components/sections/RequirementSection";
 import WayToContribute from "../components/WayToContribute";
+import { getFeaturedArticles } from "../services/community-api";
 import { getContributeContent } from "../services/sanity";
 
-export default function Contribute({ data }) {
+export default function Contribute({ data, featuredArticles }) {
   return (
-    <AlternativeLayout pageTitle={data.name} introduction={data.description}>
+    <AlternativeLayout
+      featuredArticles={featuredArticles}
+      pageTitle={data.name}
+      introduction={data.description}
+    >
       <Section id={"contributions"} bgColor={"dark-light"}>
         <h2 className={"centered-text"}>{data.waysToContributeSectionTitle}</h2>
         <div>
@@ -26,6 +31,10 @@ export default function Contribute({ data }) {
 
 export async function getStaticProps() {
   return {
-    props: { data: await getContributeContent() },
+    props: {
+      data: await getContributeContent(),
+      featuredArticles: await getFeaturedArticles(),
+    },
+    revalidate: 3000,
   };
 }

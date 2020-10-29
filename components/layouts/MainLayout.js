@@ -5,21 +5,12 @@ import React from "react";
 import { Footer } from "../Footer";
 import { Header } from "../Header";
 
-const pages = [
-  { name: "Home", path: "/" },
-  {
-    name: "Community",
-    path: "/community",
-    subpages: [
-      { name: "About Us", path: "/community/about-us" },
-      { name: "Goals", path: "/community/goals" },
-    ],
-  },
-  { name: "Contribute", path: "/contribute" },
-  { name: "Shop", path: "/shop" },
-];
-
-export default function MainLayout({ children, pageName, pageDescription }) {
+export default function MainLayout({
+  children,
+  pageName,
+  pageDescription,
+  featuredArticles,
+}) {
   const router = useRouter();
 
   const publicUrl = `https://astroplant.io`;
@@ -46,9 +37,9 @@ export default function MainLayout({ children, pageName, pageDescription }) {
         <meta property="twitter:image" content="/images/meta-image" />
       </Head>
 
-      <Header pages={pages} />
+      <Header featuredArticles={featuredArticles} />
       {children}
-      <Footer pages={pages} />
+      <Footer />
     </>
   );
 }
@@ -57,4 +48,5 @@ MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
   pageName: PropTypes.string.isRequired,
   pageDescription: PropTypes.string.isRequired,
+  featuredArticles: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

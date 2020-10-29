@@ -1,7 +1,6 @@
 .heroSection {
   position: relative;
-
-  min-height: 100vh;
+  margin-top: -128px;
 }
 
 .stars {

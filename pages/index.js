@@ -6,6 +6,7 @@ import CTASection from "../components/sections/CTASection";
 import HeroSection from "../components/sections/HeroSection";
 import MainPartnersSection from "../components/sections/MainPartnersSection";
 import PlatformSection from "../components/sections/PlatformSection";
+import { getFeaturedArticles } from "../services/community-api";
 import { getAchievements, getHome } from "../services/sanity";
 
 /*const Loader = dynamic(
@@ -15,7 +16,7 @@ import { getAchievements, getHome } from "../services/sanity";
   }
 );*/
 
-export default function Home({ data, achievements }) {
+export default function Home({ data, achievements, featuredArticles }) {
   return (
     <div className={"bg-gradient"}>
       <MainLayout
@@ -23,6 +24,7 @@ export default function Home({ data, achievements }) {
         pageDescription={
           "AstroPlant, growing a new generation of urban and space farmers."
         }
+        featuredArticles={featuredArticles}
       >
         {/*<Loader
         color={"var(--main-color)"}
@@ -68,6 +70,8 @@ export async function getStaticProps() {
     props: {
       data: await getHome(),
       achievements: await getAchievements(),
+      featuredArticles: await getFeaturedArticles(),
     },
+    revalidate: 3000,
   };
 }

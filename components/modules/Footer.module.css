@@ -1,11 +1,16 @@
 .footer {
   background-color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 3rem;
+  padding: 2rem 1.5rem;
+
+  max-width: var(--max-content-width);
 }
 
 .left {

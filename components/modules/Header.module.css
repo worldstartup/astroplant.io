@@ -1,10 +1,12 @@
 /** Header **/
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.5) 0%,
@@ -13,10 +15,15 @@
 }
 
 .container {
-  padding: 2rem;
   display: flex;
+
   justify-content: space-between;
   align-items: center;
+
+  width: 100%;
+  max-width: var(--max-content-width);
+
+  padding: 2rem 1.5rem;
 }
 
 .logo {
@@ -66,12 +73,22 @@
   margin: 0 0 1rem 0;
 }
 
-.communityLink {
+.row {
+  display: flex;
+  align-items: center;
+
   margin-top: auto;
+}
 
-  text-transform: capitalize;
-
+.communityLink {
   color: var(--main-color);
+  text-transform: capitalize;
+}
+
+.outIcon {
+  margin: 0 0 0 0.5rem;
+  font-size: 16px;
+  fill: var(--main-color);
 }
 
 .newsContainer {

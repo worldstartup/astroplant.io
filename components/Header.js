@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
+import OutIcon from "../public/icons/open-outside.svg";
 import Brand from "./Brand";
 import ArticleCard from "./cards/ArticleCard";
 import DropdownMenu from "./DropdownMenu";
@@ -6,54 +8,66 @@ import JoinCommunityButton from "./JoinCommunityButton";
 import styles from "./modules/Header.module.css";
 import PageLink from "./PageLink";
 
-export function Header({ pages }) {
+export function Header({ featuredArticles }) {
+  const [showDropdown, setShowDropdown] = useState(false);
+
   return (
     <header className={styles.header} id="header">
       <div className={styles.container}>
         <Brand />
 
         <nav className={styles.nav}>
-          {pages.map((page) => {
-            return (
-              <PageLink
-                hasDropdown={page.subpages != null}
-                key={page.path}
-                className={styles.navLink}
-                pageDetails={page}
-              />
-            );
-          })}
+          <PageLink
+            className={styles.navLink}
+            pageDetails={{ name: "Home", path: "/" }}
+          />
+          <PageLink
+            className={styles.navLink}
+            pageDetails={{ name: "Community", path: null }}
+            hasDropdown
+            onClick={() => setShowDropdown(!showDropdown)}
+          />
+          <PageLink
+            className={styles.navLink}
+            pageDetails={{ name: "Contribute", path: "/contribute" }}
+          />
+          <PageLink
+            className={styles.navLink}
+            pageDetails={{ name: "Shop", path: "/shop" }}
+          />
           <JoinCommunityButton />
         </nav>
       </div>
-      <DropdownMenu>
+      <DropdownMenu visible={showDropdown}>
         <div className={styles.linksContainer}>
           <b className={styles.dropdownTitle}>Community</b>
-          {pages.map((page) => {
-            return (
-              page.subpages && (
-                <>
-                  {page.subpages.map((subpage) => (
-                    <PageLink
-                      className={styles.dropdownLinks}
-                      key={subpage.path}
-                      pageDetails={subpage}
-                    />
-                  ))}
-                </>
-              )
-            );
-          })}
-          <a className={styles.communityLink}>Community Platform</a>
+
+          <PageLink
+            className={styles.dropdownLinks}
+            pageDetails={{ name: "About Us", path: "/community/about-us" }}
+          />
+
+          <PageLink
+            className={styles.dropdownLinks}
+            pageDetails={{ name: "Goals", path: "/community/goals" }}
+          />
+
+          <div className={styles.row}>
+            <a
+              target={"blank"}
+              referrerPolicy={"no-referrer"}
+              href={"https://app.astroplant.sda-projects.nl/"}
+              className={styles.communityLink}
+            >
+              Community Platform
+            </a>
+            <OutIcon className={styles.outIcon} />
+          </div>
         </div>
         <div className={styles.newsContainer}>
-          <ArticleCard
-            article={{
-              title: "Looking through the eyes of a space chef!",
-              date: "July 24, 2020",
-              cover: "/images/card1.jpg",
-            }}
-          />
+          {featuredArticles.map((article) => (
+            <ArticleCard key={article.id} article={article} />
+          ))}
         </div>
       </DropdownMenu>
     </header>
@@ -61,5 +75,5 @@ export function Header({ pages }) {
 }
 
 Header.propTypes = {
-  pages: PropTypes.arrayOf(PropTypes.object).isRequired,
+  featuredArticles: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

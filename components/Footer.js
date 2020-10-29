@@ -1,5 +1,3 @@
-import Link from "next/link";
-import PropTypes from "prop-types";
 import Brand from "./Brand";
 import GithubButton from "./GithubButton";
 import JoinCommunityButton from "./JoinCommunityButton";
@@ -7,7 +5,7 @@ import styles from "./modules/Footer.module.css";
 import PageLink from "./PageLink";
 import SocialIcons from "./SocialIcons";
 
-export function Footer({ pages }) {
+export function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -17,34 +15,32 @@ export function Footer({ pages }) {
           <nav className={styles.nav}>
             <div className={styles.navSection}>
               <p className={styles.navSectionTitle}>AstroPlant</p>
-              {pages.map((page) => {
-                if (!page.subpages) {
-                  return (
-                    <PageLink
-                      key={page.path}
-                      className={styles.pageLink}
-                      pageDetails={page}
-                    />
-                  );
-                }
-              })}
+              <PageLink
+                className={styles.pageLink}
+                pageDetails={{ name: "Home", path: "/" }}
+              />
+              <PageLink
+                className={styles.pageLink}
+                pageDetails={{ name: "Contribute", path: "/contribute" }}
+              />
+              <PageLink
+                className={styles.pageLink}
+                pageDetails={{ name: "Shop", path: "/shop" }}
+              />
             </div>
-            {pages.map((page) => {
-              if (page.subpages) {
-                return (
-                  <div key={page.name} className={styles.navSection}>
-                    <p className={styles.navSectionTitle}>{page.name}</p>
-                    {page.subpages.map((sub) => (
-                      <PageLink
-                        key={sub.path}
-                        className={styles.pageLink}
-                        pageDetails={sub}
-                      />
-                    ))}
-                  </div>
-                );
-              }
-            })}
+
+            <div className={styles.navSection}>
+              <p className={styles.navSectionTitle}>Community</p>
+              <PageLink
+                className={styles.pageLink}
+                pageDetails={{ name: "About Us", path: "/community/about-us" }}
+              />
+
+              <PageLink
+                className={styles.pageLink}
+                pageDetails={{ name: "Goals", path: "/community/goals" }}
+              />
+            </div>
           </nav>
 
           <SocialIcons />
@@ -73,7 +69,3 @@ export function Footer({ pages }) {
     </footer>
   );
 }
-
-Footer.propTypes = {
-  pages: PropTypes.arrayOf(PropTypes.object).isRequired,
-};

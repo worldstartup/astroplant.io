@@ -1,6 +1,6 @@
 .holder {
-  position: fixed;
-  top: 6rem;
+  position: absolute;
+  top: 100%;
 
   z-index: -1;
 
@@ -8,7 +8,23 @@
   align-items: center;
   justify-content: center;
 
+  padding: 0 1.5rem;
+
+  overflow: hidden;
+
+  transition: all 0.3s ease-out;
+}
+
+.visible {
+  visibility: visible;
   width: 100%;
+  opacity: 1;
+}
+
+.hidden {
+  visibility: hidden;
+  width: 0px;
+  opacity: 0;
 }
 
 .content {
@@ -16,7 +32,7 @@
   grid-template-columns: 0.75fr 1fr;
 
   width: 100%;
-  max-width: 1280px;
+  max-width: var(--max-content-width);
 
   padding: 1.5rem;
 

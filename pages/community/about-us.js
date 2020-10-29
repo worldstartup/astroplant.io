@@ -3,6 +3,7 @@ import AlternativeLayout from "../../components/layouts/AlternativeLayout";
 import PartnersGrid from "../../components/PartnersGrid";
 import Section from "../../components/Section";
 import TeamSection from "../../components/sections/TeamSection";
+import { getFeaturedArticles } from "../../services/community-api";
 import {
   getAboutUsContent,
   getCoreTeamMembers,
@@ -15,9 +16,14 @@ export default function AboutUs({
   coreTeamMembers,
   otherTeamMembers,
   partners,
+  featuredArticles,
 }) {
   return (
-    <AlternativeLayout pageTitle={data.name} introduction={data.description}>
+    <AlternativeLayout
+      featuredArticles={featuredArticles}
+      pageTitle={data.name}
+      introduction={data.description}
+    >
       <TeamSection
         coreTeamMembers={coreTeamMembers}
         otherTeamMembers={otherTeamMembers}
@@ -37,6 +43,8 @@ export async function getStaticProps() {
       coreTeamMembers: await getCoreTeamMembers(),
       otherTeamMembers: await getOtherTeamMembers(),
       partners: await getPartners(),
+      featuredArticles: await getFeaturedArticles(),
     },
+    revalidate: 3000,
   };
 }

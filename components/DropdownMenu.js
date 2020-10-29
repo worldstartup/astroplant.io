@@ -1,16 +1,20 @@
-import React, { useState } from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import styles from "./modules/DropdownMenu.module.css";
 
-export default function DropdownMenu({ children }) {
-  const [open, setOpen] = useState(false);
+export default function DropdownMenu({ visible, children }) {
   return (
-    <div className={styles.holder}>
+    <div
+      className={`${styles.holder} ${
+        visible ? styles["visible"] : styles["hidden"]
+      }`}
+    >
       <div className={styles.content}>{children}</div>
     </div>
   );
 }
 
 DropdownMenu.propTypes = {
+  visible: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
 };
