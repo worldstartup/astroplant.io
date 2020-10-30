@@ -6,13 +6,15 @@ export default function Carousel({ content }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    setTimeout(function () {
+    const timer = setTimeout(function () {
       if (activeIndex < content.length - 1) {
         setActiveIndex(activeIndex + 1);
       } else {
         setActiveIndex(0);
       }
     }, 6000);
+
+    return () => clearTimeout(timer);
   }, [activeIndex]);
 
   return (
