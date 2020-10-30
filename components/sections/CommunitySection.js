@@ -3,7 +3,7 @@ import Button from "../Button";
 import FloatingElement from "../FloatingElement";
 import { ImageGrid } from "../ImageGrid";
 import JoinCommunityButton from "../JoinCommunityButton";
-import ContentLayout from "../layouts/Contentlayout";
+import ContentLayout from "../layouts/ContentLayout";
 import styles from "../modules/CommunitySection.module.css";
 import Section from "../Section";
 import SectionDescription from "../SectionDescription";

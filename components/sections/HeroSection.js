@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 import { imageUrlFor } from "../../services/sanity";
 import FloatingElement from "../FloatingElement";
-import ContentLayout from "../layouts/Contentlayout";
+import ContentLayout from "../layouts/ContentLayout";
 import styles from "../modules/HeroSection.module.css";
 import Section from "../Section";
 import SectionDescription from "../SectionDescription";

@@ -3,7 +3,7 @@ import CommunityCard from "../cards/CommunityCard";
 import ContributeCard from "../cards/ContributeCard";
 import KitCard from "../cards/KitCard";
 import FloatingElement from "../FloatingElement";
-import ContentLayout from "../layouts/Contentlayout";
+import ContentLayout from "../layouts/ContentLayout";
 import styles from "../modules/CTASection.module.css";
 import Section from "../Section";
 import SectionDescription from "../SectionDescription";
