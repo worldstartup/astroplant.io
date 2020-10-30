@@ -29,7 +29,7 @@
   width: 32px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .text,
   .separator {
     display: none;

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import MenuIcon from "../public/icons/menu.svg";
 import OutIcon from "../public/icons/open-outside.svg";
 import Brand from "./Brand";
 import ArticleCard from "./cards/ArticleCard";
@@ -8,68 +8,109 @@ import JoinCommunityButton from "./JoinCommunityButton";
 import styles from "./modules/Header.module.css";
 import PageLink from "./PageLink";
 
-export function Header({ featuredArticles }) {
-  const [showDropdown, setShowDropdown] = useState(false);
+const HomeLink = () => (
+  <PageLink
+    className={styles.navLink}
+    pageDetails={{ name: "Home", path: "/" }}
+  />
+);
 
+const ContributeLink = () => (
+  <PageLink
+    className={styles.navLink}
+    pageDetails={{ name: "Contribute", path: "/contribute" }}
+  />
+);
+
+const ShopLink = () => (
+  <PageLink
+    className={styles.navLink}
+    pageDetails={{ name: "Shop", path: "/shop" }}
+  />
+);
+
+export function Header({ featuredArticles }) {
   return (
     <header className={styles.header} id="header">
       <div className={styles.container}>
         <Brand />
 
+        <div className={styles.navMobile}>
+          <DropdownMenu
+            name={"mobile-nav"}
+            trigger={<MenuIcon className={styles.menuIcon} />}
+          >
+            <nav className={styles.linksMobile}>
+              <HomeLink />
+              <PageLink
+                className={styles.navLink}
+                pageDetails={{ name: "About Us", path: "/community/about-us" }}
+              />
+              <PageLink
+                className={styles.navLink}
+                pageDetails={{ name: "Goals", path: "/community/goals" }}
+              />
+              <ContributeLink />
+              <ShopLink />
+              <JoinCommunityButton />
+            </nav>
+          </DropdownMenu>
+        </div>
+
         <nav className={styles.nav}>
-          <PageLink
-            className={styles.navLink}
-            pageDetails={{ name: "Home", path: "/" }}
-          />
-          <PageLink
-            className={styles.navLink}
-            pageDetails={{ name: "Community", path: null }}
-            hasDropdown
-            onClick={() => setShowDropdown(!showDropdown)}
-          />
-          <PageLink
-            className={styles.navLink}
-            pageDetails={{ name: "Contribute", path: "/contribute" }}
-          />
-          <PageLink
-            className={styles.navLink}
-            pageDetails={{ name: "Shop", path: "/shop" }}
-          />
+          <HomeLink />
+          <DropdownMenu
+            trigger={
+              <PageLink
+                className={styles.navLink}
+                pageDetails={{ name: "Community", path: null }}
+                hasDropdown
+              />
+            }
+            name={"community-submenu"}
+          >
+            <div className={styles.communityDropdown}>
+              <div className={styles.linksContainer}>
+                <b className={styles.dropdownTitle}>Community</b>
+
+                <PageLink
+                  className={styles.dropdownLinks}
+                  pageDetails={{
+                    name: "About Us",
+                    path: "/community/about-us",
+                  }}
+                />
+
+                <PageLink
+                  className={styles.dropdownLinks}
+                  pageDetails={{ name: "Goals", path: "/community/goals" }}
+                />
+
+                <div className={styles.row}>
+                  <a
+                    target={"blank"}
+                    referrerPolicy={"no-referrer"}
+                    href={"https://app.astroplant.sda-projects.nl/"}
+                    className={styles.communityLink}
+                  >
+                    Community Platform
+                  </a>
+                  <OutIcon className={styles.outIcon} />
+                </div>
+              </div>
+              <div className={styles.newsContainer}>
+                {featuredArticles.map((article) => (
+                  <ArticleCard key={article.id} article={article} />
+                ))}
+              </div>
+            </div>
+          </DropdownMenu>
+
+          <ContributeLink />
+          <ShopLink />
           <JoinCommunityButton />
         </nav>
       </div>
-      <DropdownMenu visible={showDropdown}>
-        <div className={styles.linksContainer}>
-          <b className={styles.dropdownTitle}>Community</b>
-
-          <PageLink
-            className={styles.dropdownLinks}
-            pageDetails={{ name: "About Us", path: "/community/about-us" }}
-          />
-
-          <PageLink
-            className={styles.dropdownLinks}
-            pageDetails={{ name: "Goals", path: "/community/goals" }}
-          />
-
-          <div className={styles.row}>
-            <a
-              target={"blank"}
-              referrerPolicy={"no-referrer"}
-              href={"https://app.astroplant.sda-projects.nl/"}
-              className={styles.communityLink}
-            >
-              Community Platform
-            </a>
-            <OutIcon className={styles.outIcon} />
-          </div>
-        </div>
-        <div className={styles.newsContainer}>
-          {featuredArticles.map((article) => (
-            <ArticleCard key={article.id} article={article} />
-          ))}
-        </div>
-      </DropdownMenu>
     </header>
   );
 }

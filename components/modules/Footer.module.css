@@ -1,36 +1,22 @@
 .footer {
   background-color: var(--dark);
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 2rem 1.5rem;
-
-  max-width: var(--max-content-width);
-}
-
-.left {
-  justify-self: start;
-
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
 
-  margin-top: 0.5rem;
+  padding: 2rem 1.5rem;
 }
 
-.logo {
-  width: 250px;
+.title {
+  margin: 2rem 0 1rem 0;
+
+  font-size: 1.5rem;
+  font-weight: var(--bold);
 }
 
 .nav {
   display: flex;
   align-items: flex-start;
+  margin: 0 0 1rem 0;
 }
 
 .pageLink {
@@ -57,80 +43,33 @@
   margin: 0 0 0.5rem 0;
 }
 
+.row {
+  display: flex;
+  align-items: baseline;
+}
+
+.sep {
+  display: block;
+  width: 1px;
+  height: 24px;
+  margin: 0 1rem 0 0;
+  background-color: var(--light);
+}
+
 .icon {
   margin-right: 0.5rem;
   width: 30px;
 }
 
-.right {
-  justify-self: end;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-.title {
-  margin-bottom: 1rem;
-
-  font-size: 2rem;
-  font-weight: var(--bold);
-  text-align: right;
-}
-
-.ctaButtons {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
-
-  margin: 2rem 0;
-}
-
-.marginButtons {
-  margin: 0.5rem 0;
-}
-
 .miles {
   display: flex;
   align-items: center;
+
+  margin: 1rem 0 0 0;
 }
 
 .milesLogo {
   height: 15px;
   margin-right: 0.5rem;
   padding-bottom: 3px;
-}
-
-@media only screen and (max-width: 1024px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    padding: 3rem;
-  }
-  .nav {
-    margin: 2rem 0;
-  }
-  .right {
-    align-items: flex-start;
-    margin: 2rem 0 0 0;
-  }
-  .title {
-    text-align: left;
-  }
-  .ctaButtons {
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-}
-
-@media only screen and (max-width: 440px) {
-  .left {
-    justify-content: flex-start;
-  }
-
-  .title {
-    font-size: 1.5rem !important;
-  }
 }

@@ -8,18 +8,30 @@
 }
 
 .cardRow {
-  margin-top: 12rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 2rem;
+  align-items: center;
 
   max-width: 1200px;
-  align-items: center;
+
+  margin-top: 12rem;
 }
 
 @media only screen and (max-width: 1024px) {
+  .title {
+    margin: 2rem 0;
+  }
+  .cardRow {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 2rem;
+
+    margin-top: 4rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .cardRow {
     grid-template-columns: 1fr;
-    grid-row-gap: 2rem;
   }
 }

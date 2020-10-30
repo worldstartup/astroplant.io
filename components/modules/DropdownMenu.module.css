@@ -1,8 +1,17 @@
-.holder {
-  position: absolute;
-  top: 100%;
+.triggerHolder {
+  cursor: pointer;
+}
 
-  z-index: -1;
+.menuHolder {
+  position: relative;
+}
+
+.holder {
+  position: fixed;
+  top: 6rem;
+  left: 0;
+
+  z-index: 999;
 
   display: flex;
   align-items: center;
@@ -12,25 +21,20 @@
 
   overflow: hidden;
 
-  transition: all 0.3s ease-out;
+  visibility: hidden;
+  width: 100vw;
+  max-width: 100%;
+  opacity: 0;
+
+  transition: opacity 0.2s ease-out, visibility 0.3s ease-out;
 }
 
 .visible {
   visibility: visible;
-  width: 100%;
   opacity: 1;
 }
 
-.hidden {
-  visibility: hidden;
-  width: 0px;
-  opacity: 0;
-}
-
 .content {
-  display: grid;
-  grid-template-columns: 0.75fr 1fr;
-
   width: 100%;
   max-width: var(--max-content-width);
 
