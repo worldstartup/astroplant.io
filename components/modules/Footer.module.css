@@ -1,9 +1,20 @@
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: var(--dark);
+  width: 100%;
+}
+
+.container {
   display: flex;
   flex-direction: column;
 
-  padding: 2rem 1.5rem;
+  width: 100%;
+  max-width: var(--max-content-width);
+
+  padding: 3rem 1.5rem;
 }
 
 .title {
