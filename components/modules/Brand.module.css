@@ -12,6 +12,10 @@
   margin: 0 1rem;
 }
 
+.darkSeparator {
+  background-color: var(--dark);
+}
+
 .text {
   display: flex;
   align-items: center;
@@ -21,6 +25,10 @@
 .text svg {
   height: 32px;
   width: 128px;
+}
+
+.darkText svg path {
+  fill: var(--dark);
 }
 
 .logoHolder {

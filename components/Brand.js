@@ -4,7 +4,7 @@ import React from "react";
 import AstroplantText from "../public/logos/astroplant-text.svg";
 import styles from "./modules/Brand.module.css";
 
-export default function Brand() {
+export default function Brand({ dark }) {
   return (
     <Link passHref href={"/"}>
       <a className={styles.container} target="_blank">
@@ -22,8 +22,10 @@ export default function Brand() {
             </g>
           </svg>
         </div>
-        <div className={styles.separator} />
-        <div className={styles.text}>
+        <div
+          className={` ${styles.separator} ${dark ? styles.darkSeparator : ""}`}
+        />
+        <div className={`${styles.text} ${dark ? styles.darkText : ""}`}>
           <AstroplantText />
         </div>
       </a>
@@ -36,4 +38,9 @@ Brand.propTypes = {
    * Styling class of the container. Used by styled-components.
    */
   className: PropTypes.string,
+  dark: PropTypes.bool,
+};
+
+Brand.defaultProps = {
+  dark: false,
 };

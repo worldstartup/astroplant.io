@@ -8,32 +8,38 @@ import JoinCommunityButton from "./JoinCommunityButton";
 import styles from "./modules/Header.module.css";
 import PageLink from "./PageLink";
 
-const HomeLink = () => (
+const HomeLink = ({ dark }) => (
   <PageLink
+    dark={dark}
     className={styles.navLink}
     pageDetails={{ name: "Home", path: "/" }}
   />
 );
 
-const ContributeLink = () => (
+const ContributeLink = ({ dark }) => (
   <PageLink
+    dark={dark}
     className={styles.navLink}
     pageDetails={{ name: "Contribute", path: "/contribute" }}
   />
 );
 
-const ShopLink = () => (
+const ShopLink = ({ dark }) => (
   <PageLink
+    dark={dark}
     className={styles.navLink}
     pageDetails={{ name: "Shop", path: "/shop" }}
   />
 );
 
-export function Header({ featuredArticles }) {
+export function Header({ featuredArticles, dark }) {
   return (
-    <header className={styles.header} id="header">
+    <header
+      className={`${styles.header} ${dark ? "" : styles.bgGradient}`}
+      id="header"
+    >
       <div className={styles.container}>
-        <Brand />
+        <Brand dark={dark} />
 
         <div className={styles.navMobile}>
           <DropdownMenu
@@ -58,10 +64,11 @@ export function Header({ featuredArticles }) {
         </div>
 
         <nav className={styles.nav}>
-          <HomeLink />
+          <HomeLink dark={dark} />
           <DropdownMenu
             trigger={
               <PageLink
+                dark={dark}
                 className={styles.navLink}
                 pageDetails={{ name: "Community", path: null }}
                 hasDropdown
@@ -106,9 +113,9 @@ export function Header({ featuredArticles }) {
             </div>
           </DropdownMenu>
 
-          <ContributeLink />
-          <ShopLink />
-          <JoinCommunityButton />
+          <ContributeLink dark={dark} />
+          <ShopLink dark={dark} />
+          <JoinCommunityButton dark={dark} />
         </nav>
       </div>
     </header>
@@ -117,4 +124,9 @@ export function Header({ featuredArticles }) {
 
 Header.propTypes = {
   featuredArticles: PropTypes.arrayOf(PropTypes.object).isRequired,
+  dark: PropTypes.bool,
+};
+
+Header.defaultProps = {
+  dark: false,
 };
