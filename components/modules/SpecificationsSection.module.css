@@ -1,0 +1,23 @@
+.specTable {
+  width: 100%;
+
+  margin: 4rem 0;
+
+  border: solid 1px var(--border-color);
+  border-radius: var(--border-radius-min);
+
+  background-color: var(--dark-light);
+}
+
+.specTable td {
+  padding: 0.5rem 1rem;
+}
+
+.specTable tr:nth-child(2n) {
+  background-color: var(--grey-dark);
+}
+
+.specName {
+  border-right: 1px solid var(--border-color);
+  width: 20%;
+}

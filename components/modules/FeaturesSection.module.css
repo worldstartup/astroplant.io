@@ -1,0 +1,21 @@
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4rem;
+
+  justify-items: center;
+
+  width: 100%;
+
+  margin: 6rem 0 4rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .featuresGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+
+    margin: 4rem 0 2rem 0;
+  }
+}

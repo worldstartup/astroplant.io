@@ -1,0 +1,36 @@
+.componentsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+
+  justify-items: center;
+
+  width: 100%;
+
+  margin: 4rem 0;
+}
+
+.componentsCover {
+  width: 100%;
+  max-width: 340px;
+
+  object-fit: cover;
+
+  margin: 0 0 1rem 0;
+}
+
+.componentsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .componentsGrid {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+
+    margin: 2rem 0;
+  }
+}

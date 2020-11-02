@@ -263,3 +263,46 @@ export async function getMilestones() {
     return null;
   }
 }
+
+/*****************************************
+ *                  KIT                  *
+ *****************************************/
+
+export async function getKitDetails() {
+  try {
+    const query = `*[_type == "kit"] {
+      components[]{
+        _key,
+        name,
+        "picture": picture.asset->url
+      },
+      features[]{
+        _key,
+        order,
+        name,
+        description,
+        "icon": icon.asset -> url
+      },
+      specifications[]{
+        _key,
+        name,
+        value,
+        unit,
+      },
+      reviews[]{
+        _key,
+        authorJob,
+        authorName,
+        "authorPicture": authorPicture.asset -> url,
+        content,
+      },
+    }`;
+
+    let res = await client.fetch(query);
+
+    return res[0];
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}

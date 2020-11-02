@@ -1,0 +1,31 @@
+.card {
+  padding: 1.5rem;
+
+  background-color: var(--grey-dark);
+}
+
+.picture {
+  width: 80px;
+  height: 80px;
+
+  margin: 0 0 1.5rem 0;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.authorName,
+.authorJob {
+  font-size: 1.25rem;
+}
+
+.authorName {
+  color: var(--main-color);
+  margin: 0 0 0.5rem 0;
+}
+
+.content {
+  margin: 1.5rem 0 0.5rem 0;
+
+  font-weight: 300;
+  font-style: italic;
+}

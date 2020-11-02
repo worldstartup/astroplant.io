@@ -11,6 +11,7 @@ import ctaIcon from "react-icons/lib/go/megaphone";
 import milestoneIcon from "react-icons/lib/go/milestone";
 import achievementIcon from "react-icons/lib/go/check";
 import teamIcon from "react-icons/lib/md/group";
+import kitIcon from "react-icons/lib/go/tools";
 
 export default () =>
   S.list()
@@ -117,4 +118,11 @@ export default () =>
         .title("Call to Actions")
         .icon(ctaIcon)
         .child(S.documentTypeList("cta")),
+
+      S.listItem()
+        .title("Kit")
+        .icon(kitIcon)
+        .child(
+          S.editor().schemaType("kit").documentId("kit").title("Edit Kit")
+        ),
     ]);

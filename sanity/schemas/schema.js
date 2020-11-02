@@ -11,6 +11,11 @@ import partner from "./partner";
 import milestone from "./milestone";
 import teamMember from "./teamMember";
 import contentBlock from "./contentBlock";
+import component from "./kit/component";
+import feature from "./kit/feature";
+import review from "./kit/review";
+import specification from "./kit/specification";
+import kit from "./kit/kit";
 
 export default createSchema({
   name: "default",
@@ -18,6 +23,10 @@ export default createSchema({
   types: schemaTypes.concat([
     //Objects
     contentBlock,
+    component,
+    feature,
+    review,
+    specification,
 
     //Documents
     home,
@@ -29,5 +38,6 @@ export default createSchema({
     achievement,
     milestone,
     cta,
+    kit,
   ]),
 });
