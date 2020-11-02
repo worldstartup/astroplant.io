@@ -5,6 +5,7 @@ import pagesIcon from "react-icons/lib/md/book";
 import partnerIcon from "react-icons/lib/md/domain";
 import homeIcon from "react-icons/lib/fa/home";
 import aboutIcon from "react-icons/lib/fa/info-circle";
+import shopIcon from "react-icons/lib/md/attach-money";
 import contributeIcon from "react-icons/lib/md/touch-app";
 import goalsIcon from "react-icons/lib/md/assignment-turned-in";
 import ctaIcon from "react-icons/lib/go/megaphone";
@@ -64,6 +65,16 @@ export default () =>
                     .schemaType("goals")
                     .documentId("16f66fe0-6f3a-45c0-9df1-305444c31991")
                     .title("Edit Goals Page")
+                ),
+
+              S.listItem()
+                .title("Shop")
+                .icon(shopIcon)
+                .child(
+                  S.editor()
+                    .schemaType("shop")
+                    .documentId("shop")
+                    .title("Edit Shop Page")
                 ),
             ])
         ),

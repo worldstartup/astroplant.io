@@ -1,21 +1,21 @@
 import schemaTypes from "all:part:@sanity/base/schema-type";
 import createSchema from "part:@sanity/base/schema-creator";
 import achievement from "./achievement";
+import contentBlock from "./contentBlock";
 import cta from "./cta";
+import component from "./kit/component";
+import feature from "./kit/feature";
+import kit from "./kit/kit";
+import review from "./kit/review";
+import specification from "./kit/specification";
+import milestone from "./milestone";
 import aboutUs from "./pages/aboutUs";
 import contribute from "./pages/contribute";
 import goals from "./pages/goals";
-
 import home from "./pages/home";
+import shop from "./pages/shop";
 import partner from "./partner";
-import milestone from "./milestone";
 import teamMember from "./teamMember";
-import contentBlock from "./contentBlock";
-import component from "./kit/component";
-import feature from "./kit/feature";
-import review from "./kit/review";
-import specification from "./kit/specification";
-import kit from "./kit/kit";
 
 export default createSchema({
   name: "default",
@@ -33,6 +33,7 @@ export default createSchema({
     aboutUs,
     contribute,
     goals,
+    shop,
     partner,
     teamMember,
     achievement,

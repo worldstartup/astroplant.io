@@ -153,6 +153,23 @@ export async function getGoalsContent() {
   }
 }
 
+export async function getShopContent() {
+  try {
+    const query = `*[_type == "shop"] {
+      "title": heroSectionTitle,
+      "description": heroSectionDescription,
+      "image": heroSectionImage.asset -> url
+    }`;
+
+    let res = await client.fetch(query);
+
+    return res[0];
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
+
 /*****************************************
  *               ACHIEVEMENTS            *
  *****************************************/
