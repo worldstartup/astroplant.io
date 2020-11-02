@@ -1,0 +1,30 @@
+.section {
+  margin: -8rem 0 0 0;
+
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+}
+
+.highlightImage {
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.title {
+  margin: 0 0 2rem 0;
+}
+
+.buttonRow {
+  display: flex;
+  grid-gap: 1rem;
+
+  margin: 2rem 0;
+}
