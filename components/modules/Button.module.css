@@ -28,6 +28,10 @@
   background-color: var(--light);
 }
 
+.bg-dark {
+  background-color: var(--dark);
+}
+
 .bg-secondary {
   background-color: var(--secondary-color);
 }
