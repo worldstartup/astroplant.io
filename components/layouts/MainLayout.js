@@ -10,6 +10,7 @@ export default function MainLayout({
   pageName,
   pageDescription,
   featuredArticles,
+  dark,
 }) {
   const router = useRouter();
 
@@ -37,7 +38,7 @@ export default function MainLayout({
         <meta property="twitter:image" content="/images/meta-image" />
       </Head>
 
-      <Header featuredArticles={featuredArticles} />
+      <Header featuredArticles={featuredArticles} dark={dark} />
       {children}
       <Footer />
     </>
@@ -49,4 +50,9 @@ MainLayout.propTypes = {
   pageName: PropTypes.string.isRequired,
   pageDescription: PropTypes.string.isRequired,
   featuredArticles: PropTypes.arrayOf(PropTypes.object).isRequired,
+  dark: PropTypes.bool,
+};
+
+MainLayout.defaultProps = {
+  dark: false,
 };
