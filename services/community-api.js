@@ -38,3 +38,31 @@ export async function getFeaturedArticles() {
     return null;
   }
 }
+
+export async function getKitFAQs() {
+  const query = `{ 
+    helpSection(id: 7) {
+      faqs {
+        id
+        question 
+        answer
+      }
+    } 
+  }`;
+
+  try {
+    const res = await fetch(GRAPHQL_URL, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query: query }),
+    }).then((res) => res.json());
+
+    return res.data.helpSection.faqs;
+  } catch (err) {
+    console.log(err);
+    return null;
+  }
+}
