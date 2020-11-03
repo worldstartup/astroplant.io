@@ -18,7 +18,7 @@ export default function CommunitySection({ title, description, images, link }) {
           <SectionDescription color={"#DEE8FF"} richText={description} />
           <div className={styles.buttons}>
             <Link href={link.to}>
-              <Button bgColor={"white"} color={"black"} label={link.label} />
+              <Button color={"light"} label={link.label} />
             </Link>
             <JoinCommunityButton className={styles.marginButton} />
           </div>

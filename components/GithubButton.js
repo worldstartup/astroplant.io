@@ -11,8 +11,7 @@ export default function GithubButton({ className }) {
       className={className}
     >
       <Button
-        color={"dark"}
-        bgColor={"light"}
+        color={"light"}
         label={"View Github"}
         icon={<GithubIcon />}
         className={styles.github}

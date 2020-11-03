@@ -5,9 +5,7 @@ import styles from "./modules/Button.module.css";
 const Button = forwardRef(
   ({ bgColor, color, className, href, icon, label, type, ...props }, ref) => (
     <button
-      className={`${styles.button} ${styles[`bg-${bgColor}`]} ${
-        styles[`${color}`]
-      } ${className}`}
+      className={`${styles.button} ${styles[color]} ${className}`}
       aria-label={label}
       type={type}
       ref={ref}
@@ -21,7 +19,6 @@ const Button = forwardRef(
 
 Button.propTypes = {
   label: PropTypes.string.isRequired,
-  bgColor: PropTypes.string,
   color: PropTypes.string,
   className: PropTypes.string,
   type: PropTypes.string,
@@ -29,8 +26,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  bgColor: "secondary",
-  color: "light",
+  color: "secondary",
   type: "button",
   icon: null,
 };

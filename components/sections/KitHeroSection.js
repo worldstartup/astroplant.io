@@ -16,7 +16,7 @@ export default function KitHeroSection({ title, description, image }) {
             <SectionDescription text={description} color={"#000"} />
             <div className={styles.buttonRow}>
               <a href={"#features"}>
-                <Button color={"light"} bgColor={"dark"} label={"Learn More"} />
+                <Button color={"dark"} label={"Learn More"} />
               </a>
               <Button label={"Join the waitlist"} />
             </div>

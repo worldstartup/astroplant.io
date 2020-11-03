@@ -16,9 +16,7 @@ export default function SanityLinkList({ links, className }) {
           if (index % 2 != 0) {
             btn = <Button className={styles.marginButton} label={link.label} />;
           } else {
-            btn = (
-              <Button label={link.label} bgColor={"white"} color={"black"} />
-            );
+            btn = <Button label={link.label} color={"light"} />;
           }
         }
 

@@ -6,7 +6,7 @@ export default function KitCard({ ...props }) {
   return (
     <CTACard {...props}>
       <div className={styles.buttonRow}>
-        <Button label={"Read more"} bgColor={"white"} color={"black"} />
+        <Button label={"Read more"} color={"light"} />
         <Button label={"Pre-order"} />
       </div>
     </CTACard>

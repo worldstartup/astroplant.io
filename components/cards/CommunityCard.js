@@ -7,7 +7,7 @@ export default function CommunityCard({ ...props }) {
   return (
     <CTACard {...props}>
       <div className={styles.buttonRow}>
-        <Button label={"Learn more"} bgColor={"white"} color={"black"} />
+        <Button label={"Learn more"} color={"light"} />
         <SocialIcons color={"secondary"} className={styles.justifyEnd} />
       </div>
     </CTACard>

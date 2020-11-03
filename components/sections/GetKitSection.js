@@ -19,11 +19,7 @@ export default function GetKitSection() {
               and build your own kit.
             </p>
             <div className={styles.buttonRow}>
-              <Button
-                label={"Order on Amazon"}
-                bgColor={"light"}
-                color={"dark"}
-              />
+              <Button label={"Order on Amazon"} color={"light"} />
               <Button label={"Order on AliExpress"} />
             </div>
           </Card>
