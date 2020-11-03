@@ -1,8 +1,8 @@
-import React from "react";
 import PropTypes from "prop-types";
-import Section from "../Section";
-import RichTextRenderer from "../RichTextRenderer";
+import React from "react";
 import styles from "../modules/RequirementSection.module.css";
+import RichTextRenderer from "../RichTextRenderer";
+import Section from "../Section";
 
 export default function RequirementSection({ title, description }) {
   return (

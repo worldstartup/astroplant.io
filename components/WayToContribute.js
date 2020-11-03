@@ -19,9 +19,4 @@ export default function WayToContribute({ way }) {
 
 WayToContribute.propTypes = {
   way: PropTypes.object.isRequired,
-  extraButton: PropTypes.node,
-};
-
-WayToContribute.defaultProps = {
-  extraButton: null,
 };

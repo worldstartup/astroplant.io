@@ -1,10 +1,10 @@
+import { format } from "date-fns";
 import PropTypes from "prop-types";
 import React from "react";
-import styles from "../modules/ArticleCard.module.css";
-import Card from "./Card";
 import ReadArrow from "../../public/icons/arrow-right.svg";
 import { API_URL } from "../../services/community-api";
-import { format } from "date-fns";
+import styles from "../modules/ArticleCard.module.css";
+import Card from "./Card";
 
 export default function ArticleCard({ article }) {
   return (

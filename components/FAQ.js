@@ -17,7 +17,6 @@ export default function FAQ({ faq }) {
         <ReactMarkdown source={faq.question} />
         <Arrow
           className={`${styles.dropdown} ${open ? styles.rotate : ""}`}
-          reverse={open}
           color={open ? "primary" : "light"}
         />
       </div>
