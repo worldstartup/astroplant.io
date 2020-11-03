@@ -15,6 +15,16 @@ export default function ReviewsSection({ reviews }) {
             <ReviewCard key={review._key} review={review} />
           ))}
         </div>
+        <div className={styles.mapLinkHolder}>
+          <a
+            target={"blank"}
+            referrerPolicy={"no-referrer"}
+            href={"https://app.astroplant.sda-projects.nl/map"}
+            className={styles.mapLink}
+          >
+            See what other users are doing
+          </a>
+        </div>
       </ContentLayout>
     </Section>
   );

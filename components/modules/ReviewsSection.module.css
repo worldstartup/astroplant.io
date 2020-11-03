@@ -10,6 +10,15 @@
   margin: 4rem 0;
 }
 
+.mapLinkHolder {
+  width: 100%;
+  text-align: center;
+}
+
+.mapLink {
+  color: var(--main-color);
+}
+
 @media screen and (max-width: 768px) {
   .cardGrid {
     display: grid;
