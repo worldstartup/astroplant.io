@@ -7,7 +7,7 @@ import styles from "./modules/Brand.module.css";
 export default function Brand({ dark }) {
   return (
     <Link passHref href={"/"}>
-      <a className={styles.container} target="_blank">
+      <a className={styles.container} target="_self">
         <div className={styles.logoHolder}>
           <svg
             version="1.1"
