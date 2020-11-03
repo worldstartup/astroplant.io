@@ -1,20 +1,17 @@
 import PropTypes from "prop-types";
 import React from "react";
-import Button from "./Button";
 import styles from "./modules/WayToContribute.module.css";
 import RichTextRenderer from "./RichTextRenderer";
+import SanityLinkList from "./SanityLinkList";
 
-export default function WayToContribute({ way, extraButton }) {
+export default function WayToContribute({ way }) {
   return (
     <div className={styles.container}>
       <img src={way.cover} className={styles.cover} />
       <div className={styles.content}>
         <h3 className={styles.title}>{way.title}</h3>
         <RichTextRenderer richText={way.content} />
-        <div className={styles.buttonRow}>
-          <Button label={"Contribute now"} />
-          {extraButton && extraButton}
-        </div>
+        <SanityLinkList links={way.links} />
       </div>
     </div>
   );

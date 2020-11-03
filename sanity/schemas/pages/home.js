@@ -36,6 +36,7 @@ export default {
       of: [{ type: "block" }],
       fieldset: "heroSection",
     },
+
     // partners section
     {
       name: "partnersTitle",
@@ -55,6 +56,13 @@ export default {
       ],
       fieldset: "partnersSection",
     },
+    {
+      name: "partnersLink",
+      title: "Link",
+      type: "link",
+      fieldset: "partnersSection",
+    },
+
     // community section
     {
       name: "communityTitle",
@@ -76,6 +84,12 @@ export default {
       of: [{ type: "block" }],
       fieldset: "communitySection",
     },
+    {
+      name: "communityLink",
+      title: "Link",
+      type: "link",
+      fieldset: "communitySection",
+    },
 
     // platform section
     {
@@ -95,6 +109,13 @@ export default {
       name: "platformImage",
       title: "Platform Image",
       type: "image",
+      fieldset: "platformSection",
+    },
+    {
+      name: "platformLinks",
+      title: "Links",
+      type: "array",
+      of: [{ type: "link" }],
       fieldset: "platformSection",
     },
 

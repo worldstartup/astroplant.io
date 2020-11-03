@@ -21,5 +21,11 @@ export default {
       type: "array",
       of: [{ type: "block" }],
     },
+    {
+      name: "links",
+      title: "Links",
+      type: "array",
+      of: [{ type: "link" }],
+    },
   ],
 };

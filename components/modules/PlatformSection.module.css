@@ -9,17 +9,6 @@
   margin: 0 2rem 0 0;
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-
-  margin: 4rem 0;
-}
-
-.marginButton {
-  margin: 0 2rem;
-}
-
 .mockUp {
   height: 100%;
   width: 100%;

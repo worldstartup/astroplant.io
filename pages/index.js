@@ -41,11 +41,13 @@ export default function Home({ data, achievements, featuredArticles }) {
         <MainPartnersSection
           title={data.partnersTitle}
           partners={data.partners}
+          link={data.partnersLink}
         />
         <CommunitySection
           title={data.communityTitle}
           description={data.communityDescription}
           images={data.communityImages}
+          link={data.communityLink}
         />
         <Section id="achievements">
           <Carousel content={achievements} />
@@ -54,6 +56,7 @@ export default function Home({ data, achievements, featuredArticles }) {
           title={data.platformTitle}
           description={data.platformDescription}
           image={data.platformImage}
+          links={data.platformLinks}
         />
         <CTASection
           title={data.ctaTitle}

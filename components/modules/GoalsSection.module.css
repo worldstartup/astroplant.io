@@ -21,13 +21,6 @@
   padding: 0 2rem;
 }
 
-.buttonRow {
-  display: flex;
-  align-items: center;
-
-  margin: 4rem 0 0 0;
-}
-
 .margin {
   margin: 0 1rem 0 0;
 }

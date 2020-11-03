@@ -1,0 +1,9 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  grid-gap: 1.5rem;
+
+  margin-top: 2.5rem;
+}

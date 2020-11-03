@@ -8,6 +8,7 @@ import feature from "./kit/feature";
 import kit from "./kit/kit";
 import review from "./kit/review";
 import specification from "./kit/specification";
+import link from "./link";
 import milestone from "./milestone";
 import aboutUs from "./pages/aboutUs";
 import contribute from "./pages/contribute";
@@ -27,6 +28,7 @@ export default createSchema({
     feature,
     review,
     specification,
+    link,
 
     //Documents
     home,

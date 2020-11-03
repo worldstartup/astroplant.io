@@ -37,6 +37,13 @@ export function renderRichText(richText) {
  *                  PAGES                *
  *****************************************/
 
+const linkModel = `{
+        _key,
+        label,
+        type,
+        to
+      }`;
+
 export async function getHome() {
   try {
     const query = `*[_type == "home"] {
@@ -53,16 +60,19 @@ export async function getHome() {
         name,
         "logo": logo.asset->url
       },
+      partnersLink ${linkModel},
 
       // community section
       communityTitle,
       communityImages,
       communityDescription,
+      communityLink ${linkModel},
       
       // platform section
       platformTitle,
       platformDescription,
       "platformImage": platformImage.asset->url,
+      platformLinks[] ${linkModel},
       
       // cta section
       ctaTitle,
@@ -110,11 +120,12 @@ export async function getContributeContent() {
       name,
       description,
       waysToContributeSectionTitle,
-        waysToContribute[]{
+      waysToContribute[]{
         _key,
         content,
         title,
-        "cover": cover.asset -> url
+        "cover": cover.asset -> url,
+        links[]${linkModel},
       },
       requirementSectionTitle,
       requirementDescription
@@ -139,7 +150,8 @@ export async function getGoalsContent() {
         _id,
         content,
         title,
-        "cover": cover.asset -> url
+        "cover": cover.asset -> url,
+        links[]${linkModel},
       },
     }
     `;

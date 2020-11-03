@@ -1,12 +1,14 @@
+import Link from "next/link";
 import PropTypes from "prop-types";
 import Button from "../Button";
 import FloatingElement from "../FloatingElement";
 import ContentLayout from "../layouts/ContentLayout";
 import styles from "../modules/PlatformSection.module.css";
+import SanityLinkList from "../SanityLinkList";
 import Section from "../Section";
 import SectionDescription from "../SectionDescription";
 
-export default function PlatformSection({ title, description, image }) {
+export default function PlatformSection({ title, description, image, links }) {
   return (
     <Section id="platform">
       <FloatingElement id="platform-highlight" percentageHidden={20}>
@@ -19,10 +21,7 @@ export default function PlatformSection({ title, description, image }) {
           <div className={styles.chip}>BETA</div>
         </div>
         <SectionDescription color={"#DEE8FF"} richText={description} />
-        <div className={styles.buttons}>
-          <Button label={"Learn More"} bgColor={"white"} color={"black"} />
-          <Button className={styles.marginButton} label={"Apply for beta"} />
-        </div>
+        <SanityLinkList links={links} />
       </ContentLayout>
     </Section>
   );
@@ -32,4 +31,5 @@ PlatformSection.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.array.isRequired,
   image: PropTypes.string.isRequired,
+  links: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PropTypes from "prop-types";
 import Button from "../Button";
 import FloatingElement from "../FloatingElement";
@@ -8,7 +9,7 @@ import styles from "../modules/CommunitySection.module.css";
 import Section from "../Section";
 import SectionDescription from "../SectionDescription";
 
-export default function CommunitySection({ title, description, images }) {
+export default function CommunitySection({ title, description, images, link }) {
   return (
     <Section id="community" className={styles.communitySection}>
       <FloatingElement id="community-highlights" percentageHidden={10}>
@@ -19,7 +20,9 @@ export default function CommunitySection({ title, description, images }) {
         <h1 className={styles.title}>{title}</h1>
         <SectionDescription color={"#DEE8FF"} richText={description} />
         <div className={styles.buttons}>
-          <Button label={"Learn More"} bgColor={"white"} color={"black"} />
+          <Link href={link.to}>
+            <Button bgColor={"white"} color={"black"} label={link.label} />
+          </Link>
           <JoinCommunityButton className={styles.marginButton} />
         </div>
       </ContentLayout>
@@ -31,4 +34,5 @@ CommunitySection.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.array.isRequired,
   images: PropTypes.arrayOf(PropTypes.object).isRequired,
+  link: PropTypes.object,
 };
