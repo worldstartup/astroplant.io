@@ -1,0 +1,47 @@
+.grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.elementHolder {
+  position: relative;
+}
+
+.floatingElement {
+  position: absolute;
+  z-index: -1;
+  left: 33%;
+
+  object-fit: contain;
+
+  height: 100%;
+  max-width: 800px;
+}
+
+.content {
+  padding: 4rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+  .content {
+    padding: 2rem 0;
+  }
+
+  .floatingElement {
+    position: relative;
+    max-width: 1024px;
+    left: unset;
+    height: unset;
+  }
+
+  .floatingElement img,
+  .floatingElement div {
+    width: 100%;
+    height: unset !important;
+  }
+}

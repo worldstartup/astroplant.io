@@ -18,14 +18,14 @@
   opacity: 0.75;
 }
 
-.mars {
-  width: 100%;
-  transform: rotate(-90deg);
-}
-
 .content {
   padding: 4rem 0;
-  max-width: 800px;
+}
+
+.mars {
+  height: 100%;
+
+  transform: rotate(-90deg);
 }
 
 .heroTitle {
@@ -35,11 +35,4 @@
 .videoHolder {
   position: relative;
   max-width: 640px;
-}
-
-@media only screen and (max-width: 910px) {
-  .heroSection {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-  }
 }
