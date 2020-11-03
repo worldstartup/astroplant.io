@@ -1,6 +1,5 @@
 // import the helper functions
 import PropTypes from "prop-types";
-import { imageUrlFor } from "../../services/sanity";
 import FloatingGrid from "../FloatingGrid.js";
 import ContentLayout from "../layouts/ContentLayout";
 import styles from "../modules/HeroSection.module.css";
@@ -21,9 +20,7 @@ export default function HeroSection({
 
       <ContentLayout>
         <FloatingGrid
-          floatingElement={
-            <img src={imageUrlFor(imageUrl)} className={styles.mars} />
-          }
+          floatingElement={<img src={imageUrl} className={styles.mars} />}
         >
           <div className={styles.content}>
             <h1 className={styles.heroTitle}>{title}</h1>
@@ -34,21 +31,6 @@ export default function HeroSection({
           </div>
         </FloatingGrid>
       </ContentLayout>
-
-      {/* <ContentLayout>
-        <div className={styles.grid}>
-          <div className={styles.content}>
-            <h1 className={styles.heroTitle}>{title}</h1>
-            <SectionDescription richText={description} color={"#E9DEFF"} />
-            <div className={styles.videoHolder}>
-              <Video source={videoUrl}></Video>
-            </div>
-          </div>
-          <div className={styles.imageHolder}>
-            <img src={imageUrlFor(imageUrl)} className={styles.mars} />
-          </div>
-        </div>
-      </ContentLayout> */}
     </Section>
   );
 }

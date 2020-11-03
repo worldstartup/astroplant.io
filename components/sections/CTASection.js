@@ -7,11 +7,11 @@ import styles from "../modules/CTASection.module.css";
 import Section from "../Section";
 import SectionDescription from "../SectionDescription";
 
-export default function CTASection({ title, description, ctas }) {
+export default function CTASection({ title, description, image, ctas }) {
   return (
     <Section id="earthlings">
       <ContentLayout>
-        <img className={styles.earth} src="/images/earth.png" />
+        <img className={styles.earth} src={image} />
 
         <h1 className={styles.title}>{title}</h1>
         <SectionDescription richText={description} color={"#F6FFF5"} />
@@ -58,6 +58,7 @@ export default function CTASection({ title, description, ctas }) {
 
 CTASection.propTypes = {
   title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
   description: PropTypes.array.isRequired,
   ctas: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

@@ -61,6 +61,7 @@ export default function Home({ data, achievements, featuredArticles }) {
         <CTASection
           title={data.ctaTitle}
           description={data.ctaDescription}
+          image={data.ctaImage}
           ctas={data.ctas}
         />
       </MainLayout>

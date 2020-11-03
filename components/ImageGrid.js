@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { imageUrlFor } from "../services/sanity";
 import styles from "./modules/ImageGrid.module.css";
 
 export function ImageGrid({ images, ...props }) {
@@ -9,7 +8,7 @@ export function ImageGrid({ images, ...props }) {
         <img
           className={`${styles.gridImage}`}
           key={image._key}
-          src={imageUrlFor(image)}
+          src={image.url}
         />
       ))}
     </div>

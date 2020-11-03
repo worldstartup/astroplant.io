@@ -55,7 +55,7 @@ export async function getHome() {
   try {
     const query = `*[_type == "home"] {
       // hero section
-      planetImage,
+      "planetImage": planetImage.asset->url,
       heroTitle,
       "video": video.asset->url,
       heroDescription,
@@ -67,7 +67,10 @@ export async function getHome() {
 
       // community section
       communityTitle,
-      communityImages,
+      communityImages[]{
+        _key,
+        "url": asset->url
+      },
       communityDescription,
       communityLink ${linkModel},
       
@@ -80,6 +83,7 @@ export async function getHome() {
       // cta section
       ctaTitle,
       ctaDescription,
+      "ctaImage": ctaImage.asset->url,
       ctas[]->{
         _id,
         "slug": slug.current,

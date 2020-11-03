@@ -127,6 +127,12 @@ export default {
       fieldset: "ctaSection",
     },
     {
+      name: "ctaImage",
+      title: "Title",
+      type: "image",
+      fieldset: "ctaSection",
+    },
+    {
       name: "ctaDescription",
       title: "Description",
       type: "array",
