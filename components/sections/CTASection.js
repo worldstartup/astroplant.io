@@ -4,6 +4,7 @@ import ContributeCard from "../cards/ContributeCard";
 import KitCard from "../cards/KitCard";
 import ContentLayout from "../layouts/ContentLayout";
 import styles from "../modules/CTASection.module.css";
+import SanityImage from "../SanityImage";
 import Section from "../Section";
 import SectionDescription from "../SectionDescription";
 
@@ -11,7 +12,11 @@ export default function CTASection({ title, description, image, ctas }) {
   return (
     <Section id="earthlings">
       <ContentLayout>
-        <img className={styles.earth} src={image} />
+        <SanityImage
+          className={styles.earth}
+          src={image}
+          params={{ "max-h": 1024 }}
+        />
 
         <h1 className={styles.title}>{title}</h1>
         <SectionDescription richText={description} color={"#F6FFF5"} />

@@ -2,6 +2,7 @@ import { compareAsc, format } from "date-fns";
 import PropTypes from "prop-types";
 import React from "react";
 import styles from "./modules/Milestone.module.css";
+import SanityImage from "./SanityImage";
 
 export default function Milestone({ milestone }) {
   let date = new Date(milestone.date);
@@ -19,7 +20,11 @@ export default function Milestone({ milestone }) {
         </p>
 
         <div className={styles.container}>
-          <img src={milestone.cover} className={styles.cover} />
+          <SanityImage
+            params={{ "max-w": 512 }}
+            src={milestone.cover}
+            className={styles.cover}
+          />
           <div className={styles.content}>
             <h3>{milestone.title}</h3>
             <p className={styles.description}>{milestone.description}</p>

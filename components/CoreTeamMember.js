@@ -2,11 +2,12 @@ import PropTypes from "prop-types";
 import React from "react";
 import LinkedinIcon from "../public/icons/linkedin.svg";
 import styles from "./modules/CoreTeamMember.module.css";
+import SanityImage from "./SanityImage";
 
 export default function CoreTeamMember({ teamMember }) {
   return (
     <div className={styles.container}>
-      <img src={teamMember.picture} className={styles.picture} />
+      <SanityImage src={teamMember.picture} className={styles.picture} />
       <div className={styles.memberDetails}>
         <h3 className={styles.name}>{teamMember.fullName}</h3>
         <b className={styles.role}>{teamMember.role}</b>

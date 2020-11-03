@@ -3,6 +3,7 @@ import React from "react";
 import Button from "../Button";
 import ContentLayout from "../layouts/ContentLayout";
 import styles from "../modules/KitHeroSection.module.css";
+import SanityImage from "../SanityImage";
 import Section from "../Section";
 import SectionDescription from "../SectionDescription";
 
@@ -21,7 +22,11 @@ export default function KitHeroSection({ title, description, image }) {
               <Button label={"Join the waitlist"} />
             </div>
           </div>
-          <img src={image} className={styles.highlightImage} />
+          <SanityImage
+            params={{ "max-h": 1024 }}
+            src={image}
+            className={styles.highlightImage}
+          />
         </div>
       </ContentLayout>
     </Section>

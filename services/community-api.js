@@ -16,7 +16,7 @@ export async function getFeaturedArticles() {
       title
       preview
       cover {
-        url
+        formats
         alternativeText
       }
     }

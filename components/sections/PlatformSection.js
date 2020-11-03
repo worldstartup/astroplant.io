@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import FloatingGrid from "../FloatingGrid.js";
 import ContentLayout from "../layouts/ContentLayout";
 import styles from "../modules/PlatformSection.module.css";
+import SanityImage from "../SanityImage.js";
 import SanityLinkList from "../SanityLinkList";
 import Section from "../Section";
 import SectionDescription from "../SectionDescription";
@@ -11,7 +12,13 @@ export default function PlatformSection({ title, description, image, links }) {
     <Section id="platform">
       <ContentLayout>
         <FloatingGrid
-          floatingElement={<img src={image} className={styles.mockUp} />}
+          floatingElement={
+            <SanityImage
+              src={image}
+              params={{ "max-h": 1024 }}
+              className={styles.mockUp}
+            />
+          }
         >
           <div className={styles.titleRow}>
             <h1 className={styles.title}>{title}</h1>

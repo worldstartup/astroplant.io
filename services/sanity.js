@@ -1,7 +1,6 @@
+import BlockContent from "@sanity/block-content-to-react";
+import sanityClient from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
-
-const sanityClient = require("@sanity/client");
-const BlockContent = require("@sanity/block-content-to-react");
 
 const client = sanityClient({
   projectId: "4iykv1c5",
@@ -15,7 +14,31 @@ export function imageUrlFor(source) {
   return imageBuilder.image(source);
 }
 
-// helper function that I can access in the front end
+/**
+ * Creates a url based on parameters to fetches optimized image from sanity
+ * @param {string} url of the sanity image "https://cdn.sanity.io/images/..."
+ * @param {object} params of the image to fetch more info at https://www.sanity.io/docs/image-urls
+ */
+export function optimizeImage(url, params = {}) {
+  params = { auto: "format", ...params };
+
+  let urlParams = Object.keys(params)
+    .map((key) => {
+      if (typeof params[key] !== "undefined") {
+        return key + "=" + params[key];
+      }
+    })
+    .join("&");
+
+  const optimizedUrl = url + "?" + urlParams;
+
+  return optimizedUrl;
+}
+
+/**
+ * Renders rich text from sanity
+ * @param {*} richText
+ */
 export function renderRichText(richText) {
   const serializers = {
     types: {

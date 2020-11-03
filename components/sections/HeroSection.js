@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import FloatingGrid from "../FloatingGrid.js";
 import ContentLayout from "../layouts/ContentLayout";
 import styles from "../modules/HeroSection.module.css";
+import SanityImage from "../SanityImage.js";
 import Section from "../Section";
 import SectionDescription from "../SectionDescription";
 import { Video } from "../Video";
@@ -20,7 +21,13 @@ export default function HeroSection({
 
       <ContentLayout>
         <FloatingGrid
-          floatingElement={<img src={imageUrl} className={styles.mars} />}
+          floatingElement={
+            <SanityImage
+              src={imageUrl}
+              params={{ "max-h": 1024 }}
+              className={styles.mars}
+            />
+          }
         >
           <div className={styles.content}>
             <h1 className={styles.heroTitle}>{title}</h1>

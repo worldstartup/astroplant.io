@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import styles from "./modules/Carousel.module.css";
+import SanityImage from "./SanityImage";
 
 export default function Carousel({ content }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -19,7 +20,11 @@ export default function Carousel({ content }) {
 
   return (
     <div className={styles.container}>
-      <img src={content[activeIndex].cover} className={styles.cover} />
+      <SanityImage
+        params={{ "max-h": 840 }}
+        src={content[activeIndex].cover}
+        className={styles.cover}
+      />
       <div className={styles.content}>
         <h2>{content[activeIndex].title}</h2>
         <p className={styles.description}>{content[activeIndex].description}</p>

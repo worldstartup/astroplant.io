@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import styles from "./modules/PartnersGrid.module.css";
+import SanityImage from "./SanityImage";
 
 export default function PartnersGrid({ partners }) {
   return (
@@ -11,7 +12,11 @@ export default function PartnersGrid({ partners }) {
           href={partner.website}
           referrerPolicy="no-referrer"
         >
-          <img className={styles.supporter} src={partner.logo} />
+          <SanityImage
+            className={styles.supporter}
+            src={partner.logo}
+            params={{ "max-h": 100 }}
+          />
         </a>
       ))}
     </div>

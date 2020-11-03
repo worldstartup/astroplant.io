@@ -1,11 +1,16 @@
 import PropTypes from "prop-types";
 import styles from "../modules/CTACard.module.css";
+import SanityImage from "../SanityImage";
 import Card from "./Card";
 
 export default function CTACard({ cover, title, description, children }) {
   return (
     <Card>
-      <img className={styles.cover} src={cover} />
+      <SanityImage
+        className={styles.cover}
+        src={cover}
+        params={{ "max-h": 400 }}
+      />
       <div className={styles.content}>
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.description}>{description}</p>

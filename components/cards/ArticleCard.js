@@ -7,6 +7,7 @@ import styles from "../modules/ArticleCard.module.css";
 import Card from "./Card";
 
 export default function ArticleCard({ article }) {
+  console.log(article.formats);
   return (
     <a
       target={"blank"}
@@ -18,7 +19,7 @@ export default function ArticleCard({ article }) {
           className={styles.cover}
           src={
             article.cover
-              ? `${API_URL}${article.cover.url}`
+              ? `${API_URL}${article.cover.formats.small.url}`
               : `/images/placeholder.svg`
           }
         />
