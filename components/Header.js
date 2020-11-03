@@ -44,7 +44,11 @@ export function Header({ featuredArticles, dark }) {
         <div className={styles.navMobile}>
           <DropdownMenu
             name={"mobile-nav"}
-            trigger={<MenuIcon className={styles.menuIcon} />}
+            trigger={
+              <MenuIcon
+                className={`${styles.menuIcon} ${dark ? styles.dark : ""}`}
+              />
+            }
           >
             <nav className={styles.linksMobile}>
               <HomeLink />

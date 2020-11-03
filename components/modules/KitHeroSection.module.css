@@ -7,13 +7,14 @@
 
 .contentGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
 
   align-items: center;
 }
 
 .highlightImage {
   width: 100%;
+  max-width: 768px;
 
   object-fit: cover;
 }
@@ -27,4 +28,18 @@
   grid-gap: 1rem;
 
   margin: 2rem 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .contentGrid {
+    display: flex;
+    flex-flow: column-reverse;
+    grid-template-columns: 1fr;
+
+    padding: 4rem 0;
+  }
+
+  .title {
+    font-size: 36px;
+  }
 }

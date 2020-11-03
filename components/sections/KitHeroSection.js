@@ -1,9 +1,9 @@
-import React from "react";
 import PropTypes from "prop-types";
-import styles from "../modules/KitHeroSection.module.css";
-import Section from "../Section";
+import React from "react";
 import Button from "../Button";
 import ContentLayout from "../layouts/ContentLayout";
+import styles from "../modules/KitHeroSection.module.css";
+import Section from "../Section";
 import SectionDescription from "../SectionDescription";
 
 export default function KitHeroSection({ title, description, image }) {
@@ -15,7 +15,9 @@ export default function KitHeroSection({ title, description, image }) {
             <h1 className={styles.title}>{title}</h1>
             <SectionDescription text={description} color={"#000"} />
             <div className={styles.buttonRow}>
-              <Button color={"light"} bgColor={"dark"} label={"Learn More"} />
+              <a href={"#features"}>
+                <Button color={"light"} bgColor={"dark"} label={"Learn More"} />
+              </a>
               <Button label={"Join the waitlist"} />
             </div>
           </div>

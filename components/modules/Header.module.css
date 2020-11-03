@@ -50,6 +50,10 @@
   fill: var(--light);
 }
 
+.dark {
+  fill: var(--dark);
+}
+
 .navMobile {
   display: none;
 }
