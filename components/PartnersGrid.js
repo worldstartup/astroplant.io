@@ -5,11 +5,14 @@ export default function PartnersGrid({ partners }) {
   return (
     <div className={styles.bar}>
       {partners.map((partner) => (
-        <img
-          className={styles.supporter}
+        <a
           key={partner._id}
-          src={partner.logo}
-        />
+          target="_blank"
+          href={partner.website}
+          referrerPolicy="no-referrer"
+        >
+          <img className={styles.supporter} src={partner.logo} />
+        </a>
       ))}
     </div>
   );

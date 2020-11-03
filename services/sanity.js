@@ -44,6 +44,13 @@ const linkModel = `{
         to
       }`;
 
+const partnerModel = `{
+        _id,
+        name,
+        "logo": logo.asset->url,
+        website
+      }`;
+
 export async function getHome() {
   try {
     const query = `*[_type == "home"] {
@@ -55,11 +62,7 @@ export async function getHome() {
                 
       // supporters section
       partnersTitle,
-      partners[]->{
-        _id,
-        name,
-        "logo": logo.asset->url
-      },
+      partners[]->${partnerModel},
       partnersLink ${linkModel},
 
       // community section
@@ -255,11 +258,7 @@ export async function getOtherTeamMembers() {
 
 export async function getPartners() {
   try {
-    const query = `*[_type == "partner"]{
-      _id,
-      name,
-      "logo": logo.asset->url
-    }`;
+    const query = `*[_type == "partner"]${partnerModel}`;
 
     let res = await client.fetch(query);
 

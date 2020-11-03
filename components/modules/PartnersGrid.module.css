@@ -13,6 +13,12 @@
   height: 50px;
   object-fit: contain;
   opacity: 0.75;
+
+  transition: opacity 0.3s ease;
+}
+
+.supporter:hover {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 1390px) {
