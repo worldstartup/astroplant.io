@@ -14,7 +14,7 @@ export default function CTASection({ title, description, image, ctas }) {
       <ContentLayout>
         <SanityImage
           className={styles.earth}
-          src={image}
+          image={image}
           params={{ h: 1024 }}
         />
 
@@ -63,7 +63,7 @@ export default function CTASection({ title, description, image, ctas }) {
 
 CTASection.propTypes = {
   title: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
   description: PropTypes.array.isRequired,
   ctas: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

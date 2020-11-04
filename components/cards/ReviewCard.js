@@ -10,7 +10,7 @@ export default function ReviewCard({ review }) {
       <SanityImage
         params={{ w: 100, h: 100 }}
         className={styles.picture}
-        src={review.authorPicture}
+        image={review.authorPicture}
       />
       <h3 className={styles.authorName}>{review.authorName}</h3>
       <h4 className={styles.authorJob}>{review.authorJob}</h4>

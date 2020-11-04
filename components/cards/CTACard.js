@@ -6,7 +6,7 @@ import Card from "./Card";
 export default function CTACard({ cover, title, description, children }) {
   return (
     <Card>
-      <SanityImage className={styles.cover} src={cover} params={{ h: 400 }} />
+      <SanityImage className={styles.cover} image={cover} params={{ h: 400 }} />
       <div className={styles.content}>
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.description}>{description}</p>
@@ -17,7 +17,7 @@ export default function CTACard({ cover, title, description, children }) {
 }
 
 CTACard.propTypes = {
-  cover: PropTypes.string.isRequired,
+  cover: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,

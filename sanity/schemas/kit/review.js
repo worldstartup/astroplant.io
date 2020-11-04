@@ -7,6 +7,19 @@ export default {
       name: "authorPicture",
       title: "Author Picture",
       type: "image",
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
       validation: (Rule) => Rule.required(),
     },
     {

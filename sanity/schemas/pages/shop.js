@@ -21,6 +21,16 @@ export default {
       name: "heroSectionImage",
       title: "Hero Section Image",
       type: "image",
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
       fieldset: "heroSection",
     },
   ],

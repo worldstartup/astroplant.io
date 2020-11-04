@@ -12,7 +12,7 @@ export default function GoalsSection({ goals }) {
       <div className={styles.container}>
         <SanityImage
           params={{ h: 800 }}
-          src={goals.cover}
+          image={goals.cover}
           className={styles.cover}
         />
         <div className={styles.contentContainer}>

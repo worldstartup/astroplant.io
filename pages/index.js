@@ -35,7 +35,7 @@ export default function Home({ data, achievements, featuredArticles }) {
         <HeroSection
           title={data.heroTitle}
           description={data.heroDescription}
-          imageUrl={data.planetImage}
+          image={data.planetImage}
           videoUrl={data.video}
         />
         <MainPartnersSection

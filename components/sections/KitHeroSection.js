@@ -24,7 +24,7 @@ export default function KitHeroSection({ title, description, image }) {
           </div>
           <SanityImage
             params={{ h: 1024 }}
-            src={image}
+            image={image}
             className={styles.highlightImage}
           />
         </div>
@@ -36,5 +36,5 @@ export default function KitHeroSection({ title, description, image }) {
 KitHeroSection.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
 };

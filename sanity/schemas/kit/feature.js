@@ -19,6 +19,16 @@ export default {
       name: "icon",
       title: "Feature Icon",
       type: "image",
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
       validation: (Rule) => Rule.required(),
     },
     {

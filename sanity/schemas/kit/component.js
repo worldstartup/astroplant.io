@@ -13,6 +13,16 @@ export default {
       name: "picture",
       title: "Component Picture",
       type: "image",
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
       validation: (Rule) => Rule.required(),
     },
   ],

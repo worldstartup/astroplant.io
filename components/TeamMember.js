@@ -9,7 +9,7 @@ export default function TeamMember({ teamMember }) {
     <div className={styles.container}>
       <SanityImage
         params={{ h: 256 }}
-        src={teamMember.picture}
+        image={teamMember.picture}
         className={styles.picture}
       />
       <div className={styles.memberDetails}>

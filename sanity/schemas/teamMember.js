@@ -7,6 +7,19 @@ export default {
       name: "picture",
       title: "Picture",
       type: "image",
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
       validation: (Rule) => Rule.required(),
     },
     {

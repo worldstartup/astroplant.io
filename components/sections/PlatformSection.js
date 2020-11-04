@@ -14,7 +14,7 @@ export default function PlatformSection({ title, description, image, links }) {
         <FloatingGrid
           floatingElement={
             <SanityImage
-              src={image}
+              image={image}
               params={{ h: 1024 }}
               className={styles.mockUp}
             />
@@ -35,6 +35,6 @@ export default function PlatformSection({ title, description, image, links }) {
 PlatformSection.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.array.isRequired,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
   links: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

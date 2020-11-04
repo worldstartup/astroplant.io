@@ -22,7 +22,7 @@ export default function Carousel({ content }) {
     <div className={styles.container}>
       <SanityImage
         params={{ h: 840 }}
-        src={content[activeIndex].cover}
+        image={content[activeIndex].cover}
         className={styles.cover}
       />
       <div className={styles.content}>

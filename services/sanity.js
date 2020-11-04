@@ -60,6 +60,11 @@ export function renderRichText(richText) {
  *                  PAGES                *
  *****************************************/
 
+const imgModel = `{
+        	"url": asset -> url,
+        	caption
+        }`;
+
 const linkModel = `{
         _key,
         label,
@@ -70,7 +75,7 @@ const linkModel = `{
 const partnerModel = `{
         _id,
         name,
-        "logo": logo.asset->url,
+        logo ${imgModel},
         website
       }`;
 
@@ -78,7 +83,7 @@ export async function getHome() {
   try {
     const query = `*[_type == "home"] {
       // hero section
-      "planetImage": planetImage.asset->url,
+      planetImage ${imgModel},
       heroTitle,
       "video": video.asset->url,
       heroDescription,
@@ -92,7 +97,8 @@ export async function getHome() {
       communityTitle,
       communityImages[]{
         _key,
-        "url": asset->url
+        "url": asset->url,
+        caption
       },
       communityDescription,
       communityLink ${linkModel},
@@ -100,19 +106,19 @@ export async function getHome() {
       // platform section
       platformTitle,
       platformDescription,
-      "platformImage": platformImage.asset->url,
+      platformImage ${imgModel},
       platformLinks[] ${linkModel},
       
       // cta section
       ctaTitle,
       ctaDescription,
-      "ctaImage": ctaImage.asset->url,
+      ctaImage ${imgModel},
       ctas[]->{
         _id,
         "slug": slug.current,
         title,
         description,
-        "cover": cover.asset->url,
+        cover ${imgModel},
       }
   }
   `;
@@ -154,7 +160,7 @@ export async function getContributeContent() {
         _key,
         content,
         title,
-        "cover": cover.asset -> url,
+        cover ${imgModel},
         links[]${linkModel},
       },
       requirementSectionTitle,
@@ -180,7 +186,7 @@ export async function getGoalsContent() {
         _id,
         content,
         title,
-        "cover": cover.asset -> url,
+        cover ${imgModel},
         links[]${linkModel},
       },
     }
@@ -200,7 +206,7 @@ export async function getShopContent() {
     const query = `*[_type == "shop"] {
       "title": heroSectionTitle,
       "description": heroSectionDescription,
-      "image": heroSectionImage.asset -> url
+      "image": heroSectionImage ${imgModel},
     }`;
 
     let res = await client.fetch(query);
@@ -222,7 +228,7 @@ export async function getAchievements() {
       _id,
       title,
       description,
-      "cover": cover.asset -> url
+      cover ${imgModel}
     }`;
 
     let res = await client.fetch(query);
@@ -245,7 +251,7 @@ export async function getCoreTeamMembers() {
       fullName,
       role,
       description,
-      "picture": picture.asset -> url,
+      picture ${imgModel},
       linkedinProfile,
       memberOf,
     }`;
@@ -265,7 +271,7 @@ export async function getOtherTeamMembers() {
       _id,
       fullName,
       role,
-      "picture": picture.asset -> url,
+      picture ${imgModel},
       linkedinProfile,
       memberOf,
     }`;
@@ -306,7 +312,7 @@ export async function getMilestones() {
       _id,
       title,
       date,
-      "cover": cover.asset -> url,
+      cover ${imgModel},
       description,
     }`;
 
@@ -329,14 +335,14 @@ export async function getKitDetails() {
       components[]{
         _key,
         name,
-        "picture": picture.asset->url
+        picture ${imgModel}
       },
       features[]{
         _key,
         order,
         name,
         description,
-        "icon": icon.asset -> url
+        icon ${imgModel}
       },
       specifications[]{
         _key,
@@ -348,7 +354,7 @@ export async function getKitDetails() {
         _key,
         authorJob,
         authorName,
-        "authorPicture": authorPicture.asset -> url,
+        authorPicture ${imgModel},
         content,
       },
     }`;

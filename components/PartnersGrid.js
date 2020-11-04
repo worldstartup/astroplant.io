@@ -14,7 +14,7 @@ export default function PartnersGrid({ partners }) {
         >
           <SanityImage
             className={styles.supporter}
-            src={partner.logo}
+            image={partner.logo}
             params={{ h: 100 }}
           />
         </a>

@@ -16,7 +16,7 @@ export default function ComponentsSection({ components }) {
               <SanityImage
                 params={{ h: 256 }}
                 className={styles.componentsCover}
-                src={component.picture}
+                image={component.picture}
               />
               <b className={"centered_text"}>{component.name}</b>
             </div>

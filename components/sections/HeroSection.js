@@ -9,12 +9,7 @@ import SectionDescription from "../SectionDescription";
 import { Video } from "../Video";
 
 // create a prop called data
-export default function HeroSection({
-  title,
-  imageUrl,
-  description,
-  videoUrl,
-}) {
+export default function HeroSection({ title, image, description, videoUrl }) {
   return (
     <Section id="hero" className={styles.heroSection}>
       <div className={styles.stars} />
@@ -23,7 +18,7 @@ export default function HeroSection({
         <FloatingGrid
           floatingElement={
             <SanityImage
-              src={imageUrl}
+              image={image}
               params={{ h: 1024 }}
               className={styles.mars}
             />
@@ -44,7 +39,7 @@ export default function HeroSection({
 
 HeroSection.propTypes = {
   title: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
   description: PropTypes.array.isRequired,
   videoUrl: PropTypes.string.isRequired,
 };

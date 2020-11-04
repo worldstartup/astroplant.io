@@ -10,7 +10,7 @@ export default function WayToContribute({ way }) {
     <div className={styles.container}>
       <SanityImage
         params={{ h: 512 }}
-        src={way.cover}
+        image={way.cover}
         className={styles.cover}
       />
       <div className={styles.content}>

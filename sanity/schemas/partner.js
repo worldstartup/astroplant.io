@@ -7,6 +7,16 @@ export default {
       name: "logo",
       title: "Logo",
       type: "image",
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
       validation: (Rule) => Rule.required(),
     },
     {

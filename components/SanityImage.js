@@ -2,11 +2,17 @@ import PropTypes from "prop-types";
 import React from "react";
 import { optimizeImage } from "../services/sanity";
 
-export default function SanityImage({ src, params = {}, ...props }) {
-  return <img src={optimizeImage(src, params)} {...props} />;
+export default function SanityImage({ image, params = {}, ...props }) {
+  return (
+    <img
+      alt={image.caption || " "}
+      src={optimizeImage(image.url, params)}
+      {...props}
+    />
+  );
 }
 
 SanityImage.propTypes = {
-  src: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
   params: PropTypes.object,
 };

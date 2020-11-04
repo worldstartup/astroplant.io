@@ -15,6 +15,16 @@ export default {
       name: "planetImage",
       title: "Planet image",
       type: "image",
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
       fieldset: "heroSection",
     },
     {
@@ -74,7 +84,21 @@ export default {
       name: "communityImages",
       title: "Images",
       type: "array",
-      of: [{ type: "image" }],
+      of: [
+        {
+          type: "image",
+          fields: [
+            {
+              name: "caption",
+              type: "string",
+              title: "Caption",
+              options: {
+                isHighlighted: true,
+              },
+            },
+          ],
+        },
+      ],
       fieldset: "communitySection",
     },
     {
@@ -109,6 +133,16 @@ export default {
       name: "platformImage",
       title: "Platform Image",
       type: "image",
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
       fieldset: "platformSection",
     },
     {
@@ -130,6 +164,16 @@ export default {
       name: "ctaImage",
       title: "Title",
       type: "image",
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
       fieldset: "ctaSection",
     },
     {

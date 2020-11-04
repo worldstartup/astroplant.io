@@ -10,7 +10,7 @@ export function ImageGrid({ images, ...props }) {
           className={styles.gridImage}
           params={{ h: 384 }}
           key={image._key}
-          src={image.url}
+          image={image}
         />
       ))}
     </div>
