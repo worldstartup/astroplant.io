@@ -8,7 +8,7 @@ export default function ReviewCard({ review }) {
   return (
     <Card className={styles.card}>
       <SanityImage
-        params={{ "max-w": 80, "max-h": 80 }}
+        params={{ w: 100, h: 100 }}
         className={styles.picture}
         src={review.authorPicture}
       />

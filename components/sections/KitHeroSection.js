@@ -23,7 +23,7 @@ export default function KitHeroSection({ title, description, image }) {
             </div>
           </div>
           <SanityImage
-            params={{ "max-h": 1024 }}
+            params={{ h: 1024 }}
             src={image}
             className={styles.highlightImage}
           />

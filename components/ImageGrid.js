@@ -8,7 +8,7 @@ export function ImageGrid({ images, ...props }) {
       {images.map((image) => (
         <SanityImage
           className={styles.gridImage}
-          params={{ "max-h": 384, "max-w": 256 }}
+          params={{ h: 384 }}
           key={image._key}
           src={image.url}
         />

@@ -15,7 +15,7 @@ export default function PlatformSection({ title, description, image, links }) {
           floatingElement={
             <SanityImage
               src={image}
-              params={{ "max-h": 1024 }}
+              params={{ h: 1024 }}
               className={styles.mockUp}
             />
           }

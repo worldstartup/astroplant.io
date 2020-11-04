@@ -11,7 +11,7 @@ export default function GoalsSection({ goals }) {
     <Section id={"presentation"} bgColor={"dark-light"}>
       <div className={styles.container}>
         <SanityImage
-          params={{ "max-h": 800 }}
+          params={{ h: 800 }}
           src={goals.cover}
           className={styles.cover}
         />

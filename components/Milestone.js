@@ -21,7 +21,7 @@ export default function Milestone({ milestone }) {
 
         <div className={styles.container}>
           <SanityImage
-            params={{ "max-w": 512 }}
+            params={{ w: 512 }}
             src={milestone.cover}
             className={styles.cover}
           />

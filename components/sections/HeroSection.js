@@ -24,7 +24,7 @@ export default function HeroSection({
           floatingElement={
             <SanityImage
               src={imageUrl}
-              params={{ "max-h": 1024 }}
+              params={{ h: 1024 }}
               className={styles.mars}
             />
           }

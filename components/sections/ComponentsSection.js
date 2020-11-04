@@ -14,7 +14,7 @@ export default function ComponentsSection({ components }) {
           {components.map((component) => (
             <div key={component._key} className={styles.componentsContainer}>
               <SanityImage
-                params={{ "max-h": 256 }}
+                params={{ h: 256 }}
                 className={styles.componentsCover}
                 src={component.picture}
               />

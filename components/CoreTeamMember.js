@@ -7,7 +7,11 @@ import SanityImage from "./SanityImage";
 export default function CoreTeamMember({ teamMember }) {
   return (
     <div className={styles.container}>
-      <SanityImage src={teamMember.picture} className={styles.picture} />
+      <SanityImage
+        params={{ h: 256 }}
+        src={teamMember.picture}
+        className={styles.picture}
+      />
       <div className={styles.memberDetails}>
         <h3 className={styles.name}>{teamMember.fullName}</h3>
         <b className={styles.role}>{teamMember.role}</b>

@@ -6,11 +6,7 @@ import Card from "./Card";
 export default function CTACard({ cover, title, description, children }) {
   return (
     <Card>
-      <SanityImage
-        className={styles.cover}
-        src={cover}
-        params={{ "max-h": 400 }}
-      />
+      <SanityImage className={styles.cover} src={cover} params={{ h: 400 }} />
       <div className={styles.content}>
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.description}>{description}</p>

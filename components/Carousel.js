@@ -21,7 +21,7 @@ export default function Carousel({ content }) {
   return (
     <div className={styles.container}>
       <SanityImage
-        params={{ "max-h": 840 }}
+        params={{ h: 840 }}
         src={content[activeIndex].cover}
         className={styles.cover}
       />

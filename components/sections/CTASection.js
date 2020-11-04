@@ -15,7 +15,7 @@ export default function CTASection({ title, description, image, ctas }) {
         <SanityImage
           className={styles.earth}
           src={image}
-          params={{ "max-h": 1024 }}
+          params={{ h: 1024 }}
         />
 
         <h1 className={styles.title}>{title}</h1>
