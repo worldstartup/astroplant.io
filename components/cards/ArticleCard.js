@@ -7,7 +7,6 @@ import styles from "../modules/ArticleCard.module.css";
 import Card from "./Card";
 
 export default function ArticleCard({ article }) {
-  console.log(article.formats);
   return (
     <a
       target={"blank"}
