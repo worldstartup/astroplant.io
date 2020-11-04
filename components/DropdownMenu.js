@@ -1,15 +1,9 @@
 import PropTypes from "prop-types";
-import React, { useRef, useState } from "react";
-import { useOutsideClick } from "../hooks/useOutsideClick";
+import React, { useState } from "react";
 import styles from "./modules/DropdownMenu.module.css";
 
 export default function DropdownMenu({ name, trigger, children, ...props }) {
   const [show, setShow] = useState(false);
-
-  const ref = useRef(null);
-  const triggerRef = useRef(null);
-
-  useOutsideClick(ref, triggerRef, close.bind(this));
 
   function toggle() {
     setShow(!show);
@@ -26,8 +20,7 @@ export default function DropdownMenu({ name, trigger, children, ...props }) {
         id={`${name}button`}
         aria-haspopup="true"
         aria-controls={`${name}menu`}
-        ref={triggerRef}
-        onClick={() => toggle()}
+        onMouseEnter={() => toggle()}
       >
         {trigger}
       </div>
@@ -40,7 +33,7 @@ export default function DropdownMenu({ name, trigger, children, ...props }) {
       >
         <div
           className={`${styles.holder} ${show ? styles["visible"] : ""}`}
-          ref={ref}
+          onMouseLeave={() => close()}
           {...props}
         >
           <div className={styles.content}>{children}</div>
