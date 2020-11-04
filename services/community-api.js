@@ -1,6 +1,7 @@
 const GRAPHQL_URL = "https://community-api.astroplant.sda-projects.nl/graphql";
 
 export const API_URL = "https://community-api.astroplant.sda-projects.nl";
+export const PLATFORM_URL = "https://app.astroplant.sda-projects.nl";
 
 export async function getFeaturedArticles() {
   const query = `{

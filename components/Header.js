@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import MenuIcon from "../public/icons/menu.svg";
 import OutIcon from "../public/icons/open-outside.svg";
+import { PLATFORM_URL } from "../services/community-api";
 import Brand from "./Brand";
 import ArticleCard from "./cards/ArticleCard";
 import DropdownMenu from "./DropdownMenu";
@@ -101,7 +102,7 @@ export function Header({ featuredArticles, dark }) {
                   <a
                     target={"blank"}
                     referrerPolicy={"no-referrer"}
-                    href={"https://app.astroplant.sda-projects.nl/"}
+                    href={PLATFORM_URL}
                     className={styles.communityLink}
                   >
                     Community Platform

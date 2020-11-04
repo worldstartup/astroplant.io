@@ -1,18 +1,18 @@
 import { format } from "date-fns";
+import Image from "next/image";
 import PropTypes from "prop-types";
 import React from "react";
 import ReadArrow from "../../public/icons/arrow-right.svg";
-import { API_URL } from "../../services/community-api";
+import { API_URL, PLATFORM_URL } from "../../services/community-api";
 import styles from "../modules/ArticleCard.module.css";
 import Card from "./Card";
-import Image from "next/image";
 
 export default function ArticleCard({ article }) {
   return (
     <a
       target={"blank"}
       referrerPolicy={"no-referrer"}
-      href={`${API_URL}/news/${article.slug}`}
+      href={`${PLATFORM_URL}/news/${article.slug}`}
     >
       <Card className={styles.card}>
         <Image

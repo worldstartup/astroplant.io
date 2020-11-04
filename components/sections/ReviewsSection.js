@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { PLATFORM_URL } from "../../services/community-api";
 import ReviewCard from "../cards/ReviewCard";
 import ContentLayout from "../layouts/ContentLayout";
 import styles from "../modules/ReviewsSection.module.css";
@@ -19,7 +20,7 @@ export default function ReviewsSection({ reviews }) {
           <a
             target={"blank"}
             referrerPolicy={"no-referrer"}
-            href={"https://app.astroplant.sda-projects.nl/map"}
+            href={`${PLATFORM_URL}/map`}
             className={styles.mapLink}
           >
             See what other users are doing

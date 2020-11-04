@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PLATFORM_URL } from "../services/community-api";
 import Brand from "./Brand";
 import styles from "./modules/Footer.module.css";
 import PageLink from "./PageLink";
@@ -61,7 +62,7 @@ export function Footer() {
               <a
                 target="_blank"
                 referrerPolicy="origin"
-                href={"https://app.astroplant.sda-projects.nl/"}
+                href={PLATFORM_URL}
                 className={styles.externalLink}
               >
                 Platform
