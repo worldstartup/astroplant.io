@@ -8,7 +8,10 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <Brand />
+        <div className={styles.row}>
+          <Brand />
+          <SocialIcons />
+        </div>
 
         <h1 className={styles.title}>
           Growing a new generation of urban and space farmers
@@ -43,18 +46,45 @@ export function Footer() {
               pageDetails={{ name: "Goals", path: "/community/goals" }}
             />
           </div>
+
+          <div className={styles.navSection}>
+            <p className={styles.navSectionTitle}>For Space Farmers</p>
+            <a
+              target="_blank"
+              referrerPolicy="origin"
+              href={"https://docs.astroplant.io/"}
+              className={styles.externalLink}
+            >
+              Documentation
+            </a>
+            <div className={styles.linkRow}>
+              <a
+                target="_blank"
+                referrerPolicy="origin"
+                href={"https://app.astroplant.sda-projects.nl/"}
+                className={styles.externalLink}
+              >
+                Platform
+              </a>
+              <span className={styles.betaTag}>BETA</span>
+            </div>
+
+            <a
+              target="_blank"
+              referrerPolicy="origin"
+              href={"https://github.com/astroplant/"}
+              className={styles.externalLink}
+            >
+              Github
+            </a>
+          </div>
         </nav>
 
-        <div className={styles.row}>
-          <SocialIcons />
-
-          <div className={styles.sep} />
-
+        <div className={styles.miles}>
           <a
             href={"https://meetmiles.nl/"}
             target={"_blank"}
             referrerPolicy={"origin"}
-            className={styles.miles}
           >
             <Image
               src="/images/miles.svg"
@@ -64,7 +94,7 @@ export function Footer() {
               height={15}
               layout={"fixed"}
             />
-            <p>was here.</p>
+            was here.
           </a>
         </div>
       </div>
