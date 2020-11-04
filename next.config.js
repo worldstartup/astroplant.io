@@ -1,4 +1,7 @@
 module.exports = {
+  images: {
+    domains: ["community-api.astroplant.sda-projects.nl"],
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

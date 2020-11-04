@@ -5,6 +5,7 @@ import ReadArrow from "../../public/icons/arrow-right.svg";
 import { API_URL } from "../../services/community-api";
 import styles from "../modules/ArticleCard.module.css";
 import Card from "./Card";
+import Image from "next/image";
 
 export default function ArticleCard({ article }) {
   return (
@@ -14,13 +15,14 @@ export default function ArticleCard({ article }) {
       href={`${API_URL}/news/${article.slug}`}
     >
       <Card className={styles.card}>
-        <img
+        <Image
           className={styles.cover}
           src={
             article.cover
               ? `${API_URL}${article.cover.formats.small.url}`
               : `/images/placeholder.svg`
           }
+          layout={"fill"}
         />
         <div className={styles.gradient} />
         <div className={styles.content}>

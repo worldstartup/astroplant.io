@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Brand from "./Brand";
 import styles from "./modules/Footer.module.css";
 import PageLink from "./PageLink";
@@ -49,14 +50,22 @@ export function Footer() {
 
           <div className={styles.sep} />
 
-          <div className={styles.miles}>
-            <img
+          <a
+            href={"https://meetmiles.nl/"}
+            target={"_blank"}
+            referrerPolicy={"origin"}
+            className={styles.miles}
+          >
+            <Image
               src="/images/miles.svg"
               className={styles.milesLogo}
               alt="miles logo"
+              width={56}
+              height={15}
+              layout={"fixed"}
             />
             <p>was here.</p>
-          </div>
+          </a>
         </div>
       </div>
     </footer>
