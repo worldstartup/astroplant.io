@@ -10,21 +10,18 @@
     "export": "next export"
   },
   "dependencies": {
-    "@sanity/block-content-to-react": "^2.0.7",
-    "@svgr/webpack": "^5.4.0",
-    "date-fns": "^2.16.1",
-    "hls.js": "^0.11.0",
-    "lodash": "^4.17.19",
-    "mux-embed": "^3.2.0",
-    "next": "9.5.5",
+    "next": "10.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-loading-skeleton": "^2.0.1",
     "react-markdown": "^4.3.1",
-    "react-preloaders": "^3.0.3"
+    "react-preloaders": "^3.0.3",
+    "@sanity/block-content-to-react": "^2.0.7",
+    "date-fns": "^2.16.1"
   },
   "devDependencies": {
     "prettier": "^2.0.5",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "@svgr/webpack": "^5.4.0"
   }
 }
