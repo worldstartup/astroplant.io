@@ -1,4 +1,4 @@
-import "../public/global.css";
+import "../styles/global.css";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
