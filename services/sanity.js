@@ -89,6 +89,7 @@ export async function getHome() {
       heroDescription,
                 
       // supporters section
+      partnersTitle,
       partners[]->${partnerModel},
       partnersLink ${linkModel},
 
