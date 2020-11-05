@@ -135,6 +135,11 @@ a {
   background: var(--bg-gradient);
 }
 
+.hide-content {
+  height: 0px;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 448px) {
   h1 {
     font-size: 3rem;
