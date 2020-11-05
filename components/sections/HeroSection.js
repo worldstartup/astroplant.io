@@ -6,7 +6,7 @@ import styles from "../modules/HeroSection.module.css";
 import SanityImage from "../SanityImage.js";
 import Section from "../Section";
 import SectionDescription from "../SectionDescription";
-import { Video } from "../Video";
+import Video from "../Video";
 
 // create a prop called data
 export default function HeroSection({ title, image, description, videoUrl }) {
@@ -28,7 +28,7 @@ export default function HeroSection({ title, image, description, videoUrl }) {
             <h1 className={styles.heroTitle}>{title}</h1>
             <SectionDescription richText={description} color={"#E9DEFF"} />
             <div className={styles.videoHolder}>
-              <Video source={videoUrl}></Video>
+              <Video url={videoUrl} />
             </div>
           </div>
         </FloatingGrid>

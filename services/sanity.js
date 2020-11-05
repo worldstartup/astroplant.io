@@ -85,11 +85,10 @@ export async function getHome() {
       // hero section
       planetImage ${imgModel},
       heroTitle,
-      "video": video.asset->url,
+      video,
       heroDescription,
                 
       // supporters section
-      partnersTitle,
       partners[]->${partnerModel},
       partnersLink ${linkModel},
 

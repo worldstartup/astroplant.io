@@ -34,9 +34,9 @@ export default {
       fieldset: "heroSection",
     },
     {
-      title: "Video file",
+      title: "Youtube URL",
       name: "video",
-      type: "file",
+      type: "url",
       fieldset: "heroSection",
     },
     {
