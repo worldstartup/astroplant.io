@@ -1,18 +1,14 @@
 import S from "@sanity/desk-tool/structure-builder";
-
-// icons
-import pagesIcon from "react-icons/lib/md/book";
-import partnerIcon from "react-icons/lib/md/domain";
-import homeIcon from "react-icons/lib/fa/home";
-import aboutIcon from "react-icons/lib/fa/info-circle";
-import shopIcon from "react-icons/lib/md/attach-money";
-import contributeIcon from "react-icons/lib/md/touch-app";
-import goalsIcon from "react-icons/lib/md/assignment-turned-in";
-import ctaIcon from "react-icons/lib/go/megaphone";
-import milestoneIcon from "react-icons/lib/go/milestone";
-import achievementIcon from "react-icons/lib/go/check";
-import teamIcon from "react-icons/lib/md/group";
-import kitIcon from "react-icons/lib/go/tools";
+import { GoCheck, GoMegaphone, GoMilestone, GoTools } from "react-icons/go";
+import {
+  MdAssignmentTurnedIn,
+  MdAttachMoney,
+  MdBuild,
+  MdDomain,
+  MdGroup,
+  MdInfo,
+} from "react-icons/md";
+import { RiHome2Line, RiPagesLine } from "react-icons/ri";
 
 export default () =>
   S.list()
@@ -21,7 +17,7 @@ export default () =>
       // First pane
       S.listItem()
         .title("Pages")
-        .icon(pagesIcon)
+        .icon(RiPagesLine)
         .child(
           // Second pane
           S.list()
@@ -29,7 +25,7 @@ export default () =>
             .items([
               S.listItem()
                 .title("Home")
-                .icon(homeIcon)
+                .icon(RiHome2Line)
                 .child(
                   S.editor()
                     .schemaType("home")
@@ -39,7 +35,7 @@ export default () =>
 
               S.listItem()
                 .title("About Us")
-                .icon(aboutIcon)
+                .icon(MdInfo)
                 .child(
                   S.editor()
                     .schemaType("aboutUs")
@@ -49,7 +45,7 @@ export default () =>
 
               S.listItem()
                 .title("Contribute")
-                .icon(contributeIcon)
+                .icon(MdBuild)
                 .child(
                   S.editor()
                     .schemaType("contribute")
@@ -59,7 +55,7 @@ export default () =>
 
               S.listItem()
                 .title("Goals")
-                .icon(goalsIcon)
+                .icon(MdAssignmentTurnedIn)
                 .child(
                   S.editor()
                     .schemaType("goals")
@@ -69,7 +65,7 @@ export default () =>
 
               S.listItem()
                 .title("Shop")
-                .icon(shopIcon)
+                .icon(MdAttachMoney)
                 .child(
                   S.editor()
                     .schemaType("shop")
@@ -81,12 +77,12 @@ export default () =>
 
       S.listItem()
         .title("Partners")
-        .icon(partnerIcon)
+        .icon(MdDomain)
         .child(S.documentTypeList("partner")),
 
       S.listItem()
         .title("Teams")
-        .icon(teamIcon)
+        .icon(MdGroup)
         .child(
           S.list()
             .title("All teams")
@@ -117,22 +113,22 @@ export default () =>
 
       S.listItem()
         .title("Achievements")
-        .icon(achievementIcon)
+        .icon(GoCheck)
         .child(S.documentTypeList("achievement")),
 
       S.listItem()
         .title("Roadmap")
-        .icon(milestoneIcon)
+        .icon(GoMilestone)
         .child(S.documentTypeList("milestone")),
 
       S.listItem()
         .title("Call to Actions")
-        .icon(ctaIcon)
+        .icon(GoMegaphone)
         .child(S.documentTypeList("cta")),
 
       S.listItem()
         .title("Kit")
-        .icon(kitIcon)
+        .icon(GoTools)
         .child(
           S.editor().schemaType("kit").documentId("kit").title("Edit Kit")
         ),
