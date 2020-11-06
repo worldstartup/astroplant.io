@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import AnimateInView from "../AnimateInView";
+import AnimateListInView from "../AnimateListInView";
 import CommunityCard from "../cards/CommunityCard";
 import ContributeCard from "../cards/ContributeCard";
 import KitCard from "../cards/KitCard";
@@ -12,15 +14,23 @@ export default function CTASection({ title, description, image, ctas }) {
   return (
     <Section id="earthlings">
       <ContentLayout>
-        <SanityImage
-          className={styles.earth}
-          image={image}
-          params={{ h: 1024 }}
-        />
+        <AnimateInView className={styles.earth} animation="slideInLeft">
+          <SanityImage image={image} params={{ h: 1024 }} />
+        </AnimateInView>
 
-        <h1 className={styles.title}>{title}</h1>
-        <SectionDescription richText={description} color={"#F6FFF5"} />
-        <div className={styles.cardRow}>
+        <AnimateListInView
+          itemsAnimation={"fadeInBottom"}
+          listAnimation={"list"}
+        >
+          <h1 className={styles.title}>{title}</h1>
+          <SectionDescription richText={description} color={"#F6FFF5"} />
+        </AnimateListInView>
+
+        <AnimateListInView
+          itemsAnimation={"fadeInBottom"}
+          listAnimation={"list"}
+          className={styles.cardRow}
+        >
           {ctas.map((cta) => {
             if (cta.slug === "contribute") {
               return (
@@ -55,7 +65,7 @@ export default function CTASection({ title, description, image, ctas }) {
               );
             }
           })}
-        </div>
+        </AnimateListInView>
       </ContentLayout>
     </Section>
   );

@@ -1,4 +1,3 @@
-// import the helper functions
 import PropTypes from "prop-types";
 import FloatingGrid from "../FloatingGrid.js";
 import ContentLayout from "../layouts/ContentLayout";
@@ -8,7 +7,6 @@ import Section from "../Section";
 import SectionDescription from "../SectionDescription";
 import Video from "../Video";
 
-// create a prop called data
 export default function HeroSection({ title, image, description, videoUrl }) {
   return (
     <Section id="hero" className={styles.heroSection}>
@@ -24,12 +22,10 @@ export default function HeroSection({ title, image, description, videoUrl }) {
             />
           }
         >
-          <div className={styles.content}>
-            <h1 className={styles.heroTitle}>{title}</h1>
-            <SectionDescription richText={description} color={"#E9DEFF"} />
-            <div className={styles.videoHolder}>
-              <Video url={videoUrl} />
-            </div>
+          <h1 className={styles.heroTitle}>{title}</h1>
+          <SectionDescription richText={description} color={"#E9DEFF"} />
+          <div className={styles.videoHolder}>
+            <Video url={videoUrl} />
           </div>
         </FloatingGrid>
       </ContentLayout>

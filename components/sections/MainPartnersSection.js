@@ -7,7 +7,7 @@ export default function MainPartnersSection({ title, partners, link }) {
   return (
     <Section id={"main-partners"} bgColor={"see-through"}>
       <h1 className={"centered-text"}>{title}</h1>
-      <PartnersGrid partners={partners} />
+      <PartnersGrid animate partners={partners} />
       <a target={"blank"} referrerPolicy={"no-referrer"} href={link.to}>
         <Button label={link.label} />
       </a>
