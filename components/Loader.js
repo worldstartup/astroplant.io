@@ -1,12 +1,19 @@
+import { AnimatePresence, motion } from "framer-motion";
 import PropTypes from "prop-types";
 import React from "react";
 import styles from "./modules/Loader.module.css";
 
 export default function Loader({ show }) {
   return (
-    <>
+    <AnimatePresence>
       {show && (
-        <div className={styles.fullScreen}>
+        <motion.div
+          key="loader"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className={styles.fullScreen}
+        >
           <svg
             width={256}
             fill="none"
@@ -22,9 +29,9 @@ export default function Loader({ show }) {
               strokeWidth="1"
             />
           </svg>
-        </div>
+        </motion.div>
       )}
-    </>
+    </AnimatePresence>
   );
 }
 
