@@ -1,0 +1,74 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  max-width: 100%;
+
+  height: 100vh;
+  max-height: 100%;
+
+  background-color: var(--dark);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  padding: 1.5rem;
+}
+
+.gifHolder {
+  position: relative;
+
+  width: 100%;
+  max-width: 512px;
+
+  height: 288px;
+
+  border-radius: var(--border-radius-max);
+
+  overflow: hidden;
+  margin: 2rem;
+}
+
+.iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.text,
+.title,
+.sub {
+  max-width: 640px;
+  text-align: center;
+}
+
+.title {
+  font-size: 6rem;
+}
+
+.sub {
+  margin: 0rem 0 2rem 0;
+}
+
+.text,
+.link {
+  font-size: 20px;
+}
+
+.link,
+.title {
+  color: var(--main-color);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
