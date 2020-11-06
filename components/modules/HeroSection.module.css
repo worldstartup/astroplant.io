@@ -1,0 +1,38 @@
+.heroSection {
+  position: relative;
+  margin-top: -128px;
+}
+
+.stars {
+  position: absolute;
+  z-index: -1;
+
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url(/images/stars-alpha.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  mix-blend-mode: luminosity;
+  opacity: 0.75;
+}
+
+.content {
+  padding: 4rem 0;
+}
+
+.mars {
+  height: 100%;
+
+  transform: rotate(-90deg);
+}
+
+.heroTitle {
+  margin: 0 0 3rem 0;
+}
+
+.videoHolder {
+  position: relative;
+  max-width: 640px;
+}

@@ -1,0 +1,54 @@
+.card {
+  flex-direction: column;
+  justify-content: center;
+
+  height: min-content;
+  width: 100%;
+
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.questionRow {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: var(--dark-light);
+
+  padding: 1.5rem;
+}
+
+.active,
+.active .dropdown,
+.questionRow:hover,
+.questionRow:hover .dropdown {
+  cursor: pointer;
+
+  color: var(--main-color);
+  fill: var(--main-color);
+}
+
+.answerRow {
+  display: none;
+  flex-direction: column;
+  padding: 1.25rem 2rem;
+  background-color: var(--grey-dark);
+  border-top: 2px solid var(--grey);
+  overflow: hidden;
+}
+
+.visible {
+  display: flex;
+}
+
+.dropdown {
+  font-size: 30px;
+  fill: var(--light);
+  margin-left: 0.5rem;
+
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}

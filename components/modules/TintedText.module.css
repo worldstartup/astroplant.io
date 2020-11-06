@@ -1,9 +1,0 @@
-.text {
-    font-size: 18px;
-    opacity: var(--tinted-text);
-    font-weight: var(--medium);
-    max-width: 800px;
-    line-height: 2rem;
-    text-align: center;
-    white-space: pre-line;
-}

@@ -1,0 +1,56 @@
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+
+  justify-items: center;
+
+  width: 100%;
+
+  margin: 4rem 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 3rem;
+  background-color: var(--dark);
+
+  max-width: 512px;
+}
+
+.cardSubtitle {
+  font-size: 1.5rem;
+  color: var(--main-color);
+
+  margin: 1rem 0;
+}
+
+.cardDescription {
+  text-align: center;
+  font-weight: 300;
+}
+
+.buttonRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+
+  margin: 2rem 0 0 0;
+}
+
+.marginButton {
+  margin: 2rem 0 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+
+    margin: 2rem 0;
+  }
+}

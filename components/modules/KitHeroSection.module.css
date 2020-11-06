@@ -1,0 +1,45 @@
+.section {
+  margin: -8rem 0 0 0;
+
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  align-items: center;
+}
+
+.highlightImage {
+  width: 100%;
+  max-width: 768px;
+
+  object-fit: cover;
+}
+
+.title {
+  margin: 0 0 2rem 0;
+}
+
+.buttonRow {
+  display: flex;
+  grid-gap: 1rem;
+
+  margin: 2rem 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .contentGrid {
+    display: flex;
+    flex-flow: column-reverse;
+    grid-template-columns: 1fr;
+
+    padding: 4rem 0;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+}

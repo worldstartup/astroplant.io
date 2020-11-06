@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: min-content;
+}
+
+.separator {
+  display: block;
+  height: 2rem;
+  width: 1px;
+  background-color: var(--light);
+  margin: 0 1rem;
+}
+
+.darkSeparator {
+  background-color: var(--dark);
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text svg {
+  height: 32px;
+  width: 128px;
+}
+
+.darkText svg path {
+  fill: var(--dark);
+}
+
+.logoHolder {
+  display: block;
+  height: 32px;
+  width: 32px;
+}
+
+@media screen and (max-width: 448px) {
+  .text,
+  .separator {
+    display: none;
+  }
+}

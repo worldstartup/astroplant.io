@@ -1,0 +1,9 @@
+.contributionsGrid {
+  display: grid;
+  grid-gap: 4rem;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 4rem 0;
+}

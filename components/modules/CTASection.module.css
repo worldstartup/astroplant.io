@@ -1,0 +1,47 @@
+.title {
+  margin: 4rem 0;
+  max-width: 640px;
+}
+
+.earth {
+  position: absolute;
+  z-index: -1;
+
+  left: 80%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cardRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+  align-items: center;
+
+  max-width: 1200px;
+
+  margin-top: 8rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .title {
+    margin: 2rem 0;
+  }
+
+  .cardRow {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 2rem;
+
+    margin-top: 4rem;
+  }
+
+  .earth {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cardRow {
+    grid-template-columns: 1fr;
+  }
+}

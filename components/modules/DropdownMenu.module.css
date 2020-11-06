@@ -1,0 +1,51 @@
+.triggerHolder {
+  cursor: pointer;
+}
+
+.menuHolder {
+  position: relative;
+}
+
+.holder {
+  position: fixed;
+  top: 6rem;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  max-width: 100%;
+
+  padding: 0 1.5rem;
+
+  overflow: hidden;
+
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.95);
+
+  transition: transform 0.2s ease-out, opacity 0.25s ease-out,
+    visibility 0.3s ease-out;
+}
+
+.visible {
+  z-index: 999;
+  pointer-events: all;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.content {
+  width: 100%;
+  max-width: var(--max-content-width);
+
+  padding: 1.5rem;
+
+  border-radius: 12px;
+  background-color: var(--dark-light);
+}

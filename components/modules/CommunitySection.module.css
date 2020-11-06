@@ -1,0 +1,19 @@
+.communitySection {
+  min-height: 1104px;
+}
+
+.title {
+  margin: 3rem 0;
+  max-width: 640px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+
+  margin: 4rem 0;
+}
+
+.marginButton {
+  margin: 0 2rem;
+}

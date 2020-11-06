@@ -1,12 +1,25 @@
-import s from "./modules/Video.module.css";
+import PropTypes from "prop-types";
+import styles from "./modules/Video.module.css";
 
-export function Video(props = { source }) {
-    return (
-        <div className={s.holder}>
-            <div className={s.gradient}></div>
-            <video className={s.video} loop autoPlay muted controls={true}>
-                <source src={props.source} type='video/mp4' />
-            </video>
-        </div>
-    );
+export default function Video({ url }) {
+  const params = ["autoplay=1", "modestbranding=1", "origin=astroplant.io"];
+  const fullURL = url + "?" + params.join("&");
+
+  return (
+    <div className={styles.holder}>
+      <iframe
+        width="560"
+        height="315"
+        src={fullURL}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className={styles.video}
+      />
+    </div>
+  );
 }
+
+Video.propTypes = {
+  url: PropTypes.string.isRequired,
+};

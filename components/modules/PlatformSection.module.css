@@ -1,0 +1,40 @@
+.titleRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin: 0 0 4rem 0;
+}
+
+.title {
+  max-width: 640px;
+  margin: 0 0 1.5rem 0;
+}
+
+.mockUp {
+  height: 100%;
+}
+
+.chip {
+  padding: 0.5rem 1rem;
+
+  border-radius: var(--border-radius-min);
+
+  font-weight: bold;
+  letter-spacing: 0.1em;
+
+  color: var(--dark);
+  background-color: var(--main-color);
+}
+
+@media only screen and (max-width: 768px) {
+  .titleRow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chip {
+    margin: 2rem 0 0 0;
+  }
+}

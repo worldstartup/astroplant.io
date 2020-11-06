@@ -50,76 +50,76 @@ Next to that I have a `global.css` file that is housed in the `public` folder of
 
 ```css
 * {
-    user-select: none;
-    margin: 0;
-    padding: 0;
-    font-family: "Inter var";
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter var";
 }
 
 @font-face {
-    font-family: "Inter var";
-    font-weight: 100 900;
-    font-display: swap;
-    font-style: normal;
-    font-named-instance: "Regular";
-    src: url("Inter.var.woff2?v=3.13") format("woff2");
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("Inter.var.woff2?v=3.13") format("woff2");
 }
 
 :root {
-    --main-color: #839cdb;
-    --main-color-darker: #6f85bd;
-    --main-color-darkest: #6073a4;
-    --green: #8bffac;
-    --bg-gradient: linear-gradient(
-        180deg,
-        #000000 0%,
-        #110823 26.04%,
-        #152a53 49.48%,
-        #052113 89.06%,
-        #000000 100%
-    );
-    --medium: 500;
-    --bold: 700;
-    --extra-bold: 900;
-    --default-2s: all 0.2s ease;
-    --title: 60px;
-    --subTitle: 24px;
-    --footnote: 18px;
-    --tinted-text: 0.75;
-    --border-radius: 10px;
-    --spacer-height: 22rem;
+  --main-color: #839cdb;
+  --main-color-darker: #6f85bd;
+  --main-color-darkest: #6073a4;
+  --green: #8bffac;
+  --bg-gradient: linear-gradient(
+    180deg,
+    #000000 0%,
+    #110823 26.04%,
+    #152a53 49.48%,
+    #052113 89.06%,
+    #000000 100%
+  );
+  --medium: 500;
+  --bold: 700;
+  --extra-bold: 900;
+  --default-2s: all 0.2s ease;
+  --title: 60px;
+  --subTitle: 24px;
+  --footnote: 18px;
+  --tinted-text: 0.75;
+  --border-radius: 10px;
+  --spacer-height: 22rem;
 }
 
 @media only screen and (max-width: 1024px) {
-    :root {
-        --spacer-height: 6rem;
-    }
+  :root {
+    --spacer-height: 6rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    :root {
-        --title: 36px;
-        --subTitle: 18px;
-    }
+  :root {
+    --title: 36px;
+    --subTitle: 18px;
+  }
 }
 
 body {
-    background: var(--bg-gradient);
-    background-repeat: no-repeat;
+  background: var(--bg-gradient);
+  background-repeat: no-repeat;
 }
 
 a {
-    color: white;
-    font-size: 16px;
-    font-weight: var(--medium);
-    cursor: pointer;
-    opacity: 0.75;
-    transition: var(--default-2s);
-    text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: var(--medium);
+  cursor: pointer;
+  opacity: 0.75;
+  transition: var(--default-2s);
+  text-decoration: none;
 }
 
 a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 ```
 
@@ -147,27 +147,27 @@ As a heads up: each component description here will have my code shown first, an
 
 ```javascript
 import s from "./modules/Header.module.css";
-import { Button } from "./Button";
+import Button from "./Button";
 
 import Link from "next/link";
 
 export function Header() {
-    return (
-        <header className={s.header} id='header'>
-            <div className={s.container}>
-                <Link href='/'>
-                    <img src='/images/logo.png' className={s.logo} />
-                </Link>
+  return (
+    <header className={s.header} id="header">
+      <div className={s.container}>
+        <Link href="/">
+          <img src="/images/logo.png" className={s.logo} />
+        </Link>
 
-                <div className={s.nav}>
-                    <Link href='/'>
-                        <a>Home</a>
-                    </Link>
-                    <Button href='earthlings' label='Join the Community'></Button>
-                </div>
-            </div>
-        </header>
-    );
+        <div className={s.nav}>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+          <Button href="earthlings" label="Join the Community"></Button>
+        </div>
+      </div>
+    </header>
+  );
 }
 ```
 
@@ -178,24 +178,24 @@ import s from "./modules/Button.module.css";
 import Link from "next/link";
 
 export function Button(
-    props = {
-        label,
-        className,
-        bgColor,
-        color,
-        href,
-    }
+  props = {
+    label,
+    className,
+    bgColor,
+    color,
+    href,
+  }
 ) {
-    return (
-        <Link href={`#` + props.href}>
-            <button
-                className={s.button}
-                style={{ backgroundColor: props.bgColor, color: props.color }}
-            >
-                {props.label}
-            </button>
-        </Link>
-    );
+  return (
+    <Link href={`#` + props.href}>
+      <button
+        className={s.button}
+        style={{ backgroundColor: props.bgColor, color: props.color }}
+      >
+        {props.label}
+      </button>
+    </Link>
+  );
 }
 ```
 
@@ -212,42 +212,42 @@ import { Video } from "./Video";
 import { TintedText } from "./TintedText";
 
 export function Hero() {
-    React.useEffect(() => {
-        // define and assign a function to the hero top padding
-        const setHeroPadding = () => {
-            // get the height of the header
-            const headerHeight = document.querySelector("#header").clientHeight;
+  React.useEffect(() => {
+    // define and assign a function to the hero top padding
+    const setHeroPadding = () => {
+      // get the height of the header
+      const headerHeight = document.querySelector("#header").clientHeight;
 
-            // find the hero section DOM element and set its padding top to the height of the header
-            document.querySelector("#hero").style.paddingTop = `${headerHeight}px`;
+      // find the hero section DOM element and set its padding top to the height of the header
+      document.querySelector("#hero").style.paddingTop = `${headerHeight}px`;
 
-            // equal padding to the bottom
-            document.querySelector("#hero").style.paddingBottom = `${headerHeight}px`;
-        };
+      // equal padding to the bottom
+      document.querySelector("#hero").style.paddingBottom = `${headerHeight}px`;
+    };
 
-        setHeroPadding();
-    });
+    setHeroPadding();
+  });
 
-    return (
-        <section id='hero' className={s.heroSection}>
-            <div className={s.stars}></div>
-            <div className={s.planetHolder}>
-                <img src='/images/mars.png' className={s.mars} />
-                <h1 className={s.heroTitle}>Grow Plants in Space</h1>
-            </div>
-            <div className={s.videoHolder}>
-                <h3 className={s.subTitle}>Time to start your journey.</h3>
-                <Video source='/astro-intro.mp4'></Video>
-            </div>
-            <TintedText
-                text={
-                    "AstroPlant is an educational citizen science project in collaboration with the European Space Agency to engage a new generation of Space Farmers, collect data and ideas for agriculture on Mars, develop open source research equipment and create awareness of regenerative and closed-loop life support systems."
-                }
-                color={"#E9DEFF"}
-                margin={"3rem auto 0 auto"}
-            ></TintedText>
-        </section>
-    );
+  return (
+    <section id="hero" className={s.heroSection}>
+      <div className={s.stars}></div>
+      <div className={s.planetHolder}>
+        <img src="/images/mars.png" className={s.mars} />
+        <h1 className={s.heroTitle}>Grow Plants in Space</h1>
+      </div>
+      <div className={s.videoHolder}>
+        <h3 className={s.subTitle}>Time to start your journey.</h3>
+        <Video source="/astro-intro.mp4"></Video>
+      </div>
+      <TintedText
+        text={
+          "AstroPlant is an educational citizen science project in collaboration with the European Space Agency to engage a new generation of Space Farmers, collect data and ideas for agriculture on Mars, develop open source research equipment and create awareness of regenerative and closed-loop life support systems."
+        }
+        color={"#E9DEFF"}
+        margin={"3rem auto 0 auto"}
+      ></TintedText>
+    </section>
+  );
 }
 ```
 
@@ -261,11 +261,11 @@ Secondly I created a component called [`<TintedText />`](https://github.com/Meet
 import s from "./modules/TintedText.module.css";
 
 export function TintedText(props = { text, color }) {
-    return (
-        <p className={s.text} style={{ color: props.color, margin: props.margin }}>
-            {props.text}
-        </p>
-    );
+  return (
+    <p className={s.text} style={{ color: props.color, margin: props.margin }}>
+      {props.text}
+    </p>
+  );
 }
 ```
 
@@ -283,24 +283,24 @@ import { TintedText } from "./TintedText";
 import { IntroText } from "./IntroText";
 
 export function Community() {
-    return (
-        <section id='community' className={s.communitySection}>
-            <IntroText
-                title='Grow with the Community'
-                subTitle='There’s a whole galaxy out there.'
-                subTitleColor='E0E4FF'
-            ></IntroText>
-            <ImageGrid></ImageGrid>
-            <TintedText
-                text={
-                    "AstroPlant is an open source project meaning that it is open to everyone, and is building for everyone. There are many ways of contributing to the project. You can buy one of the kits, tinker with it and collect valuable data, or you can help us improve our community platform. You can teach or learn biology, plant carrots or simply follow our news feed, and spread the word about our amazing community of Space Farmers.\n\n" +
-                    "Everyone can be a Space Farmer."
-                }
-                color={"#DEE8FF"}
-                margin={"3rem auto"}
-            ></TintedText>
-        </section>
-    );
+  return (
+    <section id="community" className={s.communitySection}>
+      <IntroText
+        title="Grow with the Community"
+        subTitle="There’s a whole galaxy out there."
+        subTitleColor="E0E4FF"
+      ></IntroText>
+      <ImageGrid></ImageGrid>
+      <TintedText
+        text={
+          "AstroPlant is an open source project meaning that it is open to everyone, and is building for everyone. There are many ways of contributing to the project. You can buy one of the kits, tinker with it and collect valuable data, or you can help us improve our community platform. You can teach or learn biology, plant carrots or simply follow our news feed, and spread the word about our amazing community of Space Farmers.\n\n" +
+          "Everyone can be a Space Farmer."
+        }
+        color={"#DEE8FF"}
+        margin={"3rem auto"}
+      ></TintedText>
+    </section>
+  );
 }
 ```
 
@@ -321,16 +321,16 @@ import { SupporterBar } from "./SupporterBar.js";
 import { IntroText } from "./IntroText";
 
 export function Supporters() {
-    return (
-        <section className={s.supportersSection}>
-            <IntroText
-                title='Some of our Supporters'
-                subTitle='See who’s lending us a helping hand.'
-                subTitleColor='D6ECFF'
-            ></IntroText>
-            <SupporterBar></SupporterBar>
-        </section>
-    );
+  return (
+    <section className={s.supportersSection}>
+      <IntroText
+        title="Some of our Supporters"
+        subTitle="See who’s lending us a helping hand."
+        subTitleColor="D6ECFF"
+      ></IntroText>
+      <SupporterBar></SupporterBar>
+    </section>
+  );
 }
 ```
 
@@ -348,52 +348,52 @@ import { Card } from "./Card";
 import { KitCard } from "./KitCard";
 
 export function Earthlings() {
-    return (
-        <section id='earthlings' className={s.earthlings}>
-            <div className={s.introHolder}>
-                <IntroText
-                    title='AstroPlant is for all Earthlings'
-                    subTitle='All the ways you can become a Space Farmer. There’s no better time than now.'
-                    subTitleColor='E5FFFE'
-                ></IntroText>
-            </div>
-            <div className={s.earthSection}>
-                <img className={s.earth} src='/images/earth.png' />
-                <div className={s.gradient}></div>
-                <div className={s.holder}>
-                    <Card
-                        image={"/images/card1.jpg"}
-                        title={"Community"}
-                        greenTitle={"Free"}
-                        text={
-                            "Grow with the community on Slack. Exchange ideas and talk about AstroPlant.\n\n" +
-                            "The Sky’s the limit!"
-                        }
-                        buttonLabel={"Join"}
-                    ></Card>
-                    <KitCard
-                        image={"/images/card2.png"}
-                        title={"The Kit"}
-                        greenTitle={"€ 249,-"}
-                        text={"A customizable plant station."}
-                        primaryButton={"Order"}
-                        secondaryButton={"Donate"}
-                    ></KitCard>
-                    <Card
-                        image={"/images/card3.png"}
-                        title={"Developers"}
-                        greenTitle={"Free"}
-                        text={
-                            "You can  help develop a rigorous and tested product by contributing to the AstroPlant source code.\n\n" +
-                            "Check it out on GitHub."
-                        }
-                        buttonLabel={"Contribute"}
-                    ></Card>
-                </div>
-                <Footnote text='Become a Space Farmer and act now!'></Footnote>
-            </div>
-        </section>
-    );
+  return (
+    <section id="earthlings" className={s.earthlings}>
+      <div className={s.introHolder}>
+        <IntroText
+          title="AstroPlant is for all Earthlings"
+          subTitle="All the ways you can become a Space Farmer. There’s no better time than now."
+          subTitleColor="E5FFFE"
+        ></IntroText>
+      </div>
+      <div className={s.earthSection}>
+        <img className={s.earth} src="/images/earth.png" />
+        <div className={s.gradient}></div>
+        <div className={s.holder}>
+          <Card
+            image={"/images/card1.jpg"}
+            title={"Community"}
+            greenTitle={"Free"}
+            text={
+              "Grow with the community on Slack. Exchange ideas and talk about AstroPlant.\n\n" +
+              "The Sky’s the limit!"
+            }
+            buttonLabel={"Join"}
+          ></Card>
+          <KitCard
+            image={"/images/card2.png"}
+            title={"The Kit"}
+            greenTitle={"€ 249,-"}
+            text={"A customizable plant station."}
+            primaryButton={"Order"}
+            secondaryButton={"Donate"}
+          ></KitCard>
+          <Card
+            image={"/images/card3.png"}
+            title={"Developers"}
+            greenTitle={"Free"}
+            text={
+              "You can  help develop a rigorous and tested product by contributing to the AstroPlant source code.\n\n" +
+              "Check it out on GitHub."
+            }
+            buttonLabel={"Contribute"}
+          ></Card>
+        </div>
+        <Footnote text="Become a Space Farmer and act now!"></Footnote>
+      </div>
+    </section>
+  );
 }
 ```
 
@@ -409,55 +409,71 @@ This is by far the largest component I have built for the project, especially as
 import s from "./modules/Footer.module.css";
 
 import Link from "next/link";
-import { Button } from "./Button";
+import Button from "./Button";
 
 export function Footer() {
-    return (
-        <footer className={s.footer}>
-            <div className={s.container}>
-                <div className={s.left}>
-                    <img alt='Astroplant logo' className={s.logo} src='/images/logo.png' />
-                    <div className={s.nav}>
-                        <Link href='/'>
-                            <a>Home</a>
-                        </Link>
-                        <Link href='#'>
-                            <a>Community</a>
-                        </Link>
-                        <Link href='#'>
-                            <a>The Kit</a>
-                        </Link>
-                        <Link href='#'>
-                            <a>Developers</a>
-                        </Link>
-                    </div>
-                    <div className={s.socials}>
-                        <a href='' target='_blank'>
-                            <img className={s.icon} alt='social icon' src='/images/insta.png' />
-                        </a>
-                        <a href='' target='_blank'>
-                            <img className={s.icon} alt='social icon' src='/images/twitter.png' />
-                        </a>
-                        <a href='' target='_blank'>
-                            <img className={s.icon} alt='social icon' src='/images/fb.png' />
-                        </a>
-                    </div>
-                </div>
-                <div className={s.right}>
-                    <h1 className={s.title}>Growing a New Generation of Space Farmers</h1>
-                    <h2 className={s.subTitle}>Grow with the community on Slack.</h2>
-                    <div className={s.buttons}>
-                        <Button label='Join'></Button>
-                        <Button label='View GitHub' bgColor='white' color='black'></Button>
-                    </div>
-                    <div className={s.miles}>
-                        <img src='/images/miles.svg' className={s.milesLogo} alt='miles logo' />
-                        <p>was here.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
+  return (
+    <footer className={s.footer}>
+      <div className={s.container}>
+        <div className={s.left}>
+          <img
+            alt="Astroplant logo"
+            className={s.logo}
+            src="/images/logo.png"
+          />
+          <div className={s.nav}>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+            <Link href="#">
+              <a>Community</a>
+            </Link>
+            <Link href="#">
+              <a>The Kit</a>
+            </Link>
+            <Link href="#">
+              <a>Developers</a>
+            </Link>
+          </div>
+          <div className={s.socials}>
+            <a href="" target="_blank">
+              <img
+                className={s.icon}
+                alt="social icon"
+                src="/images/insta.png"
+              />
+            </a>
+            <a href="" target="_blank">
+              <img
+                className={s.icon}
+                alt="social icon"
+                src="/images/twitter.png"
+              />
+            </a>
+            <a href="" target="_blank">
+              <img className={s.icon} alt="social icon" src="/images/fb.png" />
+            </a>
+          </div>
+        </div>
+        <div className={s.right}>
+          <h1 className={s.title}>Growing a New Generation of Space Farmers</h1>
+          <h2 className={s.subTitle}>Grow with the community on Slack.</h2>
+          <div className={s.buttons}>
+            <Button label="Join"></Button>
+            <Button label="View GitHub" bgColor="white" color="black"></Button>
+          </div>
+          <div className={s.miles}>
+            <img
+              src="/images/miles.svg"
+              className={s.milesLogo}
+              alt="miles logo"
+            />
+            <p>was here.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 }
 ```
 

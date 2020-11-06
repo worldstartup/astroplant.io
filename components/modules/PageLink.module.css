@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLink,
+.dropdown {
+  transition: fill 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+.navLink {
+  color: var(--light);
+  font-weight: 500;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.navLink:hover,
+.container:hover .dropdown {
+  opacity: 1;
+  color: var(--main-color) !important;
+  fill: var(--main-color) !important;
+}
+
+.dropdown {
+  fill: var(--light);
+  font-size: 24px;
+
+  margin: 0 0 0 0.5rem;
+}
+
+.dark {
+  color: var(--dark);
+  fill: var(--dark);
+}

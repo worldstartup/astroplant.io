@@ -1,21 +1,67 @@
 .button {
-    padding: .65rem 1rem;
-    border-radius: .25rem;
-    background-color: var(--main-color);
-    font-size: 16px;
-    font-weight: var(--bold);
-    color: rgb(240, 244, 255);
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: var(--default-2s);
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.65rem 1rem;
+  border-radius: var(--border-radius-min);
+
+  font-size: 16px;
+  font-weight: var(--bold);
+
+  border: none;
+  outline: 1px solid transparent;
+  outline-offset: -4px;
+  cursor: pointer;
+
+  transition: 0.25s ease;
 }
 
 .button:hover {
-    filter: brightness(0.8);
+  background-color: transparent;
+  outline-offset: 4px;
 }
 
-.button:active {
-    filter: brightness(0.6);
+.secondary {
+  background-color: var(--secondary-color);
+  color: var(--light);
+}
+
+.secondary:hover {
+  color: var(--secondary-color);
+  outline: 1px solid var(--secondary-color);
+}
+
+.light {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.light:hover {
+  color: var(--light) !important;
+  outline: 1px solid var(--light);
+}
+
+.dark {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.dark:hover {
+  color: var(--dark) !important;
+  outline: 1px solid var(--dark);
+}
+
+.iconHolder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 0 0 0.5rem;
+  font-size: 16px;
+}
+
+.github,
+.join {
+  width: 100%;
 }

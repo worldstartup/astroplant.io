@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+}
+
+.picture {
+  height: 224px;
+
+  width: 100%;
+  max-width: 160px;
+
+  border-radius: var(--border-radius-min);
+
+  object-fit: cover;
+}
+
+.memberDetails {
+  margin: 0 0 0 2rem;
+
+  width: 100%;
+  max-width: 512px;
+}
+
+.name {
+  font-size: 1.75rem;
+  color: var(--main-color);
+  margin: 0 0 1rem 0;
+}
+
+.role {
+  font-size: 1.2rem;
+}
+
+.description {
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.link svg path {
+  transition: fill 0.3s ease;
+}
+
+.link:hover svg path {
+  fill: var(--secondary-color) !important;
+}
+
+@media screen and (max-width: 448px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .name {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .memberDetails {
+    margin: 0;
+
+    width: 100%;
+    max-width: 512px;
+  }
+}

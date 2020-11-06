@@ -1,12 +1,22 @@
-import s from "./modules/ImageGrid.module.css";
-import { imageUrlFor } from "../services/middleman";
+import PropTypes from "prop-types";
+import styles from "./modules/ImageGrid.module.css";
+import SanityImage from "./SanityImage";
 
-export function ImageGrid(props = { data }) {
-    return (
-        <div className={s.imageGrid}>
-            {props.data.communityImages.map((image) => (
-                <img className={`${s.gridImage}`} src={imageUrlFor(image)} />
-            ))}
-        </div>
-    );
+export function ImageGrid({ images, ...props }) {
+  return (
+    <div className={styles.imageGrid} {...props}>
+      {images.map((image) => (
+        <SanityImage
+          className={styles.gridImage}
+          params={{ h: 384 }}
+          key={image._key}
+          image={image}
+        />
+      ))}
+    </div>
+  );
 }
+
+ImageGrid.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

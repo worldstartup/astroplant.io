@@ -1,53 +1,104 @@
-import s from "./modules/Footer.module.css";
+import Image from "next/image";
+import { PLATFORM_URL } from "../services/community-api";
+import Brand from "./Brand";
+import styles from "./modules/Footer.module.css";
+import PageLink from "./PageLink";
+import SocialIcons from "./SocialIcons";
 
-import Link from "next/link";
-import { Button } from "./Button";
+export function Footer() {
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.row}>
+          <Brand />
+          <SocialIcons />
+        </div>
 
-export function Footer(props = { data }) {
-    return (
-        <footer className={s.footer}>
-            <div className={s.container}>
-                <div className={s.left}>
-                    <img alt='Astroplant logo' className={s.logo} src='/images/logo.png' />
-                    <div className={s.nav}>
-                        <Link href='/'>
-                            <a>Home</a>
-                        </Link>
-                        <Link href='#'>
-                            <a>Community</a>
-                        </Link>
-                        <Link href='#'>
-                            <a>The Kit</a>
-                        </Link>
-                        <Link href='#'>
-                            <a>Developers</a>
-                        </Link>
-                    </div>
-                    <div className={s.socials}>
-                        <a href='' target='_blank'>
-                            <img className={s.icon} alt='social icon' src='/images/insta.png' />
-                        </a>
-                        <a href='' target='_blank'>
-                            <img className={s.icon} alt='social icon' src='/images/twitter.png' />
-                        </a>
-                        <a href='' target='_blank'>
-                            <img className={s.icon} alt='social icon' src='/images/fb.png' />
-                        </a>
-                    </div>
-                </div>
-                <div className={s.right}>
-                    <h1 className={s.title}>{props.data.footerSlogan}</h1>
-                    <h2 className={s.subTitle}>{props.data.footerSubSlogan}</h2>
-                    <div className={s.buttons}>
-                        <Button label='Join'></Button>
-                        <Button label='View GitHub' bgColor='white' color='black'></Button>
-                    </div>
-                    <div className={s.miles}>
-                        <img src='/images/miles.svg' className={s.milesLogo} alt='miles logo' />
-                        <p>was here.</p>
-                    </div>
-                </div>
+        <h1 className={styles.title}>
+          Growing a new generation of urban and space farmers
+        </h1>
+
+        <nav className={styles.nav}>
+          <div className={styles.navSection}>
+            <p className={styles.navSectionTitle}>AstroPlant</p>
+            <PageLink
+              className={styles.pageLink}
+              pageDetails={{ name: "Home", path: "/" }}
+            />
+            <PageLink
+              className={styles.pageLink}
+              pageDetails={{ name: "Contribute", path: "/contribute" }}
+            />
+            <PageLink
+              className={styles.pageLink}
+              pageDetails={{ name: "Shop", path: "/shop" }}
+            />
+          </div>
+
+          <div className={styles.navSection}>
+            <p className={styles.navSectionTitle}>Community</p>
+            <PageLink
+              className={styles.pageLink}
+              pageDetails={{ name: "About Us", path: "/community/about-us" }}
+            />
+
+            <PageLink
+              className={styles.pageLink}
+              pageDetails={{ name: "Goals", path: "/community/goals" }}
+            />
+          </div>
+
+          <div className={styles.navSection}>
+            <p className={styles.navSectionTitle}>For Space Farmers</p>
+            <a
+              target="_blank"
+              referrerPolicy="origin"
+              href={"https://docs.astroplant.io/"}
+              className={styles.externalLink}
+            >
+              Documentation
+            </a>
+            <div className={styles.linkRow}>
+              <a
+                target="_blank"
+                referrerPolicy="origin"
+                href={PLATFORM_URL}
+                className={styles.externalLink}
+              >
+                Platform
+              </a>
+              <span className={styles.betaTag}>BETA</span>
             </div>
-        </footer>
-    );
+
+            <a
+              target="_blank"
+              referrerPolicy="origin"
+              href={"https://github.com/astroplant/"}
+              className={styles.externalLink}
+            >
+              Github
+            </a>
+          </div>
+        </nav>
+
+        <div className={styles.miles}>
+          <a
+            href={"https://meetmiles.nl/"}
+            target={"_blank"}
+            referrerPolicy={"origin"}
+          >
+            <Image
+              src="/images/miles.svg"
+              className={styles.milesLogo}
+              alt="miles logo"
+              width={56}
+              height={15}
+              layout={"fixed"}
+            />
+            was here.
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
 }
