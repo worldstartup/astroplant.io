@@ -4,22 +4,20 @@
   justify-content: center;
 
   padding: 0.65rem 1rem;
-  border-radius: var(--border-radius-min);
 
   font-size: 16px;
   font-weight: var(--bold);
 
-  border: none;
-  outline: 1px solid transparent;
-  outline-offset: -4px;
+  border: 1px solid transparent;
+  border-radius: 5px;
   cursor: pointer;
+  outline: none;
 
   transition: 0.25s ease;
 }
 
 .button:hover {
   background-color: transparent;
-  outline-offset: 4px;
 }
 
 .secondary {
@@ -29,7 +27,7 @@
 
 .secondary:hover {
   color: var(--secondary-color);
-  outline: 1px solid var(--secondary-color);
+  border: 1px solid var(--secondary-color);
 }
 
 .light {
@@ -39,7 +37,7 @@
 
 .light:hover {
   color: var(--light) !important;
-  outline: 1px solid var(--light);
+  border: 1px solid var(--light);
 }
 
 .dark {
@@ -49,7 +47,7 @@
 
 .dark:hover {
   color: var(--dark) !important;
-  outline: 1px solid var(--dark);
+  border: 1px solid var(--dark);
 }
 
 .iconHolder {
