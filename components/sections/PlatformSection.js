@@ -25,7 +25,7 @@ export default function PlatformSection({ title, description, image, links }) {
             <div className={styles.chip}>BETA</div>
           </div>
           <SectionDescription color={"#DEE8FF"} richText={description} />
-          <SanityLinkList links={links} />
+          {/* <SanityLinkList links={links} /> */}
         </FloatingGrid>
       </ContentLayout>
     </Section>

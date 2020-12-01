@@ -6,8 +6,9 @@ export default function ContributeCard({ ...props }) {
   return (
     <CTACard {...props}>
       <div className={styles.buttonRow}>
-        <Button label={"Read more"} color={"light"} />
-        <Button label={"Contribute"} />
+        <a href="mailto:thieme@astroplant.io">
+          <Button label={"Contact"} color={"light"} />
+        </a>
       </div>
     </CTACard>
   );

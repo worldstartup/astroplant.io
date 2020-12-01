@@ -16,12 +16,12 @@ export default function CommunitySection({ title, description, images, link }) {
         <FloatingGrid floatingElement={<ImageGrid images={images} />}>
           <h1 className={styles.title}>{title}</h1>
           <SectionDescription color={"#DEE8FF"} richText={description} />
-          <div className={styles.buttons}>
+          {/* <div className={styles.buttons}>
             <Link href={link.to}>
               <Button color={"light"} label={link.label} />
             </Link>
             <JoinCommunityButton className={styles.marginButton} />
-          </div>
+          </div> */}
         </FloatingGrid>
       </ContentLayout>
     </Section>

@@ -27,9 +27,9 @@ export default function SocialIcons({ color, className }) {
       >
         <Instagram />
       </ExternalLink>
-      <ExternalLink className={`${styles.icon} ${styles[color]}`}>
+      {/* <ExternalLink href={""} className={`${styles.icon} ${styles[color]}`}>
         <Facebook />
-      </ExternalLink>
+      </ExternalLink> */}
       <ExternalLink
         href={"https://twitter.com/astroplant"}
         className={`${styles.icon} ${styles[color]}`}
