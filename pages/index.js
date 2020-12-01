@@ -78,6 +78,6 @@ export async function getStaticProps() {
       achievements: await getAchievements(),
       featuredArticles: await getFeaturedArticles(),
     },
-    revalidate: 3000,
+    revalidate: 1,
   };
 }
