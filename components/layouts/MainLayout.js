@@ -22,6 +22,7 @@ export default function MainLayout({
     <>
       <Head>
         <title>{fullTitle}</title>
+        <script async defer data-domain="astroplant.io" src="https://plausible.io/js/plausible.js"></script>
         <meta name="title" content={fullTitle} />
         <meta name="description" content={pageDescription || ""} />
 
