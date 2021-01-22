@@ -3,6 +3,8 @@ import React from "react";
 import Facebook from "../public/icons/facebook.svg";
 import Instagram from "../public/icons/instagram.svg";
 import Twitter from "../public/icons/twitter.svg";
+import Slack from "../public/icons/slack.svg";
+import Button from "./Button";
 import styles from "./modules/SocialIcons.module.css";
 
 const ExternalLink = ({ className, href, children }) => {
@@ -30,11 +32,18 @@ export default function SocialIcons({ color, className }) {
       {/* <ExternalLink href={""} className={`${styles.icon} ${styles[color]}`}>
         <Facebook />
       </ExternalLink> */}
+
       <ExternalLink
         href={"https://twitter.com/astroplant"}
         className={`${styles.icon} ${styles[color]}`}
       >
         <Twitter />
+      </ExternalLink>
+      <ExternalLink
+        href={"https://astroplant.slack.com/"}
+        className={`${styles.icon} ${styles[color]}`}
+      >
+        <Slack />
       </ExternalLink>
     </div>
   );
