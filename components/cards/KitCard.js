@@ -7,7 +7,10 @@ export default function KitCard({ ...props }) {
     <CTACard {...props}>
       <div className={styles.buttonRow}>
         {/* <Button label={"Read more"} color={"light"} /> */}
-        <a href="mailto:thieme@astroplant.io">
+        <a
+          target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdaxijLe62ITT3e8w61MwbF3NlCLj2Q5U4f0wv-VwpfTiFDUA/viewform"
+        >
           <Button label={"Pre-order"} />
         </a>
       </div>
