@@ -53,24 +53,24 @@ export function Header({ featuredArticles, dark }) {
           >
             <nav className={styles.linksMobile}>
               <HomeLink />
-              {/* <PageLink
+              <PageLink
                 className={styles.navLink}
                 pageDetails={{ name: "About Us", path: "/community/about-us" }}
               />
               <PageLink
                 className={styles.navLink}
                 pageDetails={{ name: "Goals", path: "/community/goals" }}
-              /> */}
-              {/* <ContributeLink />
+              />
+              <ContributeLink />
               <ShopLink />
-              <JoinCommunityButton /> */}
+              <JoinCommunityButton />
             </nav>
           </DropdownMenu>
         </div>
 
         <nav className={styles.nav}>
           <HomeLink dark={dark} />
-          {/* <DropdownMenu
+          <DropdownMenu
             trigger={
               <PageLink
                 dark={dark}
@@ -116,11 +116,11 @@ export function Header({ featuredArticles, dark }) {
                 ))}
               </div>
             </div>
-          </DropdownMenu> */}
+          </DropdownMenu>
 
-          {/* <ContributeLink dark={dark} />
+          <ContributeLink dark={dark} />
           <ShopLink dark={dark} />
-          <JoinCommunityButton dark={dark} /> */}
+          <JoinCommunityButton dark={dark} />
         </nav>
       </div>
     </header>
