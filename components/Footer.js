@@ -25,17 +25,17 @@ export function Footer() {
               className={styles.pageLink}
               pageDetails={{ name: "Home", path: "/" }}
             />
-            {/* <PageLink
+            <PageLink
               className={styles.pageLink}
               pageDetails={{ name: "Contribute", path: "/contribute" }}
-            /> */}
-            {/* <PageLink
+            />
+            <PageLink
               className={styles.pageLink}
               pageDetails={{ name: "Shop", path: "/shop" }}
-            /> */}
+            />
           </div>
 
-          {/* <div className={styles.navSection}>
+          <div className={styles.navSection}>
             <p className={styles.navSectionTitle}>Community</p>
             <PageLink
               className={styles.pageLink}
@@ -46,19 +46,19 @@ export function Footer() {
               className={styles.pageLink}
               pageDetails={{ name: "Goals", path: "/community/goals" }}
             />
-          </div> */}
+          </div>
 
           <div className={styles.navSection}>
             <p className={styles.navSectionTitle}>For Space Farmers</p>
-            {/* <a
+            <a
               target="_blank"
               referrerPolicy="origin"
               href={"https://docs.astroplant.io/"}
               className={styles.externalLink}
             >
               Documentation
-            </a> */}
-            {/* <div className={styles.linkRow}>
+            </a>
+            <div className={styles.linkRow}>
               <a
                 target="_blank"
                 referrerPolicy="origin"
@@ -68,7 +68,7 @@ export function Footer() {
                 Platform
               </a>
               <span className={styles.betaTag}>BETA</span>
-            </div> */}
+            </div>
 
             <a
               target="_blank"
