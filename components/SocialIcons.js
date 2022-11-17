@@ -24,7 +24,7 @@ export default function SocialIcons({ color, className }) {
   return (
     <div className={`${styles.container} ${styles[color]} ${className}`}>
       <ExternalLink
-        href={"https://www.instagram.com/astro_plant/"}
+        href={"https://www.instagram.com/astroplant.io/"}
         className={`${styles.icon} ${styles[color]}`}
       >
         <Instagram />
